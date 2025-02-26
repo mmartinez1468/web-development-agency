@@ -1,4 +1,4 @@
-/* CSS Reset */
+/********************** CSS RESET **********************/
 *, *::before, *::after {
     box-sizing: border-box;
   }
@@ -70,7 +70,7 @@
   }
   
   
-  
+    /********************** PRE LOADER **********************/
     .loader {
       position: fixed;
       top: 0;
@@ -84,7 +84,6 @@
       opacity: 1;
       z-index: 100000000;
     }
-  
     .loaderHidden {
       opacity: 0;
       visibility: hidden;
@@ -111,7 +110,7 @@
   
   
   
-    /* NAVBAR */
+    /********************** NAVAGATION BAR **********************/
     #navigation {
       display: flex;
       position: fixed;
@@ -123,7 +122,6 @@
       background-color: rgb(255, 255, 255);
       box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -1px 0px rgb(58 65 111 / 50%);
     }
-    /* Hamburger Menu */
     #menuToggle {
       /* You can also use absolute here if you want to stay on the top */
       position: fixed;
@@ -132,13 +130,11 @@
       -webkit-user-select: none;
       user-select: none;
     }
-    #menuToggle a
-    {
+    #menuToggle a {
       text-decoration: none;
       transition: color 0.3s ease;
     }
-    #menuToggle a:hover
-    {
+    #menuToggle a:hover {
       color: #ffa601;
     }
     #menuToggle input {
@@ -171,7 +167,6 @@
     #menuToggle span:nth-last-child(2) {
       transform-origin: 0% 100%;
     }
-    
     /* Changes Menu Button To An X */
     #menuToggle input:checked ~ span {
       opacity: 1;
@@ -186,7 +181,6 @@
       opacity: 1;
       transform: rotate(-45deg) translate(0, -1px);
     }
-    
     /* Vertical Nav Bar*/
      #menu {
       position: absolute;
@@ -216,24 +210,20 @@
       left: -450px;
     }
     }
-    #menu li
-    {
+    #menu li {
       padding: 10px 0;
       font-size: 2rem;
       letter-spacing: 3px;
       font-weight: 900;
       color: white;
     }
-    #menu li label
-    {
+    #menu li label {
       cursor: pointer;
     }
     #menuToggle input:checked ~ ul {
       opacity: 1;
       transform: translateX(100%); /* Bring the menu into view from the left */
     }
-  
-  
     /* Rest Of The Navbar */
     .navLogo {
       display: flex;
@@ -291,21 +281,6 @@
     
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    
   
     /********************** LANDING PAGE **********************/
     #landing {
@@ -384,8 +359,6 @@
       opacity: 0.4; /* Controls background transparency */
       z-index: -1;
     }
-    
-    
     .landing-content .landing-box:nth-child(2) {
       position: relative;
       color: white;
@@ -422,7 +395,6 @@
       opacity: 0.4; /* Controls background transparency */
       z-index: -1;
     }
-  
     .landing-tabs input:nth-child(1):checked ~ .landing-content {
       left: 0;
     }
@@ -432,7 +404,6 @@
     .landing-tabs input:nth-child(3):checked ~ .landing-content {
       left: -200vw;
     }
-  
     .landing-content-box {
       display: flex;
       flex-direction: column;
@@ -455,9 +426,8 @@
       background-color: #1178de;
       color: white;
       font-weight: 900;
-     }
-     
-     .landing-button::before {
+    }
+    .landing-button::before {
       content: '';
       width: 0;
       height: 3em;
@@ -469,12 +439,11 @@
       transition: .5s ease;
       display: block;
       z-index: -1;
-     }
-     
-     .landing-button:hover::before {
+    }  
+    .landing-button:hover::before {
       width: 9em;
-     }
-     @media screen and (min-width: 1023px) {
+    }
+    @media screen and (min-width: 1023px) {
       .landing-content-box {
           width: 50%;
       }
@@ -484,33 +453,24 @@
       .landing-content-box > p {
           font-size: 1.5rem;
       }
-     }
-  
-  
-  
-     .landing-content-box > h2 {
+    }
+    .landing-content-box > h2 {
       font-size: 1.5rem;
-     }
-     .landing-content-box > p {
+    }
+    .landing-content-box > p {
       font-size: .75rem;
-     }
-  
-  
-  
-  
-     .landing-image {
+    }
+    .landing-image {
         animation: rotation-left 6s infinite linear;
         overflow: hidden;
-     }
-     .landing-image > img {
+    }
+    .landing-image > img {
         height: 200px;
-     }
-  
-     #landingImage {
+    }
+    #landingImage {
       animation: rotation-right 6s infinite linear;
-     }
-  
-     @keyframes rotation-left {
+    }
+    @keyframes rotation-left {
       from {
         transform: rotate(0deg);
       }
@@ -518,8 +478,6 @@
         transform: rotate(-360deg);
       }
     }
-  
-  
     @keyframes rotation-right {
       from {
         transform: rotate(0deg);
@@ -528,7 +486,6 @@
         transform: rotate(360deg);
       }
     }
-  
     @media screen and (min-width: 468px) {
       .landing-content-box > h2 {
         font-size: 2rem;
@@ -581,7 +538,7 @@
   
   
   
-  /* STATS SECTION */
+  /********************** STATS SECTION **********************/
   #stats {
     padding: 1rem 0;
     width: 100%;
@@ -623,7 +580,10 @@
   }
   
   
-  /* SKILLS SECTION */
+
+
+
+  /********************** SKILLS SECTION **********************/
   #skills {
     display: flex;
     justify-content: center;
@@ -671,7 +631,6 @@
       width: 100%;
     }
   }
-  
   /* Some Skills That We Offer */
   .knowledgeContainer {
     width: 100%;
@@ -724,7 +683,10 @@
   }
   
   
-  /* PRICES SECTION */
+
+
+
+  /********************** PRICING SECTION **********************/
   #pricing {
     display: flex;
     justify-content: center;
@@ -765,7 +727,6 @@
       font-size: 1.25rem;
     }
   }
-  
   /* Web Development Packages */
   .priceExplain {
     display: flex;
@@ -873,12 +834,7 @@
     content: attr(data-front);
     transform: translateY(0) rotateX(0);
   }
-  
-  
-  
-  
-  
-  
+  /* Largest Package */
   .large-package-wrapper {
     display: flex;
     justify-content: center;
@@ -932,7 +888,6 @@
   .package-info li:nth-child(odd) {
     background-color: #f9f9f9;
   }
-  
   /* Image slider styles */
   .large-package-intro {
     position: relative;
@@ -959,7 +914,6 @@
     z-index: 1;
     padding: 20px;
   }
-  
   /* Background image approach using ::before */
   .pricing-slide::before {
     content: "";
@@ -974,23 +928,19 @@
     opacity: 0.6; /* Controls background transparency */
     z-index: -1;
   }
-  
   /* Set individual backgrounds for each slide */
   .pricing-slide:nth-child(1)::before {
     background-image: url('images/pricing-programming.jpg');
     opacity: 0.4;
   }
-  
   .pricing-slide:nth-child(2)::before {
     background-image: url('images/pricing-business.jpg');
     opacity: 0.4;
   }
-  
   .pricing-slide:nth-child(3)::before {
     background-image: url('images/pricing-social-media.jpg');
     opacity: 0.4;
   }
-  
   .pricing-slide h4 {
     margin: 0 0 15px 0;
     padding: 10px 20px;
@@ -999,7 +949,6 @@
     z-index: 3;
     text-align: center;
   }
-  
   .pricing-slide p {
     max-width: 80%;
     text-align: center;
@@ -1008,7 +957,6 @@
     border-radius: 4px;
     margin: 0;
   }
-  
   .slider-controls {
     position: absolute;
     bottom: 20px;
@@ -1075,7 +1023,7 @@
   
   
   
-  
+  /********************** LOGO CAROUSAL **********************/
   @keyframes slides {
     from {
       transform: translateX(0);
@@ -1084,7 +1032,6 @@
       transform: translateX(-100%);
     }
   }
-  
   #logo-carousal {
     overflow: hidden;
     padding: 30px 0px;
@@ -1092,7 +1039,6 @@
     position: relative;
     background-color: rgb(0, 0, 0);
   }
-  
   #logo-carousal:before, .logos:after {
     position: absolute;
     top: 0;
@@ -1101,26 +1047,21 @@
     height: 100%;
     z-index: 2;
   }
-  
   #logo-carousal:before {
     left: 0;
   }
-  
   #logo-carousal:after {
     right: 0;
   }
-  
   .logo_items {
     display: inline-block;
     display: flex;
     animation: 20s slides infinite linear;
     
   }
-  
   #logo-carousal:hover .logo_items {
     animation-play-state: paused;
   }
-  
   .logo_items img{
     height: 100px;
     width: 100px;
@@ -1137,7 +1078,7 @@
   
   
   
-  /* PORTFOLIO SECTION */
+  /********************** PORTFOLIO SECTION **********************/
   #portfolio {
     width: 100%;
     background-color: #ffffff;
@@ -1172,7 +1113,6 @@
     padding: 1rem;
     border-left: 3px solid #1178de;
   }
-  
   @media screen and (min-width: 1239px) {
     .portfolioIntro {
       width: 80%;
@@ -1207,7 +1147,7 @@
   
   
   
-  
+  /********************** CONTACT SECTION **********************/
   #contact {
     width: 100%;
     padding: 3rem 0;
@@ -1219,9 +1159,6 @@
   .getInTouch > span {
     color: #1178de;
   }
-  
-  
-  
   .formWrapper {
     background-color: #ffffff;
     margin: 1rem;
@@ -1230,7 +1167,6 @@
     color: rgb(0, 0, 0);
     border: 2px solid black;
   }
-  
   form {
     padding: 1rem;
   }
@@ -1242,7 +1178,6 @@
   .inputGroup > button {
     background-color: #ffa601;
   }
-  
   .inputGroup > input, textarea {
     border-radius: 10px;
     border: 1px solid black;
@@ -1253,9 +1188,6 @@
     outline: none;
     border: 2px solid orange;
   }
-  
-  
-  
   @media screen and (min-width:900px) {
     #contact {
         display: flex;
@@ -1305,7 +1237,15 @@
   }
   
   
-  /* ANIMATIONS */
+
+
+
+  /********************** ANIMATIONS **********************/
+  /* Replays Animation When Back In ViewPort */
+  .animated {
+    opacity: 0;
+    transition: all 1s;
+  }
   /* One Time Animation For The Landing Page  */
   .fadeInLeftStay {
     opacity: 1;
@@ -1324,7 +1264,6 @@
        transform: translateX(0);
     }
   } 
-  
   /* One Time Animation For The Landing Page  */
   .fadeInRightStay {
     opacity: 1;
@@ -1343,14 +1282,6 @@
        transform: translateY(0);
     }
   } 
-  
-  
-  .animated {
-    opacity: 0;
-    transition: all 1s;
-  }
-  
-  
   /* FadeInLeft Animation */
   .fadeInLeft {
     filter: blur(5px);
@@ -1373,32 +1304,24 @@
     filter: blur(0);
     transform: translateX(0);
   }
-  
-  
-  
-  
   .fadeInDown {
     filter: blur(5px);
     transform: translateY(-100px);
   }
-  
   .fadeInDown.visible {
     opacity: 1;
     filter: blur(0);
     transform: translateY(0);
   }
-  
   .fadeInUp {
     filter: blur(5px);
     transform: translateY(100px);
   }
-  
   .fadeInUp.visible {
     opacity: 1;
     filter: blur(0);
     transform: translateY(0);
   }
-  
   /* ANIMATION SPEEDS */
   .fast {
     animation-delay: 200ms;
@@ -1413,7 +1336,11 @@
     transition-delay: 600ms;
   }
   
-  
+
+
+
+
+  /********************** FAQ SECTION **********************/
   #faq {
     display: flex;
     justify-content: center;
@@ -1477,8 +1404,7 @@
     letter-spacing: 3px;
     padding: 2rem;
     border-radius: 10px 10px 0 0;
-  }
-  
+  } 
   .accordion i {
     font-size: 1.6rem;
   }
@@ -1525,7 +1451,10 @@
   }
   
   
-  /* FOOTER SECTION */
+
+
+
+  /********************** FOOTER SECTION **********************/
   footer {
     display: flex;
     flex-direction: column;
