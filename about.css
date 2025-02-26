@@ -1,0 +1,472 @@
+/* CSS Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}  
+html, body {
+ width: 100%;
+}
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+a {
+    text-decoration: none;
+    color: white;
+  }
+input, button, textarea, select {
+    font: inherit;
+}
+p, span, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    text-wrap: balance;
+    font-family: "Bricolage Grotesque", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+p {
+    text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+    font-family: "Bricolage Grotesque", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+#root, #__next {
+    isolation: isolate;
+}
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+h3 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+p {
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+span {
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #bab6b6;
+}
+
+
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+  opacity: 1;
+  z-index: 1000;
+}
+
+.loaderHidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 2s, visibility 1s; /* Apply transition here only */
+}
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #dddddd;
+  border-top-color: #1178de;
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+
+}
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+
+
+  /* NAVBAR */
+  #navigation {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    z-index: 10;
+    width: 100%;
+    padding: 1rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -1px 0px rgb(58 65 111 / 50%);
+  }
+  /* Hamburger Menu */
+  #menuToggle {
+    /* You can also use absolute here if you want to stay on the top */
+    position: fixed;
+    right: auto;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  #menuToggle a
+  {
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  #menuToggle a:hover
+  {
+    color: #ffa601;
+  }
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+  }
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #1178de;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+  }
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+  
+  /* Changes Menu Button To An X */
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #ffffff;
+  }
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    opacity: 1;
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+  
+  /* Vertical Nav Bar*/
+   #menu {
+    position: absolute;
+    max-width: 400px;
+    width: 100vw;
+    height: 105vh;
+    margin: -100px 0 0 0;
+    padding: 70px;
+    padding-top: 125px;
+    left: -390px; /* Start hidden off-screen */
+    right: auto;
+    transform: translateX(-100%); /* Keep it off-screen initially */
+    box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%);
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background: #1178de;
+    color: white;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Bricolage Grotesque", serif;
+    /* to stop flickering of text in safari */
+
+    transform-origin: left center;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  }
+  @media screen and (min-width: 374px) {
+  #menu {
+    left: -450px;
+  }
+  }
+  #menu li
+  {
+    padding: 10px 0;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    font-weight: 900;
+    color: white;
+  }
+  #menu li label
+  {
+    cursor: pointer;
+  }
+  #menuToggle input:checked ~ ul {
+    opacity: 1;
+    transform: translateX(100%); /* Bring the menu into view from the left */
+  }
+
+
+  /* Rest Of The Navbar */
+  .navLogo {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin: auto;
+  }
+  .navLogo > img {
+    height: 4rem;
+    padding-left: 4rem;
+  }
+  @media screen and (min-width: 1023px) {
+    .navLogo > img {
+      height: 5.5rem;
+    }
+  }
+  .navButton {
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    will-change: box-shadow,transform;
+    background: radial-gradient( 100% 100% at 100% 0%, #89E5FF 0%, #5468FF 100% );
+    box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px rgb(58 65 111 / 50%);
+    padding: 0 1rem;
+    border-radius: 6px;
+    color: #fff;
+    height: 2rem;
+    font-size: .75rem;
+    font-family: "Bricolage Grotesque", serif;
+    text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+    transition: box-shadow 0.15s ease,transform 0.15s ease;
+  }
+  .navButton:hover {
+      box-shadow: 0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #3c4fe0;
+      transform: translateY(-2px);
+  }
+  .navButton:active{
+      box-shadow: inset 0px 3px 7px #3c4fe0;
+      transform: translateY(2px);
+  }
+  .legal {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    gap: 1rem;
+    padding: 2rem 0;
+  }
+  .navLinks {
+    display: flex;
+    margin-left: -15px;
+  }
+  
+
+/* Scroll Section */
+#scroll {
+    background-color: #313030;
+    width: 100%;
+    padding-top: 8rem;
+}
+.scrollHeaderWrapper > img {
+  width: 0%;
+  height: 0%;
+}  
+.scrollHeader {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    padding: 2rem 3rem;
+}
+.scrollHeader > span, h2 {
+    margin-bottom: 1rem;
+}
+.scrollStepHeader {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    padding: 2rem 3rem;
+}
+.scrollStepHeader > img {
+  height: 0;
+}
+.scrollStepListWrapper {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    padding: 2rem 3rem;
+}
+.scrollStepList {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.scrollStepList::before {
+    content: "■"; /* Manually add a square marker */
+    font-size: 3.5rem;
+    margin-right: 0.5rem;
+    color:#1178de;
+    
+}
+.scrollStepList h4 {
+    margin-top: .75rem;
+}
+@keyframes rotation-right {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotation-left {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@media screen and (min-width:640px) {
+    .scrollHeader h2 {
+        font-size: 4rem;
+    }
+}
+@media screen and (min-width:768px) {
+    .scrollHeader h2 {
+        font-size: 5rem;
+    }
+    .scrollStepHeader h3 {
+        font-size: 3rem;
+    }
+}
+@media screen and (min-width: 1023px) {
+  .scrollHeaderWrapper {
+    display: flex;
+    overflow: hidden;
+  }
+  .scrollHeaderWrapper > img {
+    width: 40%;
+    height: 60%;
+    animation: rotation-right 6s infinite linear;
+  }  
+  .scrollHeader {
+        width: 60%;
+        padding-bottom: 15rem;
+    }
+    .scrollHeader p, span {
+        font-size: 20px;
+    }
+    .scrollWrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 2rem; 
+    }
+    .scrollStepHeader {
+        width: 40%;
+        position: sticky;
+        top: 90px;
+    }
+    .scrollStepHeader > img {
+      width: 100%;
+      height: 100%;
+      animation: rotation-left 6s infinite linear;
+    }
+    .scrollStepHeader h3 {
+        font-size: 3.75rem;
+    }
+    .scrollStepListWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; 
+        margin-left: auto;
+        width: 40%; 
+        padding: 2rem; 
+    }
+    .scrollStepList {
+        padding-bottom: 5rem;
+    }
+}
+
+/* FOOTER SECTION */
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  height: fit-content;
+  color: white;
+  padding: 2rem;
+}
+.footerLinks {
+  padding: 1rem;
+  width: 100%;
+}
+.footerLinks a p {
+  margin-bottom: 1rem;
+}
+hr.solid {
+  border-top: 1px solid #ffffff;
+  width: 100%;
+  margin: 1rem 0;
+}
+.footerContacts {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1rem;
+  gap: 1rem;
+  background-color: #0c355c;
+}
+.copyright {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #0c355c;
+}
+@media screen and (min-width: 993px) {
+  footer {
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+  }
+  .footerLinks {
+      width: 20%;
+  }
+  .footerPrivacy {
+      width: 40%;
+  }
+}

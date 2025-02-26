@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Emblema+One&family=Lora:ital,wght@0,400..700;1,400..700&family=Paytone+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Document</title>
+<body>
+  
+  <main>
+    <div class="loader"></div>
+    <nav id="navigation">
+      <div id="menuToggle">
+        <input type="checkbox" id="menuCheckbox" /> <!-- Opens Up Menu -->
+        <!-- Hamburger Menu Design -->
+        <span></span>
+        <span></span>
+        <span></span>
+        <!-- Vertical Menu -->
+        <ul id="menu">
+          <li>
+            <a href="#">
+              <label for="menuCheckbox" onclick="this.parentNode.click();">Home</label>
+            </a>
+          </li>
+          <li>
+            <a href="about.html">
+              <label for="menuCheckbox" onclick="this.parentNode.click();">About</label>
+            </a>
+          </li>
+          
+          <!-- These just close the menu -->
+          <li><label for="menuCheckbox"><a href="https://mmartinez1468.github.io/portfolio/index.html">Portfolio</a></label></li>
+          
+          <!-- Or just use regular URLs -->
+          <li>
+            <a href="mailto:marcosmartinez16@hickoryhillswebdevelopment.com?subject=Lets Work Together!" target="_blank">Contact Us</a>
+          </li>
+          <div class="legal">
+            <a href="">
+              <p>Privacy Policy</p>
+            </a>
+            <a href="">
+              <p>Terms Of Service</p>
+            </a>
+            <a href="">
+              <p>Refund Policy</p>
+            </a>
+          </div>
+        </ul>
+      </div>
+  
+      <a href="index.html" class="navLogo">
+        <img src="images/Remove background project (8).png" alt="">
+      </a>
+  
+      <div class="button">
+          <button class="navButton">
+              <a href="mailto:marcosmartinez16@hickoryhillswebdevelopment.com?subject=Lets Work Together!">Contact Us</a>
+          </button>
+      </div>
+    </nav>
+    
+
+    <!------------------ LANDING SECTION ------------------>
+    <section id="landing">
+        <div class="landing-tabs">
+            <input id="web" type="radio" name="slider" checked>
+            <input id="graphics" type="radio" name="slider">
+            <input id="photography" type="radio" name="slider">
+            <div class="landing-buttons">
+                <label for="web"></label>
+                <label for="graphics"></label>
+                <label for="photography"></label>
+            </div>
+            <div class="landing-content">
+                <div class="landing-box web">
+                    <div class="landing-content-box">
+                        <h2>Work With Us Today!</h2>
+                        <p>
+                          We're dedicated to creating beautiful, functional, 
+                          and user-friendly websites. Whether you're looking 
+                          to build a sleek portfolio, launch a cutting-edge 
+                          e-commerce platform, or revamp your existing online 
+                          presence, We're here to turn your vision into reality.
+                        </p>
+                        <a href="mailto:marcosmartinez16@hickoryhillswebdevelopment.com?subject=Lets Work Together!">
+                            <button class="landing-button">Join Us!</button>
+                        </a>
+                    </div>
+                    <div class="landing-image">
+                      <img src="images/logo.png" alt="">
+                    </div>
+                </div>
+                <div class="landing-box graphics">
+                  <div class="landing-content-box">
+                    <h2>Bring Your Website To Life!</h2>
+                    <p>
+                      Transform your website into a vibrant and engaging digital 
+                      space with dynamic animations, interactive elements, and 
+                      eye-catching visuals. Elevate user experience, capture attention,
+                      and make a lasting impression by bringing your site to life with 
+                      modern web design techniques and seamless functionality. 
+                    </p>
+                    <a href="mailto:marcosmartinez16@hickoryhillswebdevelopment.com?subject=Lets Work Together!">
+                        <button class="landing-button">Join Us!</button>
+                    </a>
+                  </div>
+                  <div class="landing-image" id="landingImage">
+                    <img src="images/Untitled (26).png" alt="">
+                  </div>
+                </div>
+                <div class="landing-box photography">
+                  <div class="landing-content-box">
+                    <h2>We Deliver Quality!</h2>
+                    <p>
+                      We provide fast, efficient, and high-quality web development 
+                      services tailored to your needs. From stunning designs to 
+                      seamless functionality, we ensure your website is built 
+                      with precision, optimized for performance, and delivered 
+                      on time. Trust us to bring your vision to life with expert 
+                      coding and cutting-edge technology
+                    </p>
+                    <a href="mailto:marcosmartinez16@hickoryhillswebdevelopment.com?subject=Lets Work Together!">
+                        <button class="landing-button">Join Us!</button>
+                    </a>
+                </div>
+                <div class="landing-image">
+                  <img src="images/logo.png" alt="">
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!------------------ STATS SECTION ------------------>
+    <section id="stats">
+            <ul class="statWrapper">
+              <li class="statContainer">
+                <h2 class="statNum" data-val="100">0</h2>
+                <p>Handmade Custom Built Websites</p>
+                <img src="images/paintbrush.png" alt="stat icon" height="70px">
+              </li>
+              <li class="statContainer">
+                <h2 class="statNum" data-val="50">0</h2>
+                <p>Faster Than Website Builders</p>
+                <img src="images/bolt.png" alt="stat icon" height="70px">
+              </li>
+              <li class="statContainer">
+                <h2 class="statNum" data-val="40">0</h2>
+                <p>More Traction Towards Your Website</p>
+                <img src="images/money.png" alt="stat icon" height="70px">
+              </li>
+              <li class="statContainer">
+                <h2 class="statNum" data-val="20">0</h2>
+                <p>More Visitors To Customers</p>
+                <img src="images/customer.png" alt="stat icon" height="70px">
+              </li>
+            </ul>
+    </section>
+  
+    <!------------------ SKILLS SECTION ------------------>
+    <section id="skills">
+      <div class="skillsAbout">
+        <span class="animated fadeInLeft">What We Offer</span>
+        <h2 class="animated fadeInLeft">Let us turn your vision into reality by creating the website of your dreams</h2>
+        <p class="animated fadeInLeft ">We offer a comprehensive range of skills that generic 
+          website builders like <b>Wix, Squarespace, and GoDaddy</b> 
+          simply can't match. Unlike templated solutions, we hand-build 
+          every website from the ground up, ensuring your site is fully 
+          customized to your specific needs and preferences. This 
+          personalized approach not only allows for unlimited 
+          design possibilities but also results in faster load times, 
+          which improve user experience and boost search engine rankings.
+          By tailoring every detail, from the layout to the functionality, 
+          we create websites that truly stand out and reflect your brand's 
+          uniqueness. Our process also enables seamless integration of 
+          advanced features, scalability for future growth, and better 
+          optimization, ensuring your site delivers superior performance 
+          and keeps visitors engaged.</p>
+      </div>
+      <ul class="knowledgeContainer">
+        <li class="knowledgeTemplate">
+            <div class="knowledgeImgWrapper">
+                <img src="images/responsive-icon.png" alt="skill icon">
+            </div>
+            <div class="knowledgeTextWrapper">
+                <h3 class="knowledgeTextHeader">Responsive Websites</h3>
+                <p class="knowledgeText">
+                  We start the development process with a mobile-first approach, ensuring the final website is optimized for both mobile and desktop platforms, providing a seamless experience across all devices.
+                </p>
+            </div>
+        </li>
+        <li class="knowledgeTemplate">
+            <div class="knowledgeImgWrapper">
+                <img src="images/guaranteed-icon.png" alt="skill icon">
+            </div>
+            <div class="knowledgeTextWrapper">
+                <h3 class="knowledgeTextHeader">Satisfaction Guaranteed</h3>
+                <p class="knowledgeText">
+                  We prioritize your needs and work tirelessly to ensure they are fully met, delivering a product that aligns perfectly with your expectations. We Guarantee You'll Love Your Website!
+                </p>
+            </div>
+        </li>
+        <li class="knowledgeTemplate">
+            <div class="knowledgeImgWrapper">
+                <img src="images/speed-icon.png" alt="skill icon">
+            </div>
+            <div class="knowledgeTextWrapper">
+                <h3 class="knowledgeTextHeader">Fast Speed Optimization</h3>
+                <p class="knowledgeText">
+                  Techniques and strategies used to enhance a website's loading time and overall performance. This is crucial for improving user experience, reducing bounce rates, and boosting search engine rankings. 
+                </p>
+            </div>
+        </li>
+        <li class="knowledgeTemplate">
+            <div class="knowledgeImgWrapper">
+                <img src="images/hosting-icon.png" alt="skill icon">
+            </div>
+            <div class="knowledgeTextWrapper">
+                <h3 class="knowledgeTextHeader">Hosting & Maintenance</h3>
+                <p class="knowledgeText">
+                  Includes server space, bandwidth, and security features, to ensure the website is always available to users. 24/7 support and maintenance included for a set period of time.
+                </p>
+            </div>
+        </li>
+        <li class="knowledgeTemplate">
+            <div class="knowledgeImgWrapper">
+                <img src="images/shop-icon.png" alt="skill icon">
+            </div>
+            <div class="knowledgeTextWrapper">
+                <h3 class="knowledgeTextHeader">E-commerce Integration</h3>
+                <p class="knowledgeText">
+                  Enable customers to browse, purchase, and pay for products or services. Includes features like a  shopping cart, secure payment gateways, product catalog, inventory management, and order tracking. 
+                </p>
+            </div>
+        </li>
+        <li class="knowledgeTemplate">
+            <div class="knowledgeImgWrapper">
+                <img src="images/seo-icon.png" alt="skill icon">
+            </div>
+            <div class="knowledgeTextWrapper">
+                <h3 class="knowledgeTextHeader">Search Engine Optimization</h3>
+                <p class="knowledgeText">
+                  Enhance your website's visibility and improve its rankings on search engines. By driving qualified leads to your site, we help you grow your business and reach your target audience more effectively.
+                </p>
+            </div>
+        </li>
+        <li class="knowledgeTemplate">
+          <div class="knowledgeImgWrapper">
+              <img src="images/support-icon.png" alt="skill icon">
+          </div>
+          <div class="knowledgeTextWrapper">
+              <h3 class="knowledgeTextHeader">24/7 Instant User Support</h3>
+              <p class="knowledgeText">
+                Your satisfaction is our top priority. We are committed to supporting you in every way possible to ensure your website meets both our high standards and your expectations. Whether by phone or email. 
+              </p>
+          </div>
+      </li>
+      <li class="knowledgeTemplate">
+        <div class="knowledgeImgWrapper">
+            <img src="images/custom-icon.png" alt="skill icon" style="height: 60px; width: 60px;">
+        </div>
+        <div class="knowledgeTextWrapper">
+            <h3 class="knowledgeTextHeader">Customizable Code</h3>
+            <p class="knowledgeText">
+              All the code on our websites is custom-written by our team, ensuring that every product we deliver is unique, tailored to your needs, and free from generic templates or prepackaged solutions.
+            </p>
+        </div>
+    </li>
+    </ul>
+    </section>
+    <!------------------ PRICES SECTION ------------------>
+    <section id="pricing">
+    <div class="pricingHeader">
+      <span class="animated fadeInDown">What We Offer</span>
+      <h2 class="animated fadeInDown">Transform your business with fully customizable 
+        websites designed to bring your vision to life!
+      </h2>
+      <p class="animated fadeInUp">Experience premium web design at unbeatable prices that 
+        redefine value for money. Our carefully crafted packages 
+        are designed to cater to businesses of all sizes, ensuring 
+        there’s an option that perfectly fits your budget and requirements. 
+        With us, you’re not just getting a website—you’re investing in a 
+        high-quality, customized solution designed to drive results and 
+        set you apart from the competition.
+      </p>
+    </div>
+    <ul class="priceExplain">
+      <li class="animated fadeInLeft fast">
+        <div class="priceExplainHeader">
+          <span>Great Starter Website</span>
+          <h2>Basic</h2>
+        </div>
+        <div class="priceExplainInfo">
+          <img src="images/basic-icon.png" alt="pricing-icon">
+          <span>Let's Work Together!</span>
+          <a href="mailto:marcosmartinez16@hickoryhillswebdevelopment.com?subject=Order: Basic Package" class="btn-flip" data-back="NOW" data-front="ORDER"></a>
+          <span>What's Included?</span>
+          <ul class="priceExplainPoints">
+            <li>1 Page Website</li>
+            <li>Up To 5 Sections Per Page </li>
+            <li>Hosting Support</li>
+            <li>Fully Customiziable</li>
+            <li>Mobile and Desktop Friendly</li>
+            <li>3 Revisions</li>
+            <li>100% Satisfaction Guaranteed</li>
+            <li>100% Ownership of Website</li>
+            <li>3 Day Delivery</li>
+            <li>Express Service: + $50</li>
+          </ul>
+        </div>
+      </li>
+      <li class="animated fadeInLeft regular">
+        <div class="priceExplainHeader">
+          <span style="color: white;">Our Best Deal!</span>
+          <h2>Standard</h2>
+        </div>
+        <div class="priceExplainInfo">
+          <img src="images/standard-icon.png" alt="pricing-icon">
+          <span>Let's Work Together!</span>
+          <a href="mailto:marcosmartinez16@hickoryhillswebdevelopment.com?subject=Order: Standard Package" class="btn-flip" data-back="NOW" data-front="ORDER"></a>
+          <span>What's Included?</span>
+          <ul class="priceExplainPoints">
+            <li>3 Page Website</li>
+            <li>Up To 5 Sections Per Page </li>
+            <li>Hosting Support</li>
+            <li>Fully Customiziable</li>
+            <li>Mobile and Desktop Friendly</li>
+            <li>Unlimited Revisions</li>
+            <li>100% Satisfaction Guaranteed</li>
+            <li>100% Ownership of Website</li>
+            <li>6 Day Delivery</li>
+            <li>Express Service: + $100</li>
+          </ul>
+        </div>
+      </li>
+      <li class="animated fadeInLeft slow">
+        <div class="priceExplainHeader">
+          <span>Complete Package</span>
+          <h2>Premium</h2>
+        </div>
+        <div class="priceExplainInfo">
+          <img src="images/premium-icon.png" alt="pricing-icon">
+          <span>Let's Work Together!</span>
+          <a href="mailto:marcosmartinez16@hickoryhillswebdevelopment.com?subject=Order: Premium Package" class="btn-flip" data-back="NOW" data-front="ORDER"></a>
+          <span>What's Included?</span>
+          <ul class="priceExplainPoints">
+            <li>5 Page Website</li>
+            <li>Up To 5 Sections Per Page</li>
+            <li>Hosting Support</li>
+            <li>Fully Customiziable</li>
+            <li>Mobile and Desktop Friendly</li>
+            <li>Unlimited Revisions</li>
+            <li>100% Satisfaction Guaranteed</li>
+            <li>100% Ownership of Website</li>
+            <li>7 Day Delivery</li>
+            <li>Express Service: + $200</li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+
+    <div class="large-package-wrapper">
+      <div class="large-package">
+        <div class="priceExplainHeader" style="background-color: #ffa601;">
+          <span>Complete Package</span>
+          <h2>Business</h2>
+        </div>
+        <div class="large-package-info">
+          <div class="large-package-intro">
+            <div class="pricing-slider-container">
+              <div class="pricing-slide">
+                <h4>Website Management</h4>
+                <a href="mailto:marcosmartinez16@hickoryhillswebdevelopment.com?subject=Order: Business Package" class="btn-flip" data-back="NOW" data-front="ORDER"></a>
+              </div>
+              <div class="pricing-slide">
+                <h4>Business Solutions</h4>
+                <a href="mailto:marcosmartinez16@hickoryhillswebdevelopment.com?subject=Order: Business Package" class="btn-flip" data-back="NOW" data-front="ORDER"></a>
+              </div>
+              <div class="pricing-slide">
+                <h4>Social Media Management</h4>
+                <a href="mailto:marcosmartinez16@hickoryhillswebdevelopment.com?subject=Order: Business Package" class="btn-flip" data-back="NOW" data-front="ORDER"></a>
+              </div>
+            </div>
+            <div class="slider-controls">
+              <div class="slider-dot active" data-index="0"></div>
+              <div class="slider-dot" data-index="1"></div>
+              <div class="slider-dot" data-index="2"></div>
+            </div>
+            <div class="slider-arrow prev">&#10094;</div>
+            <div class="slider-arrow next">&#10095;</div>
+          </div>
+          <ul class="package-info">
+            <li>10 Page Website</li>
+            <li>Social Media Management</li>
+            <li>E-commerce Intergration</li>
+            <li>Payment Intergration</li>
+            <li>Opt-in Form</li>
+            <li>Up To 5 Sections Per Page</li>
+            <li>Hosting Support</li>
+            <li>Speed Optimization</li>
+            <li>Fully Customiziable</li>
+            <li>Mobile and Desktop Friendly</li>
+            <li>Unlimited Revisions</li>
+            <li>API Intergration</li>
+            <li>5 Plug-In's/Extensions</li>
+            <li>100% Satisfaction Guaranteed</li>
+            <li>100% Ownership of Website</li>
+            <li>14 Day Delivery</li>
+            <li>Express Service: + $500</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </section>
+    <!------------------ LOGO CAROUSAL ------------------>
+    <section id="logo-carousal">
+      <div class="logo_items">
+        
+        <img src="images/carousal-insta.png" alt="carousal image">
+        <img src="images/carousal-facebook.jpg" alt="carousal image">
+        <img src="images/carousal-x.jpg" alt="carousal image">
+        <img src="images/carousal-shopify.png" alt="carousal image">
+        <img src="images/carousal-ecom.png" alt="carousal image">
+        <img src="images/carousal-ssl.png" alt="carousal image">
+        <img src="images/carousal-html.png" alt="carousal image">
+        <img src="images/carousal-css.webp" alt="carousal image">
+        <img src="images/carousal-js.png" alt="carousal image">
+        <img src="images/carousal-react.png" alt="carousal image">
+        <img src="images/carousal-insta.png" alt="carousal image">
+        <img src="images/carousal-facebook.jpg" alt="carousal image">
+        <img src="images/carousal-x.jpg" alt="carousal image">
+        <img src="images/carousal-shopify.png" alt="carousal image">
+        <img src="images/carousal-ecom.png" alt="carousal image">
+        <img src="images/carousal-ssl.png" alt="carousal image">
+        <img src="images/carousal-html.png" alt="carousal image">
+        <img src="images/carousal-css.webp" alt="carousal image">
+        <img src="images/carousal-js.png" alt="carousal image">
+        <img src="images/carousal-react.png" alt="carousal image">
+      </div>
+    </section>
+    <!------------------ ABOUT US SECTION ------------------>
+    <section id="portfolio">
+    <div class="portfolioIntro">
+      <span>About Us</span>
+      <h2 class="animated fadeInRight">Marcos Martinez</h2>
+      <p class="animated fadeInLeft">
+        Hey there! I'm a 21-year-old web developer passionate 
+        about coding and creating sleek, functional websites. 
+        Originally from Chicago, 
+        I'm currently studying in Spain, diving deeper into the 
+        world of technology. When I'm not coding, you'll probably 
+        find me watching or playing fútbol—it's my second love after 
+        programming. I'm always eager to learn, build, and collaborate 
+        on exciting web projects. Let’s create something awesome together! 
+      </p>
+    </div>
+    <div class="portfolioAbout">
+      <img src="images/someMexican.png" alt="">
+      <p>
+        I specialize in crafting responsive and user-friendly websites, 
+        blending clean code with modern design principles. Whether it's 
+        front-end development, back-end logic, or full-stack solutions, 
+        I enjoy tackling challenges and bringing ideas to life. I'm always 
+        exploring new technologies and frameworks to stay ahead in the ever-evolving 
+        world of web development. If you're looking for a passionate developer to collaborate 
+        with, let's connect!
+        <br>
+        <br>
+        <br>
+        Beyond coding and fútbol, I’m a firm believer in continuous learning and problem-solving. 
+        I love diving into new challenges, whether it’s debugging complex code, optimizing performance, 
+        or experimenting with the latest web technologies. My goal is to create seamless digital experiences 
+        that are both visually appealing and highly functional. Every project I work on is an opportunity to 
+        grow and push the boundaries of what’s possible on the web.
+      </p>
+      <button class="landing-button" role="button">
+        <a href="https://mmartinez1468.github.io/portfolio/index.html">My Portfolio</a>
+      </button>
+    </div>
+    </section>
+    <!------------------ CONTACT SECTION ------------------>
+    <section id="contact">
+      <div class="getInTouch">
+        <span>Contact Us</span>
+        <h2>Get In Touch</h2>
+        <label>
+          We’d love to hear from you! Whether you have a question, feedback, 
+          or just want to say hello, feel free to reach out. Simply fill out 
+          the form below, and we’ll get back to you as soon as possible. Your 
+          thoughts and inquiries are important to us, and we’re always happy 
+          to help. Let’s start a conversation!
+        </label>
+      </div>
+
+
+      <div class="formWrapper">
+          <form action="https://api.web3forms.com/submit" method="post">
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+              <div class="inputGroup" id="inputName">
+                  <label>Name:</label>
+                  <input type="text"required>
+              </div>
+              <div class="inputGroup">
+                  <label>Email:</label>
+                  <input type="email" required>
+              </div>
+              <div class="inputGroup">
+                  <label>Phone: (Optional)</label>
+                  <input type="text">
+              </div>
+              <div class="inputGroup">
+                  <label>Message:</label>
+                  <textarea rows="5"></textarea required>
+                  <button type="submit" class="landing-button">Submit</button>
+              </div>
+          </form>
+      </div>
+    </section>
+    <!------------------ FREQUENTLY ASKED SECTION ------------------>
+    <section id="faq">
+    <div class="faqIntro">
+      <h2>FAQs</h2>
+      <p>Got questions? We've got answers!
+        Explore our FAQ section, where we tackle common questions in a simple, 
+        friendly way. Whether you need quick info or detailed insights, our FAQs 
+        deliver clear, helpful guidance. Dive in and stay informed!
+      </p>
+    </div>
+    <ul class="faqContainer">
+      <li>
+        <div class="faqQuestion">
+          <button class="accordion">
+            Why not use a website builder
+            <i class="arrow down"></i>
+          </button>
+          <div class="panel">
+            <p>Website builders can be a quick and easy solution for creating a website, 
+              but they come with limitations. They often provide less flexibility in design
+               and functionality compared to custom development. Performance, SEO optimization, 
+               and scalability can also be restricted. Additionally, website builders may have 
+               hidden costs, lack full ownership of your site’s code, and make it harder to migrate 
+               in the future. If you want a unique, high-performing, and scalable website tailored 
+               to your needs, custom development is the better choice.
+              </p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="faqQuestion">
+          <button class="accordion">
+            What is SEO and why is it so important?
+            <i class="arrow down"></i>
+          </button>
+          <div class="panel">
+            <p>SEO (Search Engine Optimization) is the process of improving a website’s visibility 
+              in search engines like Google. It involves optimizing content, structure, and performance 
+              to rank higher in search results, making it easier for users to find your site. 
+              SEO is crucial because higher rankings lead to more traffic, better credibility, 
+              and increased conversions. A well-optimized website loads faster, provides a better 
+              user experience, and attracts the right audience. Without SEO, your website may get 
+              lost among millions of others, limiting its reach and potential growth.</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="faqQuestion">
+          <button class="accordion">
+            Why is a good website so important?
+            <i class="arrow down"></i>
+          </button>
+          <div class="panel">
+            <p>
+              A good website is essential because it serves as the digital face of your brand or business. 
+              It creates the first impression for visitors, builds credibility, and helps attract and retain customers. 
+              A well-designed website ensures a smooth user experience, fast loading times, and mobile responsiveness, 
+              all of which improve engagement and conversion rates. Additionally, a good website enhances your online presence, 
+              supports SEO efforts, and allows you to showcase your products, services, or content effectively. In today’s digital world, 
+              a strong website is a key factor in staying competitive and reaching a wider audience.
+            </p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="faqQuestion">
+          <button class="accordion">
+            How long does a website take to make?
+            <i class="arrow down"></i>
+          </button>
+          <div class="panel">
+            <p>
+              The time required to create a website depends on its complexity, features, and design requirements.
+              Simple websites (e.g., basic landing pages or portfolios) can take a few days to a couple of weeks.
+              Small business websites with multiple pages and some custom features may take 2–6 weeks.
+              E-commerce sites or more complex websites with custom functionality can take 2–3 months or more.
+              Fully custom web applications with advanced features may require several months of development.
+              Factors like revisions, content creation, and integrations with third-party tools can also impact the timeline. 
+              Proper planning and clear requirements help speed up the process.
+            </p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="faqQuestion">
+          <button class="accordion">
+            What's cheaper custom or a website builder?
+            <i class="arrow down"></i>
+          </button>
+          <div class="panel">
+            <p>
+              A website builder is generally cheaper upfront because it offers pre-made templates and drag-and-drop features. 
+              Prices typically range from $10 to $50 per month, but costs can add up with premium features, plugins, and higher-tier 
+              plans. A custom-built website requires a higher initial investment, often ranging from a few hundred to several thousand 
+              dollars, depending on complexity. However, it provides full ownership, scalability, and better long-term value without 
+              being locked into monthly fees or limited features.
+            </p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="faqQuestion">
+          <button class="accordion">
+            Why Choose Us?
+            <i class="arrow down"></i>
+          </button>
+          <div class="panel">
+            <p>
+              We offer personalized service, transparent pricing, and ongoing support to ensure your website evolves with your business. 
+              With us, you get a partner who genuinely cares about your success and provides a solution that grows with you.
+            </p>
+          </div>
+        </div>
+      </li>
+    </ul>
+    </section>
+
+     <!------------------ FOOTER SECTION ------------------>
+    <footer>
+      <div class="footerLinks">
+          <h4>Development</h4>
+          <hr class="solid">
+          <a href="">
+              <p>Skills</p>
+          </a>
+          <a href="">
+              <p>Prices</p>
+          </a>
+          <a href="">
+              <p>Development Process</p>
+          </a>
+          <a href="">
+              <p>FAQ</p>
+          </a>
+      </div>
+      <div class="footerLinks">
+          <h4>Resources</h4>
+          <hr class="solid">
+          <a href="">
+              <p>Support</p>
+          </a>
+          <a href="">
+              <p>Free Consultation</p>
+          </a>
+          <a href="">
+              <p>FAQ</p>
+          </a>
+          <a href="">
+              <p>Call Us</p>
+          </a>
+      </div>
+      <div class="footerLinks">
+          <h4>About</h4>
+          <hr class="solid">
+          <a href="">
+              <p>Portfolio</p>
+          </a>
+          <a href="">
+              <p>Terms Of Service</p>
+          </a>
+          <a href="">
+              <p>Services</p>
+          </a>
+          <a href="">
+              <p>Refund Policy</p>
+          </a>
+      </div>
+      <div class="footerLinks footerPrivacy">
+          <h4>Privacy</h4>
+          <hr class="solid">
+          <p>
+            Questions or concerns? Reading this Privacy 
+            Notice will help you understand your privacy 
+            rights and choices. We are responsible for 
+            making decisions about how your personal 
+            information is processed. If you do not 
+            agree with our policies and practices, 
+            please do not use our Services. 
+            If you still have any questions or 
+            concerns, please contact us at 
+            marcosmartinez16@icloud.com.
+          </p>
+      </div>
+    </footer>
+
+  <script src="script.js"></script>
+</main>
+</body>
+</html>
