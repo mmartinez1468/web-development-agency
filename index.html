@@ -7,62 +7,104 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Emblema+One&family=Lora:ital,wght@0,400..700;1,400..700&family=Paytone+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <title>Document</title>
 <body>
   
   <main>
     <div class="loader"></div>
-    <nav id="navigation">
-      <div id="menuToggle">
-        <input type="checkbox" id="menuCheckbox" /> <!-- Opens Up Menu -->
-        <!-- Hamburger Menu Design -->
-        <span></span>
-        <span></span>
-        <span></span>
-        <!-- Vertical Menu -->
-        <ul id="menu">
-          <li>
-            <a href="#">
-              <label for="menuCheckbox" onclick="this.parentNode.click();">Home</label>
+    <!--=============== HEADER ===============-->
+    <header class="header">
+         
+      <nav class="nav header-container">
+         <div class="nav__data">
+            <a href="index.html" class="nav__logo">
+               <img src="images/web-dev-logo.png" alt="">
             </a>
-          </li>
-          <li>
-            <a href="about.html">
-              <label for="menuCheckbox" onclick="this.parentNode.click();">About</label>
-            </a>
-          </li>
-          
-          <!-- These just close the menu -->
-          <li><label for="menuCheckbox"><a href="https://mmartinez1468.github.io/portfolio/index.html">Portfolio</a></label></li>
-          
-          <!-- Or just use regular URLs -->
-          <li>
-            <a href="mailto:marcosmartinez16@hickoryhillswebdevelopment.com?subject=Lets Work Together!" target="_blank">Contact Us</a>
-          </li>
-          <div class="legal">
-            <a href="">
-              <p>Privacy Policy</p>
-            </a>
-            <a href="">
-              <p>Terms Of Service</p>
-            </a>
-            <a href="">
-              <p>Refund Policy</p>
-            </a>
-          </div>
-        </ul>
-      </div>
-  
-      <a href="index.html" class="navLogo">
-        <img src="images/Remove background project (8).png" alt="">
-      </a>
-  
-      <div class="button">
-          <button class="navButton">
-              <a href="mailto:marcosmartinez16@hickoryhillswebdevelopment.com?subject=Lets Work Together!">Contact Us</a>
-          </button>
-      </div>
-    </nav>
+            
+            <div class="nav__toggle" id="nav-toggle">
+               <i class="ri-menu-line nav__burger"></i>
+               <i class="ri-close-line nav__close"></i>
+            </div>
+         </div>
+
+         <!--=============== NAV MENU ===============-->
+         <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+              <li><a href="#" class="nav__link">Home</a></li>
+
+              <!--=============== DROPDOWN 1 ===============-->
+               
+               
+              <li><a href="#" class="nav__link">About</a></li>
+              <li class="dropdown__item">
+                <div class="nav__link">
+                   Services <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                </div>
+
+                <ul class="dropdown__menu">
+                  <li>
+                    <a href="#" class="dropdown__link">
+                       <i class="ri-computer-fill"></i> Website Development
+                    </a>                          
+                  </li> 
+                  <li>
+                      <a href="#" class="dropdown__link">
+                         <i class="ri-cloud-fill"></i> Hosting
+                      </a>                          
+                   </li>
+
+                   <li>
+                      <a href="#" class="dropdown__link">
+                         <i class="ri-smartphone-fill"></i> Social Media
+                      </a>
+                   </li>
+
+                   <!--=============== DROPDOWN SUBMENU ===============-->
+                   <li class="dropdown__subitem">
+                      <div class="dropdown__link">
+                         <i class="ri-shopping-cart-2-fill"></i> E-commerce <i class="ri-add-line dropdown__add"></i>
+                      </div>
+
+                      <ul class="dropdown__submenu">
+                         <li>
+                            <a href="#" class="dropdown__sublink">
+                               <i class="ri-plug-2-fill"></i> Plug-ins
+                            </a>
+                         </li>
+ 
+                         <li>
+                            <a href="#" class="dropdown__sublink">
+                               <i class="ri-external-link-fill"></i> Extensions
+                            </a>
+                         </li>
+ 
+                         <li>
+                            <a href="#" class="dropdown__sublink">
+                               <i class="ri-home-gear-fill"></i> API
+                            </a>
+                         </li>
+                      </ul>
+                   </li>
+                   <li>
+                    <a href="#" class="dropdown__link">
+                       <i class="ri-search-2-fill"></i> SEO
+                    </a>
+                 </li>
+                 <li>
+                  <a href="#" class="dropdown__link">
+                     <i class="ri-money-dollar-box-fill"></i> Business Solutions
+                  </a>
+               </li>
+                </ul>
+             </li>
+              <!--=============== DROPDOWN 2 ===============-->
+              <li><a href="mailto:marcosmartinez16@hickoryhillswebdevelopment.com" class="nav__link">Contact Us</a></li>
+               
+            </ul>
+         </div>
+      </nav>
+    </header>
     
 
     <!------------------ LANDING SECTION ------------------>

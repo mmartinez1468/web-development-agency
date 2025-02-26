@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="template.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Emblema+One&family=Lora:ital,wght@0,400..700;1,400..700&family=Paytone+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Template</title>
+</head>
+<body>
+    <header class="header">
+         
+        <nav class="nav header-container">
+           <div class="nav__data">
+              <a href="index.html" class="nav__logo">
+                 <img src="images/web-dev-logo.png" alt="">
+              </a>
+              
+              <div class="nav__toggle" id="nav-toggle">
+                 <i class="ri-menu-line nav__burger"></i>
+                 <i class="ri-close-line nav__close"></i>
+              </div>
+           </div>
+  
+           <!--=============== NAV MENU ===============-->
+           <div class="nav__menu" id="nav-menu">
+              <ul class="nav__list">
+                <li><a href="#" class="nav__link">Home</a></li>
+  
+                <!--=============== DROPDOWN 1 ===============-->
+                 
+                 
+                <li><a href="#" class="nav__link">About</a></li>
+                <li class="dropdown__item">
+                  <div class="nav__link">
+                     Services <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                  </div>
+  
+                  <ul class="dropdown__menu">
+                    <li>
+                      <a href="#" class="dropdown__link">
+                         <i class="ri-computer-fill"></i> Website Development
+                      </a>                          
+                    </li> 
+                    <li>
+                        <a href="#" class="dropdown__link">
+                           <i class="ri-cloud-fill"></i> Hosting
+                        </a>                          
+                     </li>
+  
+                     <li>
+                        <a href="#" class="dropdown__link">
+                           <i class="ri-smartphone-fill"></i> Social Media
+                        </a>
+                     </li>
+  
+                     <!--=============== DROPDOWN SUBMENU ===============-->
+                     <li class="dropdown__subitem">
+                        <div class="dropdown__link">
+                           <i class="ri-shopping-cart-2-fill"></i> E-commerce <i class="ri-add-line dropdown__add"></i>
+                        </div>
+  
+                        <ul class="dropdown__submenu">
+                           <li>
+                              <a href="#" class="dropdown__sublink">
+                                 <i class="ri-plug-2-fill"></i> Plug-ins
+                              </a>
+                           </li>
+   
+                           <li>
+                              <a href="#" class="dropdown__sublink">
+                                 <i class="ri-external-link-fill"></i> Extensions
+                              </a>
+                           </li>
+   
+                           <li>
+                              <a href="#" class="dropdown__sublink">
+                                 <i class="ri-home-gear-fill"></i> API
+                              </a>
+                           </li>
+                        </ul>
+                     </li>
+                     <li>
+                      <a href="#" class="dropdown__link">
+                         <i class="ri-search-2-fill"></i> SEO
+                      </a>
+                   </li>
+                   <li>
+                    <a href="#" class="dropdown__link">
+                       <i class="ri-money-dollar-box-fill"></i> Business Solutions
+                    </a>
+                 </li>
+                  </ul>
+               </li>
+                <!--=============== DROPDOWN 2 ===============-->
+                <li><a href="mailto:marcosmartinez16@hickoryhillswebdevelopment.com" class="nav__link">Contact Us</a></li>
+                 
+              </ul>
+           </div>
+        </nav>
+    </header>
+
+    <script src="script.js"></script>
+</body>
+</html>
