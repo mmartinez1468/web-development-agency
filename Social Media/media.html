@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/template.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Emblema+One&family=Lora:ital,wght@0,400..700;1,400..700&family=Paytone+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Social Media Management</title>
+</head>
+<body>
+
+
+
+
+  <!-- CONSULTATION SLIDE PANEL -->
+  <div class="consultation-slide-panel" id="consultationPanel">
+    <button class="consultation-toggle-btn" id="consultationToggleBtn">Contact Us</button>
+    <div class="consultation-form-container" id="consultationFormBox">
+        <div class="consultation-header">
+            <h4>Free Consultation</h4>
+        </div>
+        <form action="https://api.web3forms.com/submit" method="post">
+            <input type="hidden" name="access_key" value="5859c3e1-f867-4635-9559-d832ee856a88">
+            <!-- Honeypot Spam Protection -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            
+            <div class="inputGroup" id="inputName">
+                <label for="name" id="form-label">Name:</label>
+                <input type="text" id="form-input" name="consultation-name" required>
+            </div>
+            
+            <div class="inputGroup">
+                <label for="consultation-email" id="form-label">Email:</label>
+                <input type="email" id="form-input" name="consultation-email" required>
+            </div>
+            
+            <div class="inputGroup">
+                <label for="consultation-phone" id="form-label">Phone: (Optional)</label>
+                <input type="text" id="form-input" name="phone">
+            </div>
+            
+            <div class="inputGroup">
+                <label for="consultation-message" id="form-label">Message:</label>
+                <textarea id="consultation-message" name="message" rows="5" required></textarea>
+                <button type="submit" class="consultation-submit-btn">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+   <div class="loader"></div>
+   <!------------------ NAVBAR ------------------>
+   <header class="header"> 
+    <nav class="nav header-container">
+      <div class="nav__data">
+          <a href="/index.html" class="nav__logo">
+            <img src="/images/web-dev-logo.png" alt="">
+          </a>
+          
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line nav__burger"></i>
+            <i class="ri-close-line nav__close"></i>
+          </div>
+      </div>
+
+      <!--=============== NAV MENU ===============-->
+      <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li><a href="/index.html" class="nav__link">Home</a></li>
+
+            <!--=============== DROPDOWN 1 ===============-->
+            
+            
+            <li><a href="/About/about.html" class="nav__link">About</a></li>
+            <li class="dropdown__item">
+              <div class="nav__link">
+                Services <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
+
+              <ul class="dropdown__menu">
+                <li>
+                  <a href="/webDev/webDev.html" class="dropdown__link">
+                    <i class="ri-computer-fill"></i> Website Development
+                  </a>                          
+                </li> 
+                <li>
+                    <a href="/Hosting/hosting.html" class="dropdown__link">
+                      <i class="ri-cloud-fill"></i> Hosting
+                    </a>                          
+                </li>
+
+                <li>
+                    <a href="/Social Media/media.html" class="dropdown__link">
+                      <i class="ri-smartphone-fill"></i> Social Media
+                    </a>
+                </li>
+
+                <li>
+                  <a href="/SEO/seo.html" class="dropdown__link">
+                    <i class="ri-search-2-fill"></i> SEO
+                  </a>
+              </li>
+            <!--=============== DROPDOWN SUBMENU ===============-->
+            <li class="dropdown__subitem">
+              <div class="dropdown__link">
+                <a href="/ecommerce/ecommerce.html" style="color: black;">
+                  <i class="ri-shopping-cart-2-fill"></i> E-commerce <i class="ri-add-line dropdown__add"></i>
+                </a>
+              </div>
+
+              <ul class="dropdown__submenu">
+                <li>
+                    <a href="/ecommerce/ecommerce.html" class="dropdown__sublink">
+                      <i class="ri-plug-2-fill"></i> Plug-ins
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/ecommerce/ecommerce.html" class="dropdown__sublink">
+                      <i class="ri-external-link-fill"></i> Extensions
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/ecommerce/ecommerce.html" class="dropdown__sublink">
+                      <i class="ri-home-gear-fill"></i> API
+                    </a>
+                </li>
+              </ul>
+          </li>
+              </ul>
+          </li>
+            <!--=============== DROPDOWN 2 ===============-->
+            <li><a href="/Contact Us/contact.html" class="nav__link">Contact Us</a></li>
+            
+          </ul>
+      </div>
+    </nav>
+   </header>
+
+   <!------------------ LANDING SECTION ------------------>
+   <section id="landing">
+      <div class="landing-content" id="landingContent">
+         <div class="landing-box web" id="landingBox">
+            <div class="landing-content-box">
+               <h2 class="fadeInLeftStay fast">Social Media Management</h2>
+               <p class="fadeInRightStay regular">
+                  We're dedicated to creating beautiful, functional, 
+                  and user-friendly websites. Whether you're looking 
+                  to build a sleek portfolio, launch a cutting-edge 
+                  e-commerce platform, or revamp your existing online 
+                  presence, We're here to turn your vision into reality.
+               </p>
+               <a href="/Contact Us/contact.html">
+                  <button class="landing-button fadeInLeftStay slow">Join Us!</button>
+               </a>
+         </div>
+      </div>
+   </section>
+   <!------------------ STATS SECTION ------------------>
+   <section id="stats">
+      <div class="stats-image">
+          <img src="/images/social-media-stats.jpg" alt="">
+      </div>
+      <div class="stats-intro">
+          <div class="stats-header">
+              <h3 class="animated fadeInDown slow">
+                  Why Is Social Media Important?
+              </h3>
+              <p class="animated fadeInLeft fast">
+                In today's interconnected digital landscape, social media has 
+                transformed from a simple networking tool into an essential cornerstone 
+                of modern communication, business growth, and personal expression. What 
+                began as platforms for connecting friends has evolved into powerful ecosystems 
+                that shape public opinion, drive consumer behavior, and influence global trends. 
+              </p>
+          </div>
+          <div class="stats-info">
+              <div class="stats-number">
+                  <h3 class="statNum" data-val="83">0</h4>
+                  <p>
+                      of customers discover busnisses through social media
+                  </p>
+              </div>
+              <div class="stats-number">
+                  <h3 class="statNum" data-val="78">0</h4>
+                  <p>are willing to buy after positive social media experiences</p>
+              </div>
+              <div class="stats-number">
+                  <h3 class="statNum" data-val="73">0</h4>
+                  <p>of marketers report social media is effective</p>
+              </div>
+              <div class="stats-number">
+                  <h3 class="statNum" data-val="68">0</h4>
+                  <p>of consumers use social media to interact with companies</p>
+              </div>
+          </div>
+      </div>
+   </section>
+
+   <!-------------------------- LOGO SECTION -------------------------->
+   <section id="logo-carousal">
+    <div class="logo_items">
+      <img src="/images/carousal-insta.png" alt="Instagram Icon">
+      <img src="/images/carousal-facebook.jpg" alt="Facebook Icon">
+      <img src="/images/carousal-x.jpg" alt="X Icon">
+      <img src="/images/carousal-shopify.png" alt="Shopify Icon">
+      <img src="/images/reddit.png" alt="Reddit Icon">
+      <img src="/images/threads.webp" alt="Threads Icon">
+      <img src="/images/tiktok.png" alt="TikTok Icon">
+      <img src="/images/bluesky.png" alt="Bluesky Icon">
+      <img src="/images/snapchat.webp" alt="Snapchat Icon">
+      <img src="/images/LinkedIn.png" alt="LinkedIn Icon">
+      <!-- Duplicate images for infinite scroll effect -->
+      <img src="/images/carousal-insta.png" alt="Instagram Icon">
+      <img src="/images/carousal-facebook.jpg" alt="Facebook Icon">
+      <img src="/images/carousal-x.jpg" alt="X Icon">
+      <img src="/images/carousal-shopify.png" alt="Shopify Icon">
+      <img src="/images/reddit.png" alt="Reddit Icon">
+      <img src="/images/threads.webp" alt="Threads Icon">
+      <img src="/images/tiktok.png" alt="TikTok Icon">
+      <img src="/images/bluesky.png" alt="Bluesky Icon">
+      <img src="/images/snapchat.webp" alt="Snapchat Icon">
+      <img src="/images/LinkedIn.png" alt="LinkedIn Icon">
+    </div>
+  </section>
+   <!------------------ SERVICES SECTION ------------------>
+   <section id="services">
+      <div class="services-intro">
+          <h2>What We Offer</h2>
+      </div>
+      <div class="circle-divider">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 40" preserveAspectRatio="none">
+           <path fill="#ffffff" d="M0,0 L1440,0 L1440,10 C1200,40 240,40 0,10 L0,0 Z"></path>
+        </svg>
+     </div>
+      <div class="what-we-offer">
+          <!-- Services Explained -->
+          <div class="services-container">
+              <div class="image-container">
+                  <img src="/images/nunez.png" class="image-mobile">
+              </div>
+              <div class="services-info">
+                  <h4>Content Creation</h4>
+                  <p>
+                      Content creation services transform your brand messaging into engaging 
+                      social media assets. This includes producing custom graphics, videos, tiktok/youtube/instagram/facebook short videos,
+                      and written content that's platform-specific and aligned with your brand voice. Increase your digital footprint with us today!
+                  </p>
+                  <button class="landing-button">
+                    <a href="/index.html">Learn More</a>
+                  </button>
+              </div>
+          </div>
+          <!-- Services Explained -->
+          <div class="services-container">
+              <div class="image-container">
+                  <img src="/images/ian-rush.png" class="image-desktop">
+              </div>
+              <div class="services-info">
+                  <h4>Trend Monitoring</h4>
+                  <p>
+                      Trend monitoring services keep your social strategy current and competitive in a changing 
+                      digital landscape. This includes tracking platform algorithm updates, emerging content formats, 
+                      and industry developments to help your brand stay relevant and capitalize on new opportunities.
+                  </p>
+                  <button class="landing-button">
+                    <a href="/index.html">Learn More</a>
+                  </button>
+              </div>
+          </div>
+          <!-- Services Explained -->
+          <div class="services-container">
+              <div class="image-container">
+                  <img src="/images/liverpool.png" class="image-desktop">
+              </div>
+              <div class="services-info">
+                  <h4>Advertising Management</h4>
+                  <p>
+                      Paid advertising management services maximize your social media ad investment through strategic 
+                      campaign development. This includes creating targeted ad creative, optimizing audience parameters, 
+                      and continuously refining performance to achieve specific business objectives with measurable results.
+                  </p>
+                  <button class="landing-button">
+                    <a href="/index.html">Learn More</a>
+                  </button>
+              </div>
+          </div>
+          <!-- Services Explained -->
+          <div class="services-container">
+              <div class="image-container">
+                  <img src="/images/salah.png" class="image-mobile">
+              </div>
+              <div class="services-info">
+                  <h4>Community Management</h4>
+                  <p>
+                      Community management services build and nurture relationships with your 
+                      online audience. This includes responding to comments, messages, and 
+                      mentions while moderating discussions to foster positive engagement that 
+                      strengthens brand loyalty.
+                  </p>
+                  <button class="landing-button">
+                    <a href="/index.html">Learn More</a>
+                  </button>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- Wave Separator -->
+  <div class="wave-separator">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+       <path fill="#0e4c8a" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+    </svg>
+  </div>
+
+   <section id="callToAction">
+      <div class="cta-text">
+         <h3>Work With Us Today!</h3>
+         <h4>
+            We're dedicated to helping grow your business 
+            through the world of technology. E-commerce 
+            helps connect your services through the 
+            Internet!
+         </h4>
+         <a href="/Contact Us/contact.html">
+            <button class="landing-button">Join Us</button>
+         </a>
+         <ul class="cta-list">
+           <li>Website Development</li>
+           <li>Social Media Management</li>
+           <li>E-commerce Integration</li>
+           <li>Hosting</li>
+           <li>Business Solutions</li>
+         </ul>
+      </div>
+      <div class="cta-image">
+         <img src="/images/logo.png" alt="">
+      </div>
+   </section>
+
+   <!------------------ FOOTER ------------------>
+   <footer>
+    <div class="footerLinks">
+        <h4>Development</h4>
+        <hr class="solid">
+        <a href="/webDev/webDev.html">
+            <p>Website Development</p>
+        </a>
+        <a href="/Hosting/hosting.html">
+            <p>Hosting</p>
+        </a>
+        <a href="/Social Media/media.html">
+            <p>Social Media Management</p>
+        </a>
+        <a href="/ecommerce/ecommerce.html">
+            <p>E-commerce</p>
+        </a>
+        <a href="/SEO/seo.html">
+          <p>SEO</p>
+      </a>
+    </div>
+    <div class="footerLinks">
+        <h4>Resources</h4>
+        <hr class="solid">
+        <a href="/Contact Us/contact.html">
+            <p>Support</p>
+        </a>
+        <a href="/Contact Us/contact.html">
+            <p>Free Consultation</p>
+        </a>
+        <a href="/index.html">
+            <p>FAQ</p>
+        </a>
+        <a href="/Contact Us/contact.html">
+            <p>Call Us</p>
+        </a>
+    </div>
+    <div class="footerLinks">
+        <h4>About</h4>
+        <hr class="solid">
+        <a href="https://mmartinez1468.github.io/portfolio/">
+            <p>Portfolio</p>
+        </a>
+        <a href="/Contact Us/contact.html">
+            <p>Terms Of Service</p>
+        </a>
+        <a href="/Contact Us/contact.html">
+            <p>Services</p>
+        </a>
+        <a href="/Contact Us/contact.html">
+            <p>Refund Policy</p>
+        </a>
+    </div>
+    <div class="footerLinks footerPrivacy">
+        <h4>Privacy</h4>
+        <hr class="solid">
+        <p>
+          Questions or concerns? Reading this Privacy 
+          Notice will help you understand your privacy 
+          rights and choices. We are responsible for 
+          making decisions about how your personal 
+          information is processed. If you do not 
+          agree with our policies and practices, 
+          please do not use our Services. 
+          If you still have any questions or 
+          concerns, please contact us at 
+          marcosmartinez16@icloud.com.
+        </p>
+    </div>
+   </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>

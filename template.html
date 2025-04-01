@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="template.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Emblema+One&family=Lora:ital,wght@0,400..700;1,400..700&family=Paytone+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <title>E-commerce</title>
+</head>
+<body>
+   <div class="loader"></div>
+   
+
+   <!------------------ LANDING SECTION ------------------>
+   <header class="header">
+         
+      <nav class="nav header-container">
+         <div class="nav__data">
+            <a href="index.html" class="nav__logo">
+               <img src="images/web-dev-logo.png" alt="">
+            </a>
+            
+            <div class="nav__toggle" id="nav-toggle">
+               <i class="ri-menu-line nav__burger"></i>
+               <i class="ri-close-line nav__close"></i>
+            </div>
+         </div>
+
+         <!--=============== NAV MENU ===============-->
+         <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+              <li><a href="index.html" class="nav__link">Home</a></li>
+
+              <!--=============== DROPDOWN 1 ===============-->
+               
+               
+              <li><a href="" class="nav__link">About</a></li>
+              <li class="dropdown__item">
+                <div class="nav__link">
+                   Services <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                </div>
+
+                <ul class="dropdown__menu">
+                  <li>
+                    <a href="webDev.html" class="dropdown__link">
+                       <i class="ri-computer-fill"></i> Website Development
+                    </a>                          
+                  </li> 
+                  <li>
+                      <a href="hosting.html" class="dropdown__link">
+                         <i class="ri-cloud-fill"></i> Hosting
+                      </a>                          
+                   </li>
+
+                   <li>
+                      <a href="media.html" class="dropdown__link">
+                         <i class="ri-smartphone-fill"></i> Social Media
+                      </a>
+                   </li>
+
+                   <li>
+                    <a href="seo.html" class="dropdown__link">
+                       <i class="ri-search-2-fill"></i> SEO
+                    </a>
+                 </li>
+                 <li>
+                  <a href="#" class="dropdown__link">
+                     <i class="ri-money-dollar-box-fill"></i> Business Solutions
+                  </a>
+               </li>
+               <!--=============== DROPDOWN SUBMENU ===============-->
+               <li class="dropdown__subitem">
+                <div class="dropdown__link">
+                   <a href="ecommerce.html" style="color: black;">
+                    <i class="ri-shopping-cart-2-fill"></i> E-commerce <i class="ri-add-line dropdown__add"></i>
+                   </a>
+                </div>
+
+                <ul class="dropdown__submenu">
+                   <li>
+                      <a href="#" class="dropdown__sublink">
+                         <i class="ri-plug-2-fill"></i> Plug-ins
+                      </a>
+                   </li>
+
+                   <li>
+                      <a href="#" class="dropdown__sublink">
+                         <i class="ri-external-link-fill"></i> Extensions
+                      </a>
+                   </li>
+
+                   <li>
+                      <a href="#" class="dropdown__sublink">
+                         <i class="ri-home-gear-fill"></i> API
+                      </a>
+                   </li>
+                </ul>
+             </li>
+                </ul>
+             </li>
+              <!--=============== DROPDOWN 2 ===============-->
+              <li><a href="mailto:marcosmartinez16@hickoryhillswebdevelopment.com" class="nav__link">Contact Us</a></li>
+               
+            </ul>
+         </div>
+      </nav>
+    </header>
+
+
+    <!------------------ LANDING SECTION ------------------>
+   <section id="landing">
+      <div class="landing-content">
+         <div class="landing-box web">
+            <div class="landing-content-box">
+               <h2>Work With Us Today!</h2>
+               <p>
+                  We're dedicated to creating beautiful, functional, 
+                  and user-friendly websites. Whether you're looking 
+                  to build a sleek portfolio, launch a cutting-edge 
+                  e-commerce platform, or revamp your existing online 
+                  presence, We're here to turn your vision into reality.
+               </p>
+               <a href="mailto:marcosmartinez16@hickoryhillswebdevelopment.com?subject=Lets Work Together!">
+                  <button class="landing-button">Join Us!</button>
+               </a>
+         </div>
+      </div>
+   </section>
+
+   <!------------------ STATS SECTION ------------------>
+   <section id="stats">
+      <ul class="statWrapper">
+        <li class="statContainer">
+         <div class="statIcon">
+            <i class="ri-money-dollar-box-line"></i>
+         </div>
+         <div class="statInfo">
+            <h2 class="statNum" data-val="88">0</h2>
+            <p>of users never return to a poorly made website after a bad user experience</p>
+         </div>
+        </li>
+        <li class="statContainer">
+         <div class="statIcon">
+            <i class="ri-money-dollar-box-line"></i>
+         </div>
+         <div class="statInfo">
+            <h2 class="statNum" data-val="88">0</h2>
+            <p>of consumers trust product reviews as much as personal recommendations</p>
+         </div>
+        </li>
+        <li class="statContainer">
+         <div class="statIcon">
+            <i class="ri-money-dollar-box-line"></i>
+         </div>
+         <div class="statInfo">
+            <h2 class="statNum" data-val="83">0</h2>
+            <p>of US shoppers found product images to be extremely influential in shaping their purchase decisions</p>
+         </div>
+        </li>
+        <li class="statContainer">
+         <div class="statIcon">
+            <i class="ri-money-dollar-box-line"></i>
+         </div>
+         <div class="statInfo">
+            <h2 class="statNum" data-val="73">0</h2>
+            <p>of e-commerce purchases come from outside a business's immediate geographic area</p>
+         </div>
+        </li>
+      </ul>
+</section>
+
+   <!------------------ LANDING QUOTE ------------------>
+   <section id="landing-quote">
+      <h3>GIVE US THE OPPORTUNITY TO <h3 style="color: #ffa601; border-top: none;">GROW WITH YOU</h3></h3>
+      <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. sed aut tempore distinctio quis reprehenderit vel iste, harum ipsa rerum.</h4>
+   </section>
+
+   <!------------------ INFO SECTION ------------------>
+   <section id="info">
+      <div class="info-wrapper">
+         <div class="step-container">
+            <h3 style="color: #ffa601;">STEP 1:</h3>
+            <h3 style="color: #1178de;">PROUDCT MARKETING</h3>
+            <p>
+               Lorem ipsum, dolor sit amet consectetur 
+               adipisicing elit. Excepturi esse quidem 
+               dolor odio modi saepe adipisci ipsa, 
+               vel beatae similique unde a repudiandae 
+               laboriosam id nesciunt! Aspernatur 
+               impedit laborum in!
+            </p>
+         </div>
+         <div class="step-image">
+            <img src="images/ecommerce-info-1.jpg" alt="">
+         </div>
+      </div>
+
+      <div class="info-wrapper">
+         <div class="step-image" id="stepImage">
+            <img src="images/ecommerce-2.jpg" alt="">
+         </div>
+         <div class="step-container">
+            <h3 style="color: #ffa601;">STEP 2:</h3>
+            <h3 style="color: #1178de;">PROUDCT MARKETING</h3>
+            <p>
+               Lorem ipsum, dolor sit amet consectetur 
+               adipisicing elit. Excepturi esse quidem 
+               dolor odio modi saepe adipisci ipsa, 
+               vel beatae similique unde a repudiandae 
+               laboriosam id nesciunt! Aspernatur 
+               impedit laborum in!
+            </p>
+         </div>
+      </div>
+
+      <div class="info-wrapper">
+         <div class="step-container">
+            <h3 style="color: #ffa601;">STEP 3:</h3>
+            <h3 style="color: #1178de;">PROUDCT MARKETING</h3>
+            <p>
+               Lorem ipsum, dolor sit amet consectetur 
+               adipisicing elit. Excepturi esse quidem 
+               dolor odio modi saepe adipisci ipsa, 
+               vel beatae similique unde a repudiandae 
+               laboriosam id nesciunt! Aspernatur 
+               impedit laborum in!
+            </p>
+         </div>
+         <div class="step-image">
+            <img src="images/ecommerce-info-3.jpg" alt="">
+         </div>
+      </div>
+
+      <div class="info-wrapper">
+         <div class="step-image" id="stepImage">
+            <img src="images/ecommerce-info-4.jpg" alt="">
+         </div>
+         <div class="step-container">
+            <h3 style="color: #ffa601;">STEP 4:</h3>
+            <h3 style="color: #1178de;">PROUDCT MARKETING</h3>
+            <p>
+               Lorem ipsum, dolor sit amet consectetur 
+               adipisicing elit. Excepturi esse quidem 
+               dolor odio modi saepe adipisci ipsa, 
+               vel beatae similique unde a repudiandae 
+               laboriosam id nesciunt! Aspernatur 
+               impedit laborum in!
+            </p>
+         </div>
+      </div>
+      
+   </section>
+
+   <section id="callToAction">
+      <div class="cta-text">
+         <h3>Work With Us Today!</h3>
+         <h4>
+            We're dedicated to helping grow your business 
+            through the world of technology. E-commerce 
+            helps connect your services through the 
+            Internet!
+         </h4>
+         <a href="mailto:marcosmartinez16@hickoryhillswebdevelopment.com?subject=Lets Work Together!">
+            <button class="landing-button">Join Us</button>
+         </a>
+         <ul class="cta-list">
+            <li>Website Development</li>
+            <li>Hosting</li>
+            <li>Social Media</li>
+            <li>SEO</li>
+            <li>Business Solution</li>
+            <li>E-commerce</li>
+         </ul>
+      </div>
+      <div class="cta-image">
+         <img src="images/logo.png" alt="">
+      </div>
+   </section>
+
+   <!------------------ FOOTER ------------------>
+   <footer>
+      <div class="footerLinks">
+          <h4>Development</h4>
+          <hr class="solid">
+          <a href="website.html">
+              <p>Website Development</p>
+          </a>
+          <a href="hosting.html">
+              <p>Hosting</p>
+          </a>
+          <a href="media.html">
+              <p>Social Media Management</p>
+          </a>
+          <a href="ecommerce.html">
+              <p>E-commerce</p>
+          </a>
+          <a href="seo.html">
+            <p>SEO</p>
+        </a>
+        <a href="business.html">
+            <p>Business Solution</p>
+        </a>
+      </div>
+      <div class="footerLinks">
+          <h4>Resources</h4>
+          <hr class="solid">
+          <a href="">
+              <p>Support</p>
+          </a>
+          <a href="">
+              <p>Free Consultation</p>
+          </a>
+          <a href="">
+              <p>FAQ</p>
+          </a>
+          <a href="">
+              <p>Call Us</p>
+          </a>
+      </div>
+      <div class="footerLinks">
+          <h4>About</h4>
+          <hr class="solid">
+          <a href="https://mmartinez1468.github.io/portfolio/">
+              <p>Portfolio</p>
+          </a>
+          <a href="">
+              <p>Terms Of Service</p>
+          </a>
+          <a href="">
+              <p>Services</p>
+          </a>
+          <a href="">
+              <p>Refund Policy</p>
+          </a>
+      </div>
+      <div class="footerLinks footerPrivacy">
+          <h4>Privacy</h4>
+          <hr class="solid">
+          <p>
+            Questions or concerns? Reading this Privacy 
+            Notice will help you understand your privacy 
+            rights and choices. We are responsible for 
+            making decisions about how your personal 
+            information is processed. If you do not 
+            agree with our policies and practices, 
+            please do not use our Services. 
+            If you still have any questions or 
+            concerns, please contact us at 
+            marcosmartinez16@icloud.com.
+          </p>
+      </div>
+   </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

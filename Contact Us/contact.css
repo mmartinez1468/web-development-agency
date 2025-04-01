@@ -1,0 +1,563 @@
+/********************** CSS RESET **********************/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}  
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+p, span, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    text-wrap: balance;
+    font-family: "Bricolage Grotesque", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+p {
+    text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+    font-family: "Bricolage Grotesque", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+#root, #__next {
+    isolation: isolate;
+}
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+h3 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+p {
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+span {
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --black-color: hsl(220, 24%, 12%);
+  --black-color-light: hsl(220, 24%, 15%);
+  --black-color-lighten: hsl(220, 20%, 18%);
+  --white-color: #fff;
+  --body-color: hsl(220, 100%, 97%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Montserrat", sans-serif;
+  --normal-font-size: .938rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1024px) {
+    :root {
+      --normal-font-size: 1rem;
+    }
+}  
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+} 
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+} 
+ul {
+    list-style: none;
+    /* Color highlighting when pressed on mobile devices */
+    /*-webkit-tap-highlight-color: transparent;*/
+}  
+a {
+    text-decoration: none;
+}  
+/*=============== REUSABLE CSS CLASSES ===============*/
+.header-container {
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+}
+/********************** PRE LOADER **********************/
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    opacity: 1;
+    z-index: 100000000;
+}
+.loaderHidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 2s, visibility 1s; /* Apply transition here only */
+}
+.loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: #1178de;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+
+}
+@keyframes loading {
+    from {
+      transform: rotate(0turn);
+    }
+    to {
+      transform: rotate(1turn);
+    }
+}
+
+
+
+
+
+/********************** NAVBAR **********************/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3);
+  z-index: var(--z-fixed);
+}
+.nav {
+  height: var(--header-height);
+}
+.nav__logo, 
+.nav__burger, 
+.nav__close {
+  color: black;
+}
+.nav__data {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__logo {
+  display: inline-flex;
+  align-items: center;
+  column-gap: .25rem;
+  font-weight: var(--font-semi-bold);
+  /* Color highlighting when pressed on mobile devices */
+  /*-webkit-tap-highlight-color: transparent;*/
+}
+.nav__logo img {
+  height: 50px;
+  width: 120px;
+}
+.nav__toggle {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+.nav__burger, 
+.nav__close {
+  position: absolute;
+  width: max-content;
+  height: max-content;
+  inset: 0;
+  margin: auto;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: opacity .1s, transform .4s;
+}
+.nav__close {
+  opacity: 0;
+}
+/* Navigation for mobile devices */
+@media screen and (max-width: 1118px) {
+  .nav__menu {
+    position: absolute;
+    left: 0;
+    top: 2.5rem;
+    width: 100%;
+    height: calc(100vh - 3.5rem);
+    overflow: auto;
+    pointer-events: none;
+    opacity: 0;
+    transition: top .4s, opacity .3s;
+  }
+  .nav__menu::-webkit-scrollbar {
+    width: 0;
+  }
+  .nav__list {
+    background-color: white;
+    padding-top: 1rem;
+  }
+}
+.nav__link {
+  color: #1178de;
+  background-color: white;
+  font-weight: var(--font-semi-bold);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color .3s;
+  position: relative; /* Add this to make the link a positioning context */
+}
+.nav__link:hover {
+  background-color: var(--black-color-light);
+}
+.nav__link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0; /* Position at the bottom of the link */
+  left: 0; /* Ensure it starts from the left edge */
+  border-radius: 4px;
+  background-color: #e5c42a;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+.nav__link:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+/* Show menu */
+.show-menu {
+  opacity: 1;
+  top: 3.5rem;
+  pointer-events: initial;
+}
+/* Show icon */
+.show-icon .nav__burger {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+.show-icon .nav__close {
+  opacity: 1;
+  transform: rotate(90deg);
+}
+/*=============== DROPDOWN ===============*/
+.dropdown__item {
+  cursor: pointer;
+}
+.dropdown__arrow {
+  font-size: 1.25rem;
+  font-weight: initial;
+  transition: transform .4s;
+}
+.dropdown__link, 
+.dropdown__sublink {
+  padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+  color: black;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  column-gap: .5rem;
+  font-weight: var(--font-semi-bold);
+  transition: background-color .3s;
+}
+.dropdown__link i, 
+.dropdown__sublink i {
+  font-size: 1.25rem;
+  font-weight: initial;
+}
+.dropdown__link:hover, 
+.dropdown__sublink:hover {
+  background-color: rgb(176, 176, 176);
+}
+.dropdown__menu, 
+.dropdown__submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .4s ease-out;
+}
+/* Show dropdown menu & submenu */
+.dropdown__item:hover .dropdown__menu, 
+.dropdown__subitem:hover > .dropdown__submenu {
+  max-height: 1000px;
+  transition: max-height .4s ease-in;
+}
+/* Rotate dropdown icon */
+.dropdown__item:hover .dropdown__arrow {
+  transform: rotate(180deg);
+}
+/*=============== DROPDOWN SUBMENU ===============*/
+.dropdown__add {
+  margin-left: auto;
+}
+.dropdown__sublink {
+  background-color: white;
+}
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 340px) {
+  .header-container {
+    margin-inline: 1rem;
+  }
+
+  .nav__link {
+    padding-inline: 1rem;
+  }
+}
+/* For large devices */
+@media screen and (min-width: 1118px) {
+  .header-container {
+    margin-inline: auto;
+  }
+  .dropdown__link, 
+  .dropdown__sublink {
+      width: 200px;
+  }
+  .nav {
+    height: calc(var(--header-height) + 2rem);
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav__toggle {
+    display: none;
+  }
+  .nav__list {
+    height: 100%;
+    display: flex;
+    column-gap: 3rem;
+  }
+  .nav__link {
+    height: 100%;
+    padding: 0;
+    justify-content: initial;
+    column-gap: .25rem;
+  }
+  .nav__link:hover {
+    background-color: transparent;
+  }
+
+  .dropdown__item, 
+  .dropdown__subitem {
+    position: relative;
+  }
+
+  .dropdown__menu, 
+  .dropdown__submenu {
+    max-height: initial;
+    overflow: initial;
+    position: absolute;
+    left: 0;
+    top: 6rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s, top .3s;
+  }
+
+  .dropdown__link, 
+  .dropdown__sublink {
+    padding-inline: 1rem 3.5rem;
+  }
+
+  .dropdown__subitem .dropdown__link {
+    padding-inline: 1rem;
+  }
+
+  .dropdown__submenu {
+    position: absolute;
+    left: 100%;
+    top: .5rem;
+  }
+
+  /* Show dropdown menu */
+  .dropdown__item:hover .dropdown__menu {
+    opacity: 1;
+    top: 5.5rem;
+    pointer-events: initial;
+    transition: top .3s;
+  }
+
+  /* Show dropdown submenu */
+  .dropdown__subitem:hover > .dropdown__submenu {
+    opacity: 1;
+    top: 0;
+    pointer-events: initial;
+    transition: top .3s;
+  }
+}
+
+
+/*==================================
+  13. CONTACT SECTION
+==================================*/
+#contact {
+    width: 100%;
+    padding: 3rem 0;
+    background-color: #f4efef;
+    margin-top: 3rem;
+  }
+  .getInTouch {
+    padding: 1rem;
+  }
+  .getInTouch > span {
+    color: #1178de;
+  }
+  .formWrapper {
+    background-color: #ffffff;
+    margin: 1rem;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    color: rgb(0, 0, 0);
+    border: 2px solid black;
+  }
+  .form-main {
+    padding: 1rem;
+  }
+  .inputGroup {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .inputGroup > button {
+    background-color: #ffa601;
+  }
+  .inputGroup > input, textarea {
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 5px;
+    margin-bottom: 1rem;
+  }
+  .inputGroup > input:focus {
+    outline: none;
+    border: 2px solid orange;
+  }
+  @media screen and (min-width:900px) {
+    #contact {
+        display: flex;
+        flex-direction: row;
+    }
+    .getInTouch {
+        padding: 2rem;
+        width: 50%;
+    }
+    .getInTouch > label {
+        font-size: 1.25rem;
+    }
+    .getInTouchInfo {
+        font-size: 1.5rem;
+    }
+    .formWrapper {
+        width: 70%;
+    }
+    .form-main {
+        padding: 2rem;
+    }
+    .inputGroup > label {
+        font-size: 1.25rem;
+    }
+  }
+  @media screen and (min-width:1024px) {
+    #contact {
+        margin-top: 5rem;
+    }
+    .formWrapper {
+        width: 50%;
+    }
+    .getInTouch {
+        padding: 3rem;
+    }
+    .getInTouch > label {
+        font-size: 1.5rem;
+    }
+    .getInTouchInfo > img {
+        height: 60px;
+        width: 60px;
+        margin-right: 8px;
+      }
+    .form-main {
+        padding: 3rem;
+    }
+    .inputGroup > label {
+        font-size: 1.5rem;
+    }
+  }
+  .landing-button {
+    width: 9em;
+    height: 3em;
+    font-size: 15px;
+    font-family: inherit;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+    font-family: "Bricolage Grotesque", serif;
+    background-color: #ffa601;
+    color: white;
+    font-weight: 900;
+}
+.landing-button::before {
+    content: '';
+    width: 0;
+    height: 3em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #0fb0d8 0%, #47d5f9 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}  
+.landing-content-box > p {
+    margin-bottom: 1rem;
+}
+.landing-button:hover::before {
+    width: 9em;
+}

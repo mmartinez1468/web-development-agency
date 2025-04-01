@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hickory Hills Web Development</title>
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Emblema+One&family=Lora:ital,wght@0,400..700;1,400..700&family=Paytone+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <!-- Page Loader -->
+    <div class="loader"></div>
+
+    <!-- CONSULTATION SLIDE PANEL -->
+    <div class="consultation-slide-panel" id="consultationPanel">
+      <button class="consultation-toggle-btn" id="consultationToggleBtn">Contact Us</button>
+      <div class="consultation-form-container" id="consultationFormBox">
+          <div class="consultation-header">
+              <h4>Free Consultation</h4>
+          </div>
+          <form action="https://api.web3forms.com/submit" method="post">
+              <input type="hidden" name="access_key" value="5859c3e1-f867-4635-9559-d832ee856a88">
+              <!-- Honeypot Spam Protection -->
+              <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+              
+              <div class="inputGroup" id="inputName">
+                  <label for="name" id="form-label">Name:</label>
+                  <input type="text" id="form-input" name="consultation-name" required>
+              </div>
+              
+              <div class="inputGroup">
+                  <label for="consultation-email" id="form-label">Email:</label>
+                  <input type="email" id="form-input" name="consultation-email" required>
+              </div>
+              
+              <div class="inputGroup">
+                  <label for="consultation-phone" id="form-label">Phone: (Optional)</label>
+                  <input type="text" id="form-input" name="phone">
+              </div>
+              
+              <div class="inputGroup">
+                  <label for="consultation-message" id="form-label">Message:</label>
+                  <textarea id="consultation-message" name="message" rows="5" required></textarea>
+                  <button type="submit" class="consultation-submit-btn">Submit</button>
+              </div>
+          </form>
+      </div>
+    </div>
+    
+    <!------------------ NAVBAR ------------------>
+    <header class="header"> 
+      <nav class="nav header-container">
+        <div class="nav__data">
+            <a href="/index.html" class="nav__logo">
+              <img src="/images/web-dev-logo.png" alt="">
+            </a>
+            
+            <div class="nav__toggle" id="nav-toggle">
+              <i class="ri-menu-line nav__burger"></i>
+              <i class="ri-close-line nav__close"></i>
+            </div>
+        </div>
+
+        <!--=============== NAV MENU ===============-->
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+              <li><a href="/index.html" class="nav__link">Home</a></li>
+
+              <!--=============== DROPDOWN 1 ===============-->
+              
+              
+              <li><a href="/About/about.html" class="nav__link">About</a></li>
+              <li class="dropdown__item">
+                <div class="nav__link">
+                  Services <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                </div>
+
+                <ul class="dropdown__menu">
+                  <li>
+                    <a href="/webDev/webDev.html" class="dropdown__link">
+                      <i class="ri-computer-fill"></i> Website Development
+                    </a>                          
+                  </li> 
+                  <li>
+                      <a href="/Hosting/hosting.html" class="dropdown__link">
+                        <i class="ri-cloud-fill"></i> Hosting
+                      </a>                          
+                  </li>
+
+                  <li>
+                      <a href="/Social Media/media.html" class="dropdown__link">
+                        <i class="ri-smartphone-fill"></i> Social Media
+                      </a>
+                  </li>
+
+                  <li>
+                    <a href="/SEO/seo.html" class="dropdown__link">
+                      <i class="ri-search-2-fill"></i> SEO
+                    </a>
+                </li>
+              <!--=============== DROPDOWN SUBMENU ===============-->
+              <li class="dropdown__subitem">
+                <div class="dropdown__link">
+                  <a href="/ecommerce/ecommerce.html" style="color: black;">
+                    <i class="ri-shopping-cart-2-fill"></i> E-commerce <i class="ri-add-line dropdown__add"></i>
+                  </a>
+                </div>
+
+                <ul class="dropdown__submenu">
+                  <li>
+                      <a href="/ecommerce/ecommerce.html" class="dropdown__sublink">
+                        <i class="ri-plug-2-fill"></i> Plug-ins
+                      </a>
+                  </li>
+
+                  <li>
+                      <a href="/ecommerce/ecommerce.html" class="dropdown__sublink">
+                        <i class="ri-external-link-fill"></i> Extensions
+                      </a>
+                  </li>
+
+                  <li>
+                      <a href="/ecommerce/ecommerce.html" class="dropdown__sublink">
+                        <i class="ri-home-gear-fill"></i> API
+                      </a>
+                  </li>
+                </ul>
+            </li>
+                </ul>
+            </li>
+              <!--=============== DROPDOWN 2 ===============-->
+              <li><a href="/Contact Us/contact.html" class="nav__link">Contact Us</a></li>
+              
+            </ul>
+        </div>
+      </nav>
+    </header>
+    
+    <!-------------------------- LANDING SECTION -------------------------->
+    <section id="landing">
+        <div class="landing-tabs">
+            <input id="web" type="radio" name="slider" checked>
+            <input id="graphics" type="radio" name="slider">
+            <input id="photography" type="radio" name="slider">
+            
+            <div class="landing-buttons">
+                <label for="web"></label>
+                <label for="graphics"></label>
+                <label for="photography"></label>
+            </div>
+            
+            <div class="landing-content">
+                <!-- Tab 1: Web Development -->
+                <div class="landing-box web">
+                    <div class="landing-content-box">
+                        <h2 class="animated fast fadeInLeft">Work With Us Today!</h2>
+                        <p class="animated regular fadeInLeft">
+                          We're dedicated to creating beautiful, functional, 
+                          and user-friendly websites. Whether you're looking 
+                          to build a sleek portfolio, launch a cutting-edge 
+                          e-commerce platform, or revamp your existing online 
+                          presence, We're here to turn your vision into reality.
+                        </p>
+                        <a href="/Contact Us/contact.html">
+                            <button class="landing-button animated slow fadeInLeft">Join Us!</button>
+                        </a>
+                    </div>
+                    <div class="landing-image">
+                      <img src="images/logo.png" alt="Company Logo">
+                    </div>
+                </div>
+                
+                <!-- Tab 2: Graphics -->
+                <div class="landing-box graphics">
+                  <div class="landing-content-box">
+                    <h2 class="animated fast fadeInLeft">Bring Your Website To Life!</h2>
+                    <p class="animated regular fadeInLeft">
+                      Transform your website into a vibrant and engaging digital 
+                      space with dynamic animations, interactive elements, and 
+                      eye-catching visuals. Elevate user experience, capture attention,
+                      and make a lasting impression by bringing your site to life with 
+                      modern web design techniques and seamless functionality. 
+                    </p>
+                    <a href="/Contact Us/contact.html">
+                        <button class="landing-button animated slow fadeInLeft">Join Us!</button>
+                    </a>
+                  </div>
+                  <div class="landing-image" id="landingImage">
+                    <img src="images/Untitled (26).png" alt="Website Design">
+                  </div>
+                </div>
+                
+                <!-- Tab 3: Quality -->
+                <div class="landing-box photography">
+                  <div class="landing-content-box animated fast fadeInLeft">
+                    <h2 class="animated regular fadeInLeft">We Deliver Quality!</h2>
+                    <p>
+                      We provide fast, efficient, and high-quality web development 
+                      services tailored to your needs. From stunning designs to 
+                      seamless functionality, we ensure your website is built 
+                      with precision, optimized for performance, and delivered 
+                      on time. Trust us to bring your vision to life with expert 
+                      coding and cutting-edge technology
+                    </p>
+                    <a href="/Contact Us/contact.html">
+                        <button class="landing-button animated slow fadeInLeft">Join Us!</button>
+                    </a>
+                  </div>
+                  <div class="landing-image">
+                    <img src="images/logo.png" alt="Company Logo">
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-------------------------- PAGES SECTION -------------------------->
+    <section id="pageLinks">
+      <div class="page-links-intro">
+          <div class="line"></div>
+          <div class="heading-container">
+              <h2 class="primary-color animated fadeInLeft fast">What We</h2>
+              <h2 class="secondary-color animated fadeInRight fast">Offer</h2>
+          </div>
+          <p class="animated fadeInUp">
+            We craft bespoke websites tailored to your unique business needs, ensuring responsive design that performs flawlessly across all devices. Our development team combines cutting-edge technology with intuitive user experience to create websites that not only look stunning but drive results.
+          </p>
+      </div>
+      
+      <div class="page-links-wrapper">
+          <!-- Website Development -->
+          <a href="/webDev/webDev.html" class="page-links-container">
+            <h4>Website Development</h4>
+            <p>
+                We combine cutting-edge technology with exceptional 
+                user experience design to create digital solutions that 
+                elevate your brand and engage your audience.
+            </p>
+          </a>
+          
+          <!-- Hosting -->
+          <a href="/Hosting/hosting.html" class="page-links-container">
+            <h4>Hosting</h4>
+            <p>
+                Our premium hosting services deliver lightning-fast 
+                speeds, bulletproof security, and seamless scalability—all 
+                backed by our dedicated support team that treats your website as if it were our own.
+            </p>
+          </a>
+          
+          <!-- Social Media -->
+           <a href="/Social Media/media.html" class="page-links-container">
+              <h4>Social Media</h4>
+              <p>
+                Our comprehensive social media management service strategically 
+                creates, schedules, and optimizes your content across all platforms, 
+                driving engagement and converting followers into loyal customers while you focus on running your business.
+              </p>
+           </a>
+          
+          <!-- SEO -->
+           <a href="/SEO/seo.html" class="page-links-container">
+              <h4>Search Engine Optimization</h4>
+              <p>
+                Our data-driven SEO strategies combine technical expertise, compelling content creation, 
+                and strategic link building to boost your search rankings and deliver qualified traffic that converts 
+                into measurable business growth.
+              </p>
+           </a>
+          
+          <!-- E-commerce -->
+           <a href="/ecommerce/ecommerce.html" class="page-links-container">
+              <h4>Ecommerce</h4>
+              <p>
+                Our tailored ecommerce solutions seamlessly integrate stunning design with powerful functionality, 
+                creating intuitive shopping experiences that maximize conversions and drive sustainable revenue growth 
+                for your online store.
+              </p>
+           </a>
+      </div>
+    </section>
+    
+
+    <!-- HTML -->
+    <section id="landing-video">
+      <video class="my-video" controls>
+        <source src="images/HHWD.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+
+    <!-- Wave Separator -->
+    <div class="wave-separator">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+         <path fill="#1178de" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+      </svg>
+    </div>
+    
+    <!-------------------------- PRICING SECTION -------------------------->
+    <section id="pricing">
+      <div class="pricingHeader">
+        <span class="animated fadeInDown">What We Offer</span>
+        <h2 class="animated fadeInDown">
+          Transform your business with fully customizable 
+          websites designed to bring your vision to life!
+        </h2>
+        <p class="animated fadeInUp">
+          Experience premium web design at unbeatable prices that 
+          redefine value for money. Our carefully crafted packages 
+          are designed to cater to businesses of all sizes, ensuring 
+          there's an option that perfectly fits your budget and requirements. 
+          With us, you're not just getting a website—you're investing in a 
+          high-quality, customized solution designed to drive results and 
+          set you apart from the competition.
+        </p>
+      </div>
+      
+      <ul class="priceExplain">
+        <!-- Basic Package -->
+        <li class="animated fadeInLeft fast">
+          <div class="priceExplainHeader">
+            <span>Great Starter Website</span>
+            <h2>Basic</h2>
+          </div>
+          <div class="priceExplainInfo">
+            <img src="images/basic-icon.png" alt="Basic Package Icon">
+            <span>Let's Work Together!</span>
+            <a href="/Contact Us/contact.html" class="btn-flip" data-back="NOW" data-front="ORDER"></a>
+            <span>What's Included?</span>
+            <ul class="priceExplainPoints">
+              <li>1 Page Website</li>
+              <li>Up To 5 Sections Per Page </li>
+              <li>Hosting Support</li>
+              <li>Fully Customiziable</li>
+              <li>Mobile and Desktop Friendly</li>
+              <li>3 Revisions</li>
+              <li>100% Satisfaction Guaranteed</li>
+              <li>100% Ownership of Website</li>
+              <li>3 Day Delivery</li>
+              <li>Express Service: + $50</li>
+            </ul>
+          </div>
+        </li>
+        
+        <!-- Standard Package -->
+        <li class="animated fadeInLeft regular">
+          <div class="priceExplainHeader">
+            <span style="color: white;">Our Best Deal!</span>
+            <h2>Standard</h2>
+          </div>
+          <div class="priceExplainInfo">
+            <img src="images/standard-icon.png" alt="Standard Package Icon">
+            <span>Let's Work Together!</span>
+            <a href="/Contact Us/contact.html" class="btn-flip" data-back="NOW" data-front="ORDER"></a>
+            <span>What's Included?</span>
+            <ul class="priceExplainPoints">
+              <li>3 Page Website</li>
+              <li>Up To 5 Sections Per Page </li>
+              <li>Hosting Support</li>
+              <li>Fully Customiziable</li>
+              <li>Mobile and Desktop Friendly</li>
+              <li>Unlimited Revisions</li>
+              <li>100% Satisfaction Guaranteed</li>
+              <li>100% Ownership of Website</li>
+              <li>6 Day Delivery</li>
+              <li>Express Service: + $100</li>
+            </ul>
+          </div>
+        </li>
+        
+        <!-- Premium Package -->
+        <li class="animated fadeInLeft slow">
+          <div class="priceExplainHeader">
+            <span>Complete Package</span>
+            <h2>Premium</h2>
+          </div>
+          <div class="priceExplainInfo">
+            <img src="images/premium-icon.png" alt="Premium Package Icon">
+            <span>Let's Work Together!</span>
+            <a href="/Contact Us/contact.html" class="btn-flip" data-back="NOW" data-front="ORDER"></a>
+            <span>What's Included?</span>
+            <ul class="priceExplainPoints">
+              <li>5 Page Website</li>
+              <li>Up To 5 Sections Per Page</li>
+              <li>Hosting Support</li>
+              <li>Fully Customiziable</li>
+              <li>Mobile and Desktop Friendly</li>
+              <li>Unlimited Revisions</li>
+              <li>100% Satisfaction Guaranteed</li>
+              <li>100% Ownership of Website</li>
+              <li>7 Day Delivery</li>
+              <li>Express Service: + $200</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Business Package -->
+      <div class="large-package-wrapper">
+        <div class="large-package">
+          <div class="priceExplainHeader" style="background-color: #ffa601;">
+            <span>Complete Package</span>
+            <h2>Business</h2>
+          </div>
+          <div class="large-package-info">
+            <div class="large-package-intro">
+              <div class="pricing-slider-container">
+                <div class="pricing-slide">
+                  <h4>Website Management</h4>
+                  <a href="/Contact Us/contact.html" class="btn-flip" data-back="NOW" data-front="ORDER"></a>
+                </div>
+                <div class="pricing-slide">
+                  <h4>Business Solutions</h4>
+                  <a href="/Contact Us/contact.html" class="btn-flip" data-back="NOW" data-front="ORDER"></a>
+                </div>
+                <div class="pricing-slide">
+                  <h4>Social Media Management</h4>
+                  <a href="/Contact Us/contact.html" class="btn-flip" data-back="NOW" data-front="ORDER"></a>
+                </div>
+              </div>
+              <div class="slider-controls">
+                <div class="slider-dot active" data-index="0"></div>
+                <div class="slider-dot" data-index="1"></div>
+                <div class="slider-dot" data-index="2"></div>
+              </div>
+              <div class="slider-arrow prev">&#10094;</div>
+              <div class="slider-arrow next">&#10095;</div>
+            </div>
+            <ul class="package-info">
+              <li>10 Page Website</li>
+              <li>Social Media Management</li>
+              <li>E-commerce Intergration</li>
+              <li>Payment Intergration</li>
+              <li>Opt-in Form</li>
+              <li>Up To 5 Sections Per Page</li>
+              <li>Hosting Support</li>
+              <li>Speed Optimization</li>
+              <li>Fully Customiziable</li>
+              <li>Mobile and Desktop Friendly</li>
+              <li>Unlimited Revisions</li>
+              <li>API Intergration</li>
+              <li>5 Plug-In's/Extensions</li>
+              <li>100% Satisfaction Guaranteed</li>
+              <li>100% Ownership of Website</li>
+              <li>14 Day Delivery</li>
+              <li>Express Service: + $500</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-------------------------- CONTACT SECTION -------------------------->
+    <section id="contact">
+      <div class="getInTouch">
+        <span>Contact Us</span>
+        <h2>Get In Touch</h2>
+        <label>
+          We'd love to hear from you! Whether you have a question, feedback, 
+          or just want to say hello, feel free to reach out. Simply fill out 
+          the form below, and we'll get back to you as soon as possible. Your 
+          thoughts and inquiries are important to us, and we're always happy 
+          to help. Let's start a conversation!
+        </label>
+      </div>
+
+      <div class="formWrapper">
+        <form action="https://api.web3forms.com/submit" method="post" class="form-main">
+          <input type="hidden" name="access_key" value="5859c3e1-f867-4635-9559-d832ee856a88">
+          <!-- Honeypot Spam Protection -->
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+          <div class="inputGroup" id="inputName">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="inputGroup">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="inputGroup">
+            <label for="phone">Phone: (Optional)</label>
+            <input type="text" id="phone" name="phone">
+          </div>
+          <div class="inputGroup">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button type="submit" class="landing-button">Submit</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    
+    <!-------------------------- FAQ SECTION -------------------------->
+    <section id="faq">
+      <div class="faqIntro">
+        <h2>FAQs</h2>
+        <p>
+          Got questions? We've got answers!
+          Explore our FAQ section, where we tackle common questions in a simple, 
+          friendly way. Whether you need quick info or detailed insights, our FAQs 
+          deliver clear, helpful guidance. Dive in and stay informed!
+        </p>
+      </div>
+      
+      <ul class="faqContainer">
+        <!-- FAQ 1 -->
+        <li>
+          <div class="faqQuestion">
+            <button class="accordion">
+              Why not use a website builder
+              <i class="arrow down"></i>
+            </button>
+            <div class="panel">
+              <p>
+                Website builders can be a quick and easy solution for creating a website, 
+                but they come with limitations. They often provide less flexibility in design
+                and functionality compared to custom development. Performance, SEO optimization, 
+                and scalability can also be restricted. Additionally, website builders may have 
+                hidden costs, lack full ownership of your site's code, and make it harder to migrate 
+                in the future. If you want a unique, high-performing, and scalable website tailored 
+                to your needs, custom development is the better choice.
+              </p>
+            </div>
+          </div>
+        </li>
+        
+        <!-- FAQ 2 -->
+        <li>
+          <div class="faqQuestion">
+            <button class="accordion">
+              What is SEO and why is it so important?
+              <i class="arrow down"></i>
+            </button>
+            <div class="panel">
+              <p>
+                SEO (Search Engine Optimization) is the process of improving a website's visibility 
+                in search engines like Google. It involves optimizing content, structure, and performance 
+                to rank higher in search results, making it easier for users to find your site. 
+                SEO is crucial because higher rankings lead to more traffic, better credibility, 
+                and increased conversions. A well-optimized website loads faster, provides a better 
+                user experience, and attracts the right audience. Without SEO, your website may get 
+                lost among millions of others, limiting its reach and potential growth.
+              </p>
+            </div>
+          </div>
+        </li>
+        
+        <!-- FAQ 3 -->
+        <li>
+          <div class="faqQuestion">
+            <button class="accordion">
+              Why is a good website so important?
+              <i class="arrow down"></i>
+            </button>
+            <div class="panel">
+              <p>
+                A good website is essential because it serves as the digital face of your brand or business. 
+                It creates the first impression for visitors, builds credibility, and helps attract and retain customers. 
+                A well-designed website ensures a smooth user experience, fast loading times, and mobile responsiveness, 
+                all of which improve engagement and conversion rates. Additionally, a good website enhances your online presence, 
+                supports SEO efforts, and allows you to showcase your products, services, or content effectively. In today's digital world, 
+                a strong website is a key factor in staying competitive and reaching a wider audience.
+              </p>
+            </div>
+          </div>
+        </li>
+        
+        <!-- FAQ 4 -->
+        <li>
+          <div class="faqQuestion">
+            <button class="accordion">
+              How long does a website take to make?
+              <i class="arrow down"></i>
+            </button>
+            <div class="panel">
+              <p>
+                The time required to create a website depends on its complexity, features, and design requirements.
+                Simple websites (e.g., basic landing pages or portfolios) can take a few days to a couple of weeks.
+                Small business websites with multiple pages and some custom features may take 2–6 weeks.
+                E-commerce sites or more complex websites with custom functionality can take 2–3 months or more.
+                Fully custom web applications with advanced features may require several months of development.
+                Factors like revisions, content creation, and integrations with third-party tools can also impact the timeline. 
+                Proper planning and clear requirements help speed up the process.
+              </p>
+            </div>
+          </div>
+        </li>
+        
+        <!-- FAQ 5 -->
+        <li>
+          <div class="faqQuestion">
+            <button class="accordion">
+              What's cheaper custom or a website builder?
+              <i class="arrow down"></i>
+            </button>
+            <div class="panel">
+              <p>
+                A website builder is generally cheaper upfront because it offers pre-made templates and drag-and-drop features. 
+                Prices typically range from $10 to $50 per month, but costs can add up with premium features, plugins, and higher-tier 
+                plans. A custom-built website requires a higher initial investment, often ranging from a few hundred to several thousand 
+                dollars, depending on complexity. However, it provides full ownership, scalability, and better long-term value without 
+                being locked into monthly fees or limited features.
+              </p>
+            </div>
+          </div>
+        </li>
+        
+        <!-- FAQ 6 -->
+        <li>
+          <div class="faqQuestion">
+            <button class="accordion">
+              Why Choose Us?
+              <i class="arrow down"></i>
+            </button>
+            <div class="panel">
+              <p>
+                We offer personalized service, transparent pricing, and ongoing support to ensure your website evolves with your business. 
+                With us, you get a partner who genuinely cares about your success and provides a solution that grows with you.
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+    
+    <!------------------ FOOTER ------------------>
+   <footer>
+    <div class="footerLinks">
+        <h4>Development</h4>
+        <hr class="solid">
+        <a href="/webDev/webDev.html">
+            <p>Website Development</p>
+        </a>
+        <a href="/Hosting/hosting.html">
+            <p>Hosting</p>
+        </a>
+        <a href="/Social Media/media.html">
+            <p>Social Media Management</p>
+        </a>
+        <a href="/ecommerce/ecommerce.html">
+            <p>E-commerce</p>
+        </a>
+        <a href="/SEO/seo.html">
+          <p>SEO</p>
+      </a>
+    </div>
+    <div class="footerLinks">
+        <h4>Resources</h4>
+        <hr class="solid">
+        <a href="/Contact Us/contact.html">
+            <p>Support</p>
+        </a>
+        <a href="/Contact Us/contact.html">
+            <p>Free Consultation</p>
+        </a>
+        <a href="/index.html">
+            <p>FAQ</p>
+        </a>
+        <a href="/Contact Us/contact.html">
+            <p>Call Us</p>
+        </a>
+    </div>
+    <div class="footerLinks">
+        <h4>About</h4>
+        <hr class="solid">
+        <a href="https://mmartinez1468.github.io/portfolio/">
+            <p>Portfolio</p>
+        </a>
+        <a href="/Contact Us/contact.html">
+            <p>Terms Of Service</p>
+        </a>
+        <a href="/Contact Us/contact.html">
+            <p>Services</p>
+        </a>
+        <a href="/Contact Us/contact.html">
+            <p>Refund Policy</p>
+        </a>
+    </div>
+    <div class="footerLinks footerPrivacy">
+        <h4>Privacy</h4>
+        <hr class="solid">
+        <p>
+          Questions or concerns? Reading this Privacy 
+          Notice will help you understand your privacy 
+          rights and choices. We are responsible for 
+          making decisions about how your personal 
+          information is processed. If you do not 
+          agree with our policies and practices, 
+          please do not use our Services. 
+          If you still have any questions or 
+          concerns, please contact us at 
+          marcosmartinez16@icloud.com.
+        </p>
+    </div>
+   </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </main>
+</body>
+</html>

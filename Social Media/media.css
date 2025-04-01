@@ -1,0 +1,501 @@
+/*==================================
+  12. LOG0 CAROUSEL
+==================================*/
+@keyframes slides {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+#logo-carousal {
+  overflow: hidden;
+  padding: 30px 0px;
+  white-space: nowrap;
+  position: relative;
+  background-color: rgb(0, 0, 0);
+}
+#logo-carousal:before, .logos:after {
+  position: absolute;
+  top: 0;
+  content: '';
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+}
+#logo-carousal:before {
+  left: 0;
+}
+#logo-carousal:after {
+  right: 0;
+}
+.logo_items {
+  display: inline-block;
+  display: flex;
+  animation: 20s slides infinite linear;
+  
+}
+#logo-carousal:hover .logo_items {
+  animation-play-state: paused;
+}
+.logo_items img{
+  height: 100px;
+  width: 100px;
+  margin: 0 2rem;
+}
+.logo_items > h4 {
+  color: white;
+  margin: 0 2rem;
+  width: 400px;
+}
+
+/********************** SERVICES SECTION **********************/
+#services {
+    position: relative;
+}
+
+.services-intro {
+  display: flex;
+  justify-content: center;
+  text-align: center;  
+  padding-top: 2rem;
+  padding-bottom: 7rem;
+  background-color: #ffffff;
+}
+.services-intro > h2 {
+  position: relative;
+  border-bottom: none;
+}
+
+.services-intro > h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px; /* Adjust this value to change the width */
+  height: 3px;
+  background-color: #ffa601;
+}
+
+.what-we-offer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10rem;
+    background-color: #0e4c8a;
+    padding: 2rem;
+}
+
+.services-container {
+    background-color: #1178de;
+    border-radius: 10px;
+    padding: 1.5rem;
+    position: relative;
+    padding-top: 5rem;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: -5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 5;
+}
+
+.services-container:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.image-container {
+    position: absolute;
+    top: -100px;
+    right: -10px;
+    z-index: 1;
+}
+
+/* Add hover effect to the image */
+.image-mobile, .image-desktop {
+    height: 200px;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    transform: rotate(10deg);
+}
+.image-desktop {
+  height: 150px;
+  margin-top: 3rem;
+}
+
+.services-container:hover .image-mobile {
+    transform: rotate(40deg) scale(1.1);
+}
+.services-container:hover .image-desktop {
+  transform: rotate(40deg) scale(1.1);
+}
+
+/* Add hover effect to the button */
+.services-info button {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.services-info button:hover {
+    transform: scale(1.05);
+    background-color: #4a4a4a; /* Change this to match your site's color scheme */
+    cursor: pointer;
+}
+
+/* Optional: Add subtle animation to text on hover */
+.services-info h4, 
+.services-info p {
+    transition: color 0.3s ease;
+}
+.services-info > h4 {
+  border-bottom: 3px solid #ffa601;
+  padding-bottom: 1rem;
+}
+.services-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: #ffffff;
+}
+.landing-button {
+    width: 9em;
+    height: 3em;
+
+    font-size: 15px;
+    font-family: inherit;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+    font-family: "Bricolage Grotesque", serif;
+    background-color: #ffa601;
+    color: white;
+    font-weight: 900;
+  }
+  .landing-button::before {
+    content: '';
+    width: 0;
+    height: 3em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #0fb0d8 0%, #47d5f9 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+  }  
+  .landing-button:hover::before {
+    width: 9em;
+  }
+  @media screen and (min-width: 768px) {
+    .services-container {
+      width: 380px;
+    }
+    .what-we-offer {
+      flex-direction: row;
+    }
+  }
+  #landingContent #landingBox:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/images/pricing-social-media.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.4; /* Controls background transparency */
+    z-index: -1;
+}
+
+
+
+
+
+
+
+
+  
+#stats {
+  padding: 3rem;
+  background-color: #f4f4f4;
+}
+.stats-image {
+  transition: transform 0.3s ease;
+}
+.stats-image:hover {
+  transform: scale(1.03);
+}
+.stats-image > img {
+  border-radius: 10px;
+}
+.stats-intro {
+  text-align: center;
+}
+.stats-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.stats-header > h3 {
+  line-height: 2.5rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  width: fit-content;
+  color: #1178de;
+}
+.stats-header > p {
+  border-left: 3px solid #ffa601;
+  padding-left: 1rem;
+}
+.stats-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 3rem;
+  gap: 2rem;
+}
+.stats-number {
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #1178de;
+}
+.stats-number > h3 {
+  letter-spacing: 0px;
+  border-bottom: 3px solid #ffa601;
+  color: white;
+  margin-bottom: 1rem;
+}
+.stats-number > p {
+  color: white;
+}
+@media screen and (min-width: 768px) {
+  .stats-info {
+      flex-direction: row;
+      flex-wrap: wrap;
+  }
+  .stats-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .stats-image > img {
+      height: 300px;
+  }
+}
+@media screen and (min-width: 1023px) {
+  #stats {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: start;
+  }
+  .stats-intro {
+      width: 50%;
+      justify-content: start;
+      align-items: start;
+  }
+  .stats-header > h3 {
+      text-align: start;
+  }
+  .stats-header > p {
+      text-align: start;
+  }
+  .stats-info {
+      flex-direction: row;
+      justify-content: start;
+      flex-wrap: wrap;
+      align-items: start;
+  }
+  .stats-info > h3 {
+      text-align: start;
+  }
+  .stats-number {
+      width: 200px;
+  }
+  .stats-image {
+      justify-content: end;
+      align-items: center;
+      margin-left: auto;
+      width: 50%;
+      margin-left: 2rem;
+  }
+  .stats-image > img {
+      width: 100%;
+      height: 100%;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .stats-number {
+      width: 300px;
+  }
+  .stats-header {
+      align-items: start;
+  }
+}
+@media screen and (min-width: 1456px) {
+  .stats-info {
+      gap: 4rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/*==================================
+  9. Wave Separator
+==================================*/
+.wave-separator {
+  display: block;
+  width: 100%;
+  height: 120px;
+  position: relative;
+  margin-top: -2px;
+  z-index: 1;
+  overflow: hidden;
+}
+svg {
+  height: 100%;
+}
+.wave-separator svg {
+  width: 100%;
+  height: 100%;
+  background-image: url(/images/background-blue.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .wave-separator {
+      height: 80px;
+  }
+}
+
+
+
+
+
+
+.circle-divider {
+  display: block;
+  width: 100%;
+  height: 60px;
+  position: relative;
+  margin-top: -1px;
+  z-index: 1;
+  overflow: hidden;
+  background-color: #0e4c8a;
+}
+
+.circle-divider svg {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+
+/*==================================
+  4. CONSULTATION FORM SLIDE PANEL
+==================================*/
+/* Updated CSS with more specific class names */
+.consultation-slide-panel {
+  position: fixed;
+  top: 50%;
+  right: -300px;
+  transform: translateY(-50%);
+  display: flex;
+  transition: right 0.5s ease;
+  z-index: 1000;
+}
+
+.consultation-slide-panel.open {
+  right: 0;
+}
+
+.consultation-toggle-btn {
+  background-color: #1178de;
+  color: white;
+  border: 1px solid black;
+  border-left: none;
+  padding: 15px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  height: 120px;
+  align-self: center;
+  transition: background-color 0.3s;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.consultation-toggle-btn:hover {
+  background-color: #0d62b8;
+}
+
+.consultation-form-container {
+  width: 300px;
+  background-color: white;
+  border-left: 1px solid #ddd;
+  border-radius: 1rem 0 0 1rem;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  overflow-y: auto; /* Allow scrolling if content is too long */
+}
+
+.consultation-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.consultation-header h4 {
+  color: var(--primary-color);
+  margin: 0;
+  border-bottom: 3px solid #ffa601;
+}
+
+.consultation-submit-btn {
+  background-color: #1178de;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: var(--font-semi-bold);
+  margin-top: 5px;
+  transition: background-color 0.3s;
+}
+
+.consultation-submit-btn:hover {
+  background-color: #0d62b8;
+}
+
+#form-input {
+  border: none;
+  border-bottom: 1px solid black;
+  border-radius: 0;
+}
+
+#form-label {
+  font-size: 14px;
+}

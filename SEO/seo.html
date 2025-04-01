@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="seo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Emblema+One&family=Lora:ital,wght@0,400..700;1,400..700&family=Paytone+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <title>SEO</title>
+</head>
+<body>
+   <!-- CONSULTATION SLIDE PANEL -->
+   <div class="consultation-slide-panel" id="consultationPanel">
+      <button class="consultation-toggle-btn" id="consultationToggleBtn">Contact Us</button>
+      <div class="consultation-form-container" id="consultationFormBox">
+          <div class="consultation-header">
+              <h4>Free Consultation</h4>
+          </div>
+          <form action="https://api.web3forms.com/submit" method="post">
+              <input type="hidden" name="access_key" value="5859c3e1-f867-4635-9559-d832ee856a88">
+              <!-- Honeypot Spam Protection -->
+              <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+              
+              <div class="inputGroup" id="inputName">
+                  <label for="name" id="form-label">Name:</label>
+                  <input type="text" id="form-input" name="consultation-name" required>
+              </div>
+              
+              <div class="inputGroup">
+                  <label for="consultation-email" id="form-label">Email:</label>
+                  <input type="email" id="form-input" name="consultation-email" required>
+              </div>
+              
+              <div class="inputGroup">
+                  <label for="consultation-phone" id="form-label">Phone: (Optional)</label>
+                  <input type="text" id="form-input" name="phone">
+              </div>
+              
+              <div class="inputGroup">
+                  <label for="consultation-message" id="form-label">Message:</label>
+                  <textarea id="consultation-message" name="message" rows="5" required></textarea>
+                  <button type="submit" class="consultation-submit-btn">Submit</button>
+              </div>
+          </form>
+      </div>
+   </div>
+   <!------------------ PRE-LOADER ------------------>
+   <div class="loader"></div>
+   
+
+   <!------------------ NAVBAR ------------------>
+   <header class="header"> 
+      <nav class="nav header-container">
+         <div class="nav__data">
+            <a href="/index.html" class="nav__logo">
+               <img src="/images/web-dev-logo.png" alt="">
+            </a>
+            
+            <div class="nav__toggle" id="nav-toggle">
+               <i class="ri-menu-line nav__burger"></i>
+               <i class="ri-close-line nav__close"></i>
+            </div>
+         </div>
+
+         <!--=============== NAV MENU ===============-->
+         <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+              <li><a href="/index.html" class="nav__link">Home</a></li>
+
+              <!--=============== DROPDOWN 1 ===============-->
+               
+               
+              <li><a href="/About/about.html" class="nav__link">About</a></li>
+              <li class="dropdown__item">
+                <div class="nav__link">
+                   Services <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                </div>
+
+                <ul class="dropdown__menu">
+                  <li>
+                    <a href="/webDev/webDev.html" class="dropdown__link">
+                       <i class="ri-computer-fill"></i> Website Development
+                    </a>                          
+                  </li> 
+                  <li>
+                      <a href="/Hosting/hosting.html" class="dropdown__link">
+                         <i class="ri-cloud-fill"></i> Hosting
+                      </a>                          
+                   </li>
+
+                   <li>
+                      <a href="/Social Media/media.html" class="dropdown__link">
+                         <i class="ri-smartphone-fill"></i> Social Media
+                      </a>
+                   </li>
+
+                   <li>
+                    <a href="/SEO/seo.html" class="dropdown__link">
+                       <i class="ri-search-2-fill"></i> SEO
+                    </a>
+                 </li>
+               <!--=============== DROPDOWN SUBMENU ===============-->
+               <li class="dropdown__subitem">
+                <div class="dropdown__link">
+                   <a href="/ecommerce/ecommerce.html" style="color: black;">
+                    <i class="ri-shopping-cart-2-fill"></i> E-commerce <i class="ri-add-line dropdown__add"></i>
+                   </a>
+                </div>
+
+                <ul class="dropdown__submenu">
+                   <li>
+                      <a href="/ecommerce/ecommerce.html" class="dropdown__sublink">
+                         <i class="ri-plug-2-fill"></i> Plug-ins
+                      </a>
+                   </li>
+
+                   <li>
+                      <a href="/ecommerce/ecommerce.html" class="dropdown__sublink">
+                         <i class="ri-external-link-fill"></i> Extensions
+                      </a>
+                   </li>
+
+                   <li>
+                      <a href="/ecommerce/ecommerce.html" class="dropdown__sublink">
+                         <i class="ri-home-gear-fill"></i> API
+                      </a>
+                   </li>
+                </ul>
+             </li>
+                </ul>
+             </li>
+              <!--=============== DROPDOWN 2 ===============-->
+              <li><a href="/Contact Us/contact.html" class="nav__link">Contact Us</a></li>
+               
+            </ul>
+         </div>
+      </nav>
+   </header>
+
+
+    <!------------------ LANDING SECTION ------------------>
+   <section id="landing">
+      <div class="landing-content">
+         <div class="landing-box web">
+            <div class="landing-content-box">
+               <h2 class="fadeInLeftStay slow">Search Engine Optimization</h2>
+               <p class="fadeInRightStay regular">
+                  SEO Services: Boost Your Online Visibility
+                  Drive more targeted traffic to your website 
+                  with our comprehensive SEO services. We optimize 
+                  every aspect of your online presence to help you 
+                  rank higher in search results, attract qualified 
+                  leads, and outperform your competitors.
+               </p>
+               <a href="/Contact Us/contact.html">
+                  <button class="landing-button fadeInLeftStay slow">Join Us!</button>
+               </a>
+         </div>
+      </div>
+   </section>
+
+
+
+
+
+
+
+
+
+   <!------------------ STATS SECTION ------------------>
+   <section id="stats">
+      <div class="stats-image">
+          <img src="/images/landing-seo-2.jpeg" alt="">
+      </div>
+      <div class="stats-intro">
+          <div class="stats-header">
+              <h3 class="animated fadeInLeft fast">
+                  Why Is SEO Important?
+              </h3>
+              <p class="animated fadeInLeft fast">
+                  When your business appears in top search results for relevant 
+                  queries, you significantly increase your chances of being discovered 
+                  by potential customers. Since most people don't look beyond the first 
+                  page of search results, ranking highly ensures you're visible when customers 
+                  are actively looking for your products or services.
+              </p>
+          </div>
+          <div class="stats-info">
+              <div class="stats-number">
+                  <h3 class="statNum" data-val="93">0</h4>
+                  <p>
+                     of all online experiences begin with a search engine
+                  </p>
+              </div>
+              <div class="stats-number">
+                  <h3 class="statNum" data-val="75">0</h4>
+                  <p>of users never scroll past the first page of search results</p>
+              </div>
+              <div class="stats-number">
+                  <h3 class="statNum" data-val="70">0</h4>
+                  <p>of users skip paid ads, focusing on organic results</p>
+              </div>
+              <div class="stats-number">
+                  <h3 class="statNum" data-val="61">0</h4>
+                  <p>of marketers say improving SEO is their top priority</p>
+              </div>
+          </div>
+      </div>
+   </section>
+
+      <!------------------ WAVE SEPARATOR ------------------>
+      <div class="wave-separator-2">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+         <path fill="#1178de" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+         </svg>
+      </div>
+
+   <!------------------ LANDING QUOTE ------------------>
+   <section id="landing-quote">
+      <h3 class="animated fadeInUp fast">GIVE US THE OPPORTUNITY TO <h3 style="color: #ffa601; border-top: none;" class="animated fadeInUp regular">GROW WITH YOU</h3></h3>
+      <h4 class="animated fadeInUp slow">
+         We believe that business growth should be a shared journey. Our development team doesn't just build websites—we forge partnerships that evolve alongside your business ambitions. When you choose us, you're not just getting developers; you're gaining growth partners committed to your long-term success.
+      </h4>
+   </section>
+   <!------------------ INFO SECTION ------------------>
+   <section id="info">
+      <div class="info-wrapper">
+         <div class="step-container">
+            <h3 style="color: #ffa601;">STEP 1:</h3>
+            <h3 style="color: #1178de;">SEO DISCOVERY & ASSESSMENT</h3>
+            <p>
+               We begin by conducting a comprehensive analysis of your business goals, 
+               target audience, and industry landscape to develop a tailored SEO strategy. 
+               Our team researches your most valuable keywords based on search volume, 
+               competition, and relevance to your products or services. We'll audit your 
+               existing website if applicable, identifying current strengths, weaknesses, 
+               and opportunities for improvement.
+            </p>
+         </div>
+         <div class="step-image">
+            <img src="/images/SEO-1.png" alt="">
+         </div>
+      </div>
+
+      <div class="info-wrapper">
+         <div class="step-image" id="stepImage">
+            <img src="/images/Negative-SEO.png" alt="">
+         </div>
+         <div class="step-container">
+            <h3 style="color: #ffa601;">STEP 2:</h3>
+            <h3 style="color: #1178de;">TECHNICAL SEO FOUNDATION</h3>
+            <p>
+               Our technical team ensures your website's structure meets modern SEO requirements, 
+               starting with a clean, crawlable architecture that search engines can easily navigate. 
+               We'll implement proper URL structures, create an optimized XML sitemap, and configure 
+               robots.txt directives to control search engine access. We'll optimize page load speeds 
+               through image compression, browser caching, and code optimization, then ensure your site 
+               is fully responsive across all devices with mobile-friendly design principles.
+            </p>
+         </div>
+      </div>
+
+      <div class="info-wrapper">
+         <div class="step-container">
+            <h3 style="color: #ffa601;">STEP 3:</h3>
+            <h3 style="color: #1178de;">ON-PAGE OPTIMIZATION</h3>
+            <p>
+               Our technical team ensures your website's structure meets modern SEO requirements, starting 
+               with a clean, crawlable architecture that search engines can easily navigate. We'll implement 
+               proper URL structures, create an optimized XML sitemap, and configure robots.txt directives to 
+               control search engine access. We'll optimize page load speeds through image compression, browser caching, 
+               and code optimization, then ensure your site is fully responsive across all devices with mobile-friendly 
+               design principles.
+            </p>
+         </div>
+         <div class="step-image">
+            <img src="/images/OPTIMIZE-SEO.png" alt="">
+         </div>
+      </div>
+
+      <div class="info-wrapper">
+         <div class="step-image">
+            <img src="/images/SEO-para-video.png" alt="">
+         </div>
+         <div class="step-container">
+            <h3 style="color: #ffa601;">STEP 4:</h3>
+            <h3 style="color: #1178de;">CONTENT STRATEGY DEVELOPMENT</h3>
+            <p>
+               Based on thorough keyword research, we'll create a content calendar targeting 
+               valuable search terms at each stage of the customer journey. We'll develop in-depth, 
+               authoritative content that positions your brand as an industry leader while addressing 
+               common customer questions and pain points. Our strategy includes regular blog posts, 
+               product descriptions, category pages, and FAQ content designed to capture organic traffic 
+               and engage potential customers.
+            </p>
+         </div>
+      </div>
+
+      <div class="info-wrapper">
+         <div class="step-container">
+            <h3 style="color: #ffa601;">STEP 5:</h3>
+            <h3 style="color: #1178de;">LOCAL SEO IMPLEMENTATION</h3>
+            <p>
+               For businesses with physical locations, we'll create and optimize your Google Business 
+               Profile with accurate business information, categories, and attributes. We'll ensure 
+               consistent NAP (Name, Address, Phone) details across all online directories and citation 
+               sources. Our team will implement location-specific pages with relevant local keywords and 
+               develop strategies for generating positive customer reviews to boost local visibility.
+
+            </p>
+         </div>
+         <div class="step-image">
+            <img src="/images/LOCAL-SEO.png" alt="">
+         </div>
+      </div>
+
+      <div class="info-wrapper">
+         <div class="step-image">
+            <img src="/images/Digital-Analytics.png" alt="">
+         </div>
+         <div class="step-container">
+            <h3 style="color: #ffa601;">STEP 6:</h3>
+            <h3 style="color: #1178de;">ANALYTICS & TRACKING SETUP</h3>
+            <p>
+               We'll implement comprehensive tracking tools including Google Analytics 4, 
+               Google Search Console, and conversion tracking to monitor all aspects of your 
+               SEO performance. Custom dashboards will be created to track key metrics including 
+               organic traffic, rankings, engagement metrics, and conversion rates. We'll set up 
+               regular reporting systems tailored to your business goals and KPIs that provide 
+               actionable insights rather than just raw data.
+            </p>
+         </div>
+      </div>
+
+      <div class="info-wrapper">
+         <div class="step-container">
+            <h3 style="color: #ffa601;">STEP 7:</h3>
+            <h3 style="color: #1178de;">ONGOING OPTIMIZATION & GROWTH</h3>
+            <p>
+               SEO is an ongoing process, so we'll establish a regular schedule for monitoring rankings, 
+               traffic patterns, and conversion metrics to identify new opportunities. We'll continue 
+               developing fresh, relevant content based on emerging keyword opportunities and evolving 
+               search trends. Our team will regularly audit and refresh existing content to maintain relevance 
+               and implement adjustments based on algorithm updates and changing search behaviors to ensure 
+               sustained growth.
+            </p>
+         </div>
+         <div class="step-image">
+            <img src="/images/ONGOING-OPTIMIZATION.jpg" alt="">
+         </div>
+      </div>
+   </section>
+
+   <!------------------ WAVE SEPARATOR ------------------>
+   <div class="wave-separator">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path fill="hsl(220, 100%, 97%)" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+      </svg>
+   </div>
+   <section id="callToAction">
+      <div class="cta-text">
+         <h3 class="animated fadeInLeft fast">Work With Us Today!</h3>
+         <h4 class="animated fadeInLeft regular">
+            We're dedicated to helping grow your business 
+            through the world of technology. E-commerce 
+            helps connect your services through the 
+            Internet!
+         </h4>
+         <a href="/Contact Us/contact.html">
+            <button class="landing-button animated fadeInLeft slow">Join Us</button>
+         </a>
+         <ul class="cta-list">
+            <li>Website Development</li>
+            <li>Hosting</li>
+            <li>Social Media</li>
+            <li>SEO</li>
+            <li>Business Solution</li>
+            <li>E-commerce</li>
+         </ul>
+      </div>
+      <div class="cta-image">
+         <img src="/images/logo.png" alt="">
+      </div>
+   </section>
+
+   <!------------------ FOOTER ------------------>
+   <footer>
+      <div class="footerLinks">
+          <h4>Development</h4>
+          <hr class="solid">
+          <a href="/webDev/webDev.html">
+              <p>Website Development</p>
+          </a>
+          <a href="/Hosting/hosting.html">
+              <p>Hosting</p>
+          </a>
+          <a href="/Social Media/media.html">
+              <p>Social Media Management</p>
+          </a>
+          <a href="/ecommerce/ecommerce.html">
+              <p>E-commerce</p>
+          </a>
+          <a href="/SEO/seo.html">
+            <p>SEO</p>
+        </a>
+      </div>
+      <div class="footerLinks">
+          <h4>Resources</h4>
+          <hr class="solid">
+          <a href="/Contact Us/contact.html">
+              <p>Support</p>
+          </a>
+          <a href="/Contact Us/contact.html">
+              <p>Free Consultation</p>
+          </a>
+          <a href="/index.html">
+              <p>FAQ</p>
+          </a>
+          <a href="/Contact Us/contact.html">
+              <p>Call Us</p>
+          </a>
+      </div>
+      <div class="footerLinks">
+          <h4>About</h4>
+          <hr class="solid">
+          <a href="https://mmartinez1468.github.io/portfolio/">
+              <p>Portfolio</p>
+          </a>
+          <a href="/Contact Us/contact.html">
+              <p>Terms Of Service</p>
+          </a>
+          <a href="/Contact Us/contact.html">
+              <p>Services</p>
+          </a>
+          <a href="/Contact Us/contact.html">
+              <p>Refund Policy</p>
+          </a>
+      </div>
+      <div class="footerLinks footerPrivacy">
+          <h4>Privacy</h4>
+          <hr class="solid">
+          <p>
+            Questions or concerns? Reading this Privacy 
+            Notice will help you understand your privacy 
+            rights and choices. We are responsible for 
+            making decisions about how your personal 
+            information is processed. If you do not 
+            agree with our policies and practices, 
+            please do not use our Services. 
+            If you still have any questions or 
+            concerns, please contact us at 
+            marcosmartinez16@icloud.com.
+          </p>
+      </div>
+     </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>

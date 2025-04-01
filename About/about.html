@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="about.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Emblema+One&family=Lora:ital,wght@0,400..700;1,400..700&family=Paytone+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <title>About</title>
+</head>
+<body>
+   <!-- CONSULTATION SLIDE PANEL -->
+   <div class="consultation-slide-panel" id="consultationPanel">
+        <button class="consultation-toggle-btn" id="consultationToggleBtn">Contact Us</button>
+        <div class="consultation-form-container" id="consultationFormBox">
+            <div class="consultation-header">
+                <h4>Free Consultation</h4>
+            </div>
+            <form action="https://api.web3forms.com/submit" method="post">
+                <input type="hidden" name="access_key" value="5859c3e1-f867-4635-9559-d832ee856a88">
+                <!-- Honeypot Spam Protection -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                
+                <div class="inputGroup" id="inputName">
+                    <label for="name" id="form-label">Name:</label>
+                    <input type="text" id="form-input" name="consultation-name" required>
+                </div>
+                
+                <div class="inputGroup">
+                    <label for="consultation-email" id="form-label">Email:</label>
+                    <input type="email" id="form-input" name="consultation-email" required>
+                </div>
+                
+                <div class="inputGroup">
+                    <label for="consultation-phone" id="form-label">Phone: (Optional)</label>
+                    <input type="text" id="form-input" name="phone">
+                </div>
+                
+                <div class="inputGroup">
+                    <label for="consultation-message" id="form-label">Message:</label>
+                    <textarea id="consultation-message" name="message" rows="5" required></textarea>
+                    <button type="submit" class="consultation-submit-btn">Submit</button>
+                </div>
+            </form>
+        </div>
+   </div>
+   <div class="loader"></div>
+   
+
+   <!------------------ NAVBAR ------------------>
+   <header class="header"> 
+    <nav class="nav header-container">
+      <div class="nav__data">
+          <a href="/index.html" class="nav__logo">
+            <img src="/images/web-dev-logo.png" alt="">
+          </a>
+          
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line nav__burger"></i>
+            <i class="ri-close-line nav__close"></i>
+          </div>
+      </div>
+
+      <!--=============== NAV MENU ===============-->
+      <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li><a href="/index.html" class="nav__link">Home</a></li>
+
+            <!--=============== DROPDOWN 1 ===============-->
+            
+            
+            <li><a href="/About/about.html" class="nav__link">About</a></li>
+            <li class="dropdown__item">
+              <div class="nav__link">
+                Services <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
+
+              <ul class="dropdown__menu">
+                <li>
+                  <a href="/webDev/webDev.html" class="dropdown__link">
+                    <i class="ri-computer-fill"></i> Website Development
+                  </a>                          
+                </li> 
+                <li>
+                    <a href="/Hosting/hosting.html" class="dropdown__link">
+                      <i class="ri-cloud-fill"></i> Hosting
+                    </a>                          
+                </li>
+
+                <li>
+                    <a href="/Social Media/media.html" class="dropdown__link">
+                      <i class="ri-smartphone-fill"></i> Social Media
+                    </a>
+                </li>
+
+                <li>
+                  <a href="/SEO/seo.html" class="dropdown__link">
+                    <i class="ri-search-2-fill"></i> SEO
+                  </a>
+              </li>
+            <!--=============== DROPDOWN SUBMENU ===============-->
+            <li class="dropdown__subitem">
+              <div class="dropdown__link">
+                <a href="/ecommerce/ecommerce.html" style="color: black;">
+                  <i class="ri-shopping-cart-2-fill"></i> E-commerce <i class="ri-add-line dropdown__add"></i>
+                </a>
+              </div>
+
+              <ul class="dropdown__submenu">
+                <li>
+                    <a href="/ecommerce/ecommerce.html" class="dropdown__sublink">
+                      <i class="ri-plug-2-fill"></i> Plug-ins
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/ecommerce/ecommerce.html" class="dropdown__sublink">
+                      <i class="ri-external-link-fill"></i> Extensions
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/ecommerce/ecommerce.html" class="dropdown__sublink">
+                      <i class="ri-home-gear-fill"></i> API
+                    </a>
+                </li>
+              </ul>
+          </li>
+              </ul>
+          </li>
+            <!--=============== DROPDOWN 2 ===============-->
+            <li><a href="mailto:marcosmartinez16@hickoryhillswebdevelopment.com" class="nav__link">Contact Us</a></li>
+            
+          </ul>
+      </div>
+    </nav>
+  </header>
+
+
+    <!------------------ LANDING SECTION ------------------>
+   <section id="landing">
+      <div class="landing-content">
+         <div class="landing-box web">
+            <div class="landing-content-box">
+               <h2 class="animated fadeInLeft fast">Work With Us Today!</h2>
+               <p class="animated fadeInLeft regular">
+                  We're dedicated to creating beautiful, functional, 
+                  and user-friendly websites. Whether you're looking 
+                  to build a sleek portfolio, launch a cutting-edge 
+                  e-commerce platform, or revamp your existing online 
+                  presence, We're here to turn your vision into reality.
+               </p>
+               <a href="mailto:marcosmartinez16@hickoryhillswebdevelopment.com?subject=Lets Work Together!" class="animated fadeInLeft slow">
+                  <button class="landing-button">Join Us!</button>
+               </a>
+         </div>
+      </div>
+   </section>
+
+   <!------------------ OUR MISSION SECTION ------------------>
+   <section id="mission">
+        <div class="mission-text">
+            <h2 class="animated fadeInLeft fast">Our Mission</h2>
+            <p class="animated fadeInLeft regular">
+                Founded by a 3 good friends, Hickory Hills Web Development transforms digital visions into powerful, functional websites that drive real results for our clients. Our mission is to deliver exceptional web solutions through technical excellence, innovative design, and a deep understanding of our clients' business needs.
+            </p>
+            <button class="landing-button-2 animated fadeInLeft slow" style="background-color: #ffa601;">
+                <a href="">Work With Us</a>
+            </button>
+        </div>
+        <div class="mission-image">
+            <img src="/images/team.png" alt="">
+        </div>
+   </section>
+
+   <!------------------ WAVE SEPARATOR ------------------>
+   <div class="wave-separator">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+       <path fill="#ffffff" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+    </svg>
+   </div>
+
+   <!------------------ SERVICES SECTION ------------------>
+   <section id="services">
+    <div class="services-intro">
+        <h2>Websites that work. Period. Done.</h2>
+    </div>
+    <div class="services-wrapper">
+        <div class="services-container">
+            <a href="/webDev/webDev.html">
+                <div class="services-title" id="web">
+                    <i class="ri-computer-fill" style="color: #ffa601;"></i>
+                    <h4>Web Development</h4>
+                </div>
+                <div class="services-info">
+                    <p>
+                        We offer beautifully built websites guaranteed 
+                        to last!
+                    </p>
+                </div>
+                <ul class="services-list">
+                    <li>Website design and development</li>
+                    <li>E-commerce solutions</li>
+                    <li>Custom Development</li>
+                    <li>API Intergration</li>
+                    <li>Hosting</li>
+                    <li>SEO</li>
+                </ul>
+                <button class="landing-button" style="background-color: #ffa601;">
+                    <a href="/webDev/webDev.html">Learn More</a>
+                </button>
+            </a>
+        </div>
+        <div class="services-container">
+            <a href="/Social Media/media.html">
+                <div class="services-title" id="social-media">
+                    <i class="ri-smartphone-fill" style="color: #1178de;"></i>
+                    <h4>Social Media</h4>
+                </div>
+                <div class="services-info">
+                    <p>
+                        Our main goal is to expand your social media footprint!
+                    </p>
+                </div>
+                <ul class="services-list">
+                    <li>Strategic Content Planning</li>
+                    <li>Multi-Platform Expertise</li>
+                    <li>Community Management</li>
+                    <li>Analytics & Performance Reporting</li>
+                    <li>Trend Awareness & Adaptability</li>
+                    <li>Brand Voice Development</li>
+                </ul>
+                <button class="landing-button">
+                    <a href="/Social Media/media.html">Learn More</a>
+                </button>
+            </a>
+        </div>
+        <div class="services-container">
+            <a href="/ecommerce/ecommerce.html">
+                <div class="services-title" id="web">
+                    <i class="ri-money-dollar-box-fill" style="color: #ffa601;"></i>
+                    <h4>E-commerce</h4>
+                </div>
+                <div class="services-info">
+                    <p>
+                        We're here to connect you and your business to new and returning customers!
+                    </p>
+                </div>
+                <ul class="services-list">
+                    <li>Customized Storefront Development </li>
+                    <li>Secure Payment Integration</li>
+                    <li>Scalable Architecture</li>
+                    <li>Conversion Optimization</li>
+                    <li>Backend Integration </li>
+                    <li>Post-Launch Support & Maintenance</li>
+                </ul>
+                <button class="landing-button" style="background-color: #ffa601;">
+                    <a href="/ecommerce/ecommerce.html">Learn More</a>
+                </button>
+            </a>
+        </div>
+    </div>
+   </section>
+
+   <!-- Subtle Curved Divider -->
+    <div class="circle-divider">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 40" preserveAspectRatio="none">
+        <path fill="#313030" d="M0,0 L1440,0 L1440,10 C1200,40 240,40 0,10 L0,0 Z"></path>
+        </svg>
+    </div>
+
+   <!------------------ TEAM SECTION ------------------>
+   <section id="team-wrapper">
+     <div class="team-line"></div>
+     <div class="team-intro">
+        <h2>Meet Our Team</h2>
+        <p>
+            At Hickory Hills Web Development, we bring together a talented team dedicated to creating exceptional 
+            web experiences and managing your online presence. Our small but mighty team combines 
+            technical expertise with creative flair to deliver results that exceed expectations. We believe that technology 
+            should serve humans, not the other way around. Every line of code we write and every social media strategy we develop 
+            is guided by this principle. We don't just build websites; we create digital experiences that connect businesses with 
+            their audiences in meaningful ways.
+        </p>
+     </div>
+     <div class="team-about">
+        <div class="team-about-container">
+            <div class="team-about-intro">
+                <img src="/images/faceshot-marcos.png" alt="">
+                <span>Web Developer</span>
+                <h3>Marcos Martinez</h3>
+                <p>
+                    From Chicago, Illinois. I specialize in Full-Stack programming with a great 
+                    understanding of user-interface. I'm well versed in 
+                    modern coding techniques and website layouts allowing 
+                    for modern and functional websites.
+                </p>
+            </div>
+            <div class="team-about-info">
+                <ul class="team-links">
+                    <li>
+                        <a href="https://github.com/mmartinez1468" target="_blank">
+                            <i class="ri-github-fill"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="www.linkedin.com/in/marcos-martinez-928b86301" target="_blank">
+                            <i class="ri-linkedin-box-fill"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/marquitoss1892/" target="_blank">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:marcosmartinez16@hickoryhillswebdevelopment.com" target="_blank">
+                            <i class="ri-mail-fill"></i>
+                        </a>
+                    </li>
+                </ul>
+                <a href="/webDev/webDev.html"><button class="landing-button">Work With Me!</button></a>
+            </div>
+        </div>
+        <div class="team-about-container">
+            <div class="team-about-intro">
+                <img src="/images/flavio.png" alt="">
+                <span>Social Media Manager</span>
+                <h3>Flavio Di Palma</h3>
+                <p>
+                    I specialize in Social Media Growth with a proven track record of 14.5 million 
+                    YouTube views and 32,000+ subscribers. I'm well versed in content strategy and 
+                    audience engagement techniques allowing for maximum reach and community building 
+                    across platforms.
+                </p>
+            </div>
+            <div class="team-about-info">
+                <ul class="team-links">
+                    <li>
+                        <a href="https://github.com/mmartinez1468" target="_blank">
+                            <i class="ri-github-fill"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/mmartinez1468" target="_blank">
+                            <i class="ri-linkedin-box-fill"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/_flaviodipalma/" target="_blank">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:flaviodipalma.dreher@gmail.com" target="_blank">
+                            <i class="ri-mail-fill"></i>
+                        </a>
+                    </li>
+                </ul>
+                <a href="/Social Media/media.html"><button class="landing-button">Work With Me!</button></a>
+            </div>
+        </div>
+        <div class="team-about-container">
+            <div class="team-about-intro">
+                <img src="/images/andrea-faceshot.png" alt="">
+                <span>Web Developer</span>
+                <h3>Andrea Croce</h3>
+                <p>
+                    I grew up in Rome, Italy, where I developed a passion 
+                    for blending aesthetics and functionality. As a web developer, 
+                    I specialize in creating responsive, user-centered designs that combine elegant 
+                    interfaces with robust functionality. My expertise spans both front-end and back-end 
+                    technologies, allowing me to build comprehensive digital solutions that meet modern 
+                    standards while delivering exceptional user experiences.
+                </p>
+            </div>
+            <div class="team-about-info">
+                <ul class="team-links">
+                    <li>
+                        <a href="https://github.com/mmartinez1468" target="_blank">
+                            <i class="ri-github-fill"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/mmartinez1468" target="_blank">
+                            <i class="ri-linkedin-box-fill"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/andreaa.croce/" target="_blank">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:andreacroce46@gmail.com" target="_blank">
+                            <i class="ri-mail-fill"></i>
+                        </a>
+                    </li>
+                </ul>
+                <a href="/webDev/webDev.html"><button class="landing-button">Work With Me!</button></a>
+            </div>
+        </div>
+     </div>
+   </section>
+
+   <!-------------------------- SKILLS SECTION -------------------------->
+   <section id="skills">
+    <div class="skillsAbout">
+      <span class="animated fadeInLeft">What We Offer</span>
+      <h2 class="animated fadeInLeft">Let us turn your vision into reality by creating the website of your dreams</h2>
+      <p class="animated fadeInLeft">
+        We offer a comprehensive range of skills that generic 
+        website builders like <b>Wix, Squarespace, and GoDaddy</b> 
+        simply can't match. Unlike templated solutions, we hand-build 
+        every website from the ground up, ensuring your site is fully 
+        customized to your specific needs and preferences. This 
+        personalized approach not only allows for unlimited 
+        design possibilities but also results in faster load times, 
+        which improve user experience and boost search engine rankings.
+        By tailoring every detail, from the layout to the functionality, 
+        we create websites that truly stand out and reflect your brand's 
+        uniqueness. Our process also enables seamless integration of 
+        advanced features, scalability for future growth, and better 
+        optimization, ensuring your site delivers superior performance 
+        and keeps visitors engaged.
+      </p>
+    </div>
+    
+    <ul class="knowledgeContainer">
+      <!-- Responsive Websites -->
+      <li class="knowledgeTemplate">
+          <div class="knowledgeImgWrapper">
+              <img src="/images/responsive-icon.png" alt="Responsive Design Icon">
+          </div>
+          <div class="knowledgeTextWrapper">
+              <h3 class="knowledgeTextHeader">Responsive Websites</h3>
+              <p class="knowledgeText">
+                We start the development process with a mobile-first approach, ensuring the final website is optimized for both mobile and desktop platforms, providing a seamless experience across all devices.
+              </p>
+          </div>
+      </li>
+      
+      <!-- Satisfaction Guaranteed -->
+      <li class="knowledgeTemplate">
+          <div class="knowledgeImgWrapper">
+              <img src="/images/guaranteed-icon.png" alt="Satisfaction Guaranteed Icon">
+          </div>
+          <div class="knowledgeTextWrapper">
+              <h3 class="knowledgeTextHeader">Satisfaction Guaranteed</h3>
+              <p class="knowledgeText">
+                We prioritize your needs and work tirelessly to ensure they are fully met, delivering a product that aligns perfectly with your expectations. We Guarantee You'll Love Your Website!
+              </p>
+          </div>
+      </li>
+      
+      <!-- Speed Optimization -->
+      <li class="knowledgeTemplate">
+          <div class="knowledgeImgWrapper">
+              <img src="/images/speed-icon.png" alt="Speed Optimization Icon">
+          </div>
+          <div class="knowledgeTextWrapper">
+              <h3 class="knowledgeTextHeader">Fast Speed Optimization</h3>
+              <p class="knowledgeText">
+                Techniques and strategies used to enhance a website's loading time and overall performance. This is crucial for improving user experience, reducing bounce rates, and boosting search engine rankings. 
+              </p>
+          </div>
+      </li>
+      
+      <!-- Hosting & Maintenance -->
+      <li class="knowledgeTemplate">
+          <div class="knowledgeImgWrapper">
+              <img src="/images/hosting-icon.png" alt="Hosting Icon">
+          </div>
+          <div class="knowledgeTextWrapper">
+              <h3 class="knowledgeTextHeader">Hosting & Maintenance</h3>
+              <p class="knowledgeText">
+                Includes server space, bandwidth, and security features, to ensure the website is always available to users. 24/7 support and maintenance included for a set period of time.
+              </p>
+          </div>
+      </li>
+      
+      <!-- E-commerce Integration -->
+      <li class="knowledgeTemplate">
+          <div class="knowledgeImgWrapper">
+              <img src="/images/shop-icon.png" alt="E-commerce Icon">
+          </div>
+          <div class="knowledgeTextWrapper">
+              <h3 class="knowledgeTextHeader">E-commerce Integration</h3>
+              <p class="knowledgeText">
+                Enable customers to browse, purchase, and pay for products or services. Includes features like a shopping cart, secure payment gateways, product catalog, inventory management, and order tracking. 
+              </p>
+          </div>
+      </li>
+      
+      <!-- SEO -->
+      <li class="knowledgeTemplate">
+          <div class="knowledgeImgWrapper">
+              <img src="/images/seo-icon.png" alt="SEO Icon">
+          </div>
+          <div class="knowledgeTextWrapper">
+              <h3 class="knowledgeTextHeader">Search Engine Optimization</h3>
+              <p class="knowledgeText">
+                Enhance your website's visibility and improve its rankings on search engines. By driving qualified leads to your site, we help you grow your business and reach your target audience more effectively.
+              </p>
+          </div>
+      </li>
+      
+      <!-- 24/7 Support -->
+      <li class="knowledgeTemplate">
+        <div class="knowledgeImgWrapper">
+            <img src="/images/support-icon.png" alt="Support Icon">
+        </div>
+        <div class="knowledgeTextWrapper">
+            <h3 class="knowledgeTextHeader">24/7 Instant User Support</h3>
+            <p class="knowledgeText">
+              Your satisfaction is our top priority. We are committed to supporting you in every way possible to ensure your website meets both our high standards and your expectations. Whether by phone or email. 
+            </p>
+        </div>
+      </li>
+      
+      <!-- Custom Code -->
+      <li class="knowledgeTemplate">
+        <div class="knowledgeImgWrapper">
+            <img src="/images/custom-icon.png" alt="Custom Code Icon" style="height: 60px; width: 60px;">
+        </div>
+        <div class="knowledgeTextWrapper">
+            <h3 class="knowledgeTextHeader">Customizable Code</h3>
+            <p class="knowledgeText">
+              All the code on our websites is custom-written by our team, ensuring that every product we deliver is unique, tailored to your needs, and free from generic templates or prepackaged solutions.
+            </p>
+        </div>
+      </li>
+      
+      <!-- Social Media -->
+      <li class="knowledgeTemplate">
+        <div class="knowledgeImgWrapper">
+            <i class="ri-smartphone-line" style="font-size: 60px;"></i>
+        </div>
+        <div class="knowledgeTextWrapper">
+            <h3 class="knowledgeTextHeader">Social Media Management</h3>
+            <p class="knowledgeText">
+              With our experienced Social Media Team we guarantee
+              your businesses with quality social media interation. Whether 
+              it be with short videos showcasing your services/products 
+              or custom made social media posts.
+            </p>
+        </div>
+      </li>
+      
+      <!-- Business Solutions -->
+      <li class="knowledgeTemplate">
+        <div class="knowledgeImgWrapper">
+            <i class="ri-briefcase-2-line" style="font-size: 60px;"></i>
+        </div>
+        <div class="knowledgeTextWrapper">
+            <h3 class="knowledgeTextHeader">Business Solutions</h3>
+            <p class="knowledgeText">
+              We have connections to many succussful buisness owners and we offer
+              refferals and make connections to small buisness to help you grow!
+              Contact Us to learn more!
+            </p>
+        </div>
+      </li>
+    </ul>
+   </section>
+
+   <!------------------ WAVE SEPARATOR ------------------>
+   <div class="wave-separator-2">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+       <path fill="#ffffff" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+    </svg>
+   </div>
+
+   <section id="callToAction">
+    <div class="cta-text">
+       <h3>Work With Us Today!</h3>
+       <h4>
+          We're dedicated to helping grow your business 
+          through the world of technology. E-commerce 
+          helps connect your services through the 
+          Internet!
+       </h4>
+       <a href="mailto:marcosmartinez16@hickoryhillswebdevelopment.com?subject=Lets Work Together!">
+          <button class="landing-button-2">Join Us</button>
+       </a>
+       <ul class="cta-list">
+          <li>Website Development</li>
+          <li>Social Media Management</li>
+          <li>E-commerce Integration</li>
+          <li>Hosting</li>
+          <li>Business Solutions</li>
+       </ul>
+    </div>
+    <div class="cta-image">
+       <img src="/images/logo.png" alt="">
+    </div>
+   </section>
+   <!------------------ FOOTER ------------------>
+   <footer>
+      <div class="footerLinks">
+          <h4>Development</h4>
+          <hr class="solid">
+          <a href="website.html">
+              <p>Website Development</p>
+          </a>
+          <a href="hosting.html">
+              <p>Hosting</p>
+          </a>
+          <a href="media.html">
+              <p>Social Media Management</p>
+          </a>
+          <a href="ecommerce.html">
+              <p>E-commerce</p>
+          </a>
+          <a href="seo.html">
+            <p>SEO</p>
+        </a>
+        <a href="business.html">
+            <p>Business Solution</p>
+        </a>
+      </div>
+      <div class="footerLinks">
+          <h4>Resources</h4>
+          <hr class="solid">
+          <a href="">
+              <p>Support</p>
+          </a>
+          <a href="">
+              <p>Free Consultation</p>
+          </a>
+          <a href="">
+              <p>FAQ</p>
+          </a>
+          <a href="">
+              <p>Call Us</p>
+          </a>
+      </div>
+      <div class="footerLinks">
+          <h4>About</h4>
+          <hr class="solid">
+          <a href="https://mmartinez1468.github.io/portfolio/">
+              <p>Portfolio</p>
+          </a>
+          <a href="">
+              <p>Terms Of Service</p>
+          </a>
+          <a href="">
+              <p>Services</p>
+          </a>
+          <a href="">
+              <p>Refund Policy</p>
+          </a>
+      </div>
+      <div class="footerLinks footerPrivacy">
+          <h4>Privacy</h4>
+          <hr class="solid">
+          <p>
+            Questions or concerns? Reading this Privacy 
+            Notice will help you understand your privacy 
+            rights and choices. We are responsible for 
+            making decisions about how your personal 
+            information is processed. If you do not 
+            agree with our policies and practices, 
+            please do not use our Services. 
+            If you still have any questions or 
+            concerns, please contact us at 
+            marcosmartinez16@icloud.com.
+          </p>
+      </div>
+   </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>

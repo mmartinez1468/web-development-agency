@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="webDev.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Emblema+One&family=Lora:ital,wght@0,400..700;1,400..700&family=Paytone+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <title>Website Development</title>
+</head>
+<body>
+    <main>
+        <!-- CONSULTATION SLIDE PANEL -->
+        <div class="consultation-slide-panel" id="consultationPanel">
+            <button class="consultation-toggle-btn" id="consultationToggleBtn">Contact Us</button>
+            <div class="consultation-form-container" id="consultationFormBox">
+                <div class="consultation-header">
+                    <h4>Free Consultation</h4>
+                </div>
+                <form action="https://api.web3forms.com/submit" method="post">
+                    <input type="hidden" name="access_key" value="5859c3e1-f867-4635-9559-d832ee856a88">
+                    <!-- Honeypot Spam Protection -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                    
+                    <div class="inputGroup" id="inputName">
+                        <label for="name" id="form-label">Name:</label>
+                        <input type="text" id="form-input" name="consultation-name" required>
+                    </div>
+                    
+                    <div class="inputGroup">
+                        <label for="consultation-email" id="form-label">Email:</label>
+                        <input type="email" id="form-input" name="consultation-email" required>
+                    </div>
+                    
+                    <div class="inputGroup">
+                        <label for="consultation-phone" id="form-label">Phone: (Optional)</label>
+                        <input type="text" id="form-input" name="phone">
+                    </div>
+                    
+                    <div class="inputGroup">
+                        <label for="consultation-message" id="form-label">Message:</label>
+                        <textarea id="consultation-message" name="message" rows="5" required></textarea>
+                        <button type="submit" class="consultation-submit-btn">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- PRE-LOADER -->
+        <div class="loader"></div>
+
+        <!-- NAVBAR -->
+        <header class="header"> 
+            <nav class="nav header-container">
+                <div class="nav__data">
+                    <a href="/index.html" class="nav__logo">
+                        <img src="/images/web-dev-logo.png" alt="Website Development Logo">
+                    </a>
+                    
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-line nav__burger"></i>
+                        <i class="ri-close-line nav__close"></i>
+                    </div>
+                </div>
+        
+                <!-- NAV MENU -->
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li><a href="/index.html" class="nav__link">Home</a></li>
+                        <li><a href="/About/about.html" class="nav__link">About</a></li>
+                        
+                        <!-- DROPDOWN: SERVICES -->
+                        <li class="dropdown__item">
+                            <div class="nav__link">
+                                Services <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                            </div>
+            
+                            <ul class="dropdown__menu">
+                                <li>
+                                    <a href="/webDev/webDev.html" class="dropdown__link">
+                                        <i class="ri-computer-fill"></i> Website Development
+                                    </a>                          
+                                </li> 
+                                <li>
+                                    <a href="/Hosting/hosting.html" class="dropdown__link">
+                                        <i class="ri-cloud-fill"></i> Hosting
+                                    </a>                          
+                                </li>
+                                <li>
+                                    <a href="/Social Media/media.html" class="dropdown__link">
+                                        <i class="ri-smartphone-fill"></i> Social Media
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/SEO/seo.html" class="dropdown__link">
+                                        <i class="ri-search-2-fill"></i> SEO
+                                    </a>
+                                </li>
+                                
+                                <!-- DROPDOWN SUBMENU: E-COMMERCE -->
+                                <li class="dropdown__subitem">
+                                    <div class="dropdown__link">
+                                        <a href="/ecommerce/ecommerce.html" style="color: black;">
+                                            <i class="ri-shopping-cart-2-fill"></i> E-commerce <i class="ri-add-line dropdown__add"></i>
+                                        </a>
+                                    </div>
+                
+                                    <ul class="dropdown__submenu">
+                                        <li>
+                                            <a href="/ecommerce/ecommerce.html" class="dropdown__sublink">
+                                                <i class="ri-plug-2-fill"></i> Plug-ins
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/ecommerce/ecommerce.html" class="dropdown__sublink">
+                                                <i class="ri-external-link-fill"></i> Extensions
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/ecommerce/ecommerce.html" class="dropdown__sublink">
+                                                <i class="ri-home-gear-fill"></i> API
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li><a href="/Contact Us/contact.html" class="nav__link">Contact Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- LANDING SECTION -->
+        <section id="landing">
+            <div class="landing-content">
+                <div class="landing-box web">
+                    <div class="landing-content-box">
+                        <h2 class="fadeInLeftStay">Website Development</h2>
+                        <p class="fadeInRightStay">
+                            We're dedicated to creating beautiful, functional, 
+                            and user-friendly websites. Whether you're looking 
+                            to build a sleek portfolio, launch a cutting-edge 
+                            e-commerce platform, or revamp your existing online 
+                            presence, We're here to turn your vision into reality.
+                        </p>
+                        <a href="/Contact Us/contact.html">
+                            <button class="landing-button fadeInLeftStay">Join Us!</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATS SECTION -->
+        <section id="stats">
+            <div class="stats-image">
+                <img src="/images/webDev-stats.jpg" alt="SEO Statistics Image">
+            </div>
+            <div class="stats-intro">
+                <div class="stats-header">
+                    <h3 class="animated fadeInDown slow">Why Are Websites Important?</h3>
+                    <p class="animated fadeInLeft fast">
+                        Websites are essential business tools that establish 
+                        credibility, create 24/7 visibility, and expand market 
+                        reach beyond physical limitations. They provide cost-effective 
+                        marketing, valuable customer data, and competitive advantages. 
+                    </p>
+                </div>
+                <div class="stats-info">
+                    <div class="stats-number">
+                        <h3 class="statNum" data-val="81">0</h3>
+                        <p>of Customers look for a business website</p>
+                    </div>
+                    <div class="stats-number">
+                        <h3 class="statNum" data-val="73">0</h3>
+                        <p>Increase of sales with a professional website</p>
+                    </div>
+                    <div class="stats-number">
+                        <h3 class="statNum" data-val="85">0</h3>
+                        <p>of customers trust professional websites.</p>
+                    </div>
+                    <div class="stats-number">
+                        <h3 class="statNum" data-val="56">0</h3>
+                        <p>of consumers distrust website-less businesses</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WAVE SEPARATOR -->
+        <div class="wave-separator">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path fill="#f4f4f4" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+            </svg>
+        </div>
+        
+        <!-- SCROLL SECTION -->
+        <section id="scroll">
+            <div class="scrollHeaderWrapper">
+                <div class="scrollHeader">
+                    <span>100% Satisfaction Guaranteed</span>
+                    <h2><em>W</em>e Deliever</h2>
+                    <p>
+                        We take meticulous care in planning 
+                        and creating your website, ensuring 
+                        it meets our high standards. Every 
+                        step in the process is essential 
+                        to delivering a product designed to 
+                        stand the test of time and significantly 
+                        enhance your business.
+                    </p>
+                </div>
+                <img src="/images/logo.png" alt="Company Logo">
+            </div>
+
+            <div class="scrollWrapper">
+                <div class="scrollStepHeader">
+                    <h3>Our Mission</h3>
+                    <p>
+                      Our Mission is to bring your ideas to life with cutting-edge 
+                      web development solutions that are both functional and visually 
+                      appealing. We strive to create websites that not only meet your 
+                      business needs but also engage and delight your users.
+                    </p>
+                    <img src="/images/logo.png" alt="Company Logo">
+                </div>
+                <div class="scrollStepListWrapper">
+                    <div class="scrollStepList">
+                        <h4>Brainstorming</h4>
+                        <p>
+                            Mediocrity is not in our vocabulary. 
+                            We are passionate advocates for quality in 
+                            everything we deliver. From the lines of 
+                            code in our software to the pixels on your 
+                            website, we sweat the details, so you don't 
+                            have to. Quality isn't just a checkbox; 
+                            it's a commitment to excellence that runs 
+                            through the heart of our work.
+                        </p>
+                    </div>
+                    <div class="scrollStepList">
+                        <h4>Laying Out A Plan</h4>
+                        <p>
+                          Web development starts with Laying Out A Plan, 
+                          defining the website's purpose, target audience, 
+                          and features while sketching a site structure. 
+                          Next, Designing the UI/UX involves creating wireframes, 
+                          choosing colors, and ensuring a smooth user experience.
+                        </p>
+                    </div>
+                    <div class="scrollStepList">
+                        <h4>Time To Code</h4>
+                        <p>
+                          When it's Time To Code, that's when we jump into action, 
+                          turning your vision into reality. We start by structuring 
+                          your project and setting up version control with Git, 
+                          ensuring seamless collaboration and future scalability. 
+                          For the frontend, we craft clean, responsive HTML, CSS, 
+                          and JavaScript to make your designs interactive and 
+                          mobile-friendly. On the backend, we develop robust servers, 
+                          integrate databases, and build any necessary APIs or 
+                          authentication systems.
+                        </p>
+                    </div>
+                    <div class="scrollStepList">
+                        <h4>SEO And Marketing</h4>
+                        <p>
+                          We focus on boosting your website's visibility and driving 
+                          traffic. We start by optimizing your site's content, structure, 
+                          and metadata to ensure it ranks well on search engines. We also 
+                          implement SEO best practices like keyword research, backlinking, 
+                          and improving page speed. On the marketing side, we develop 
+                          strategies tailored to your audience, using social media, 
+                          email campaigns, and paid ads to reach potential customers. 
+                        </p>
+                    </div>
+                    <div class="scrollStepList">
+                        <h4>Your Website Is Live!</h4>
+                        <p>
+                          We handle the final deployment, setting up your hosting and domain, 
+                          and ensuring SSL certificates are in place for security. We monitor 
+                          performance closely, checking for any issues and making sure your site 
+                          loads quickly and efficiently. We also provide ongoing maintenance to 
+                          ensure your site stays up to date with the latest technologies, security 
+                          updates, and content.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CURVED DIVIDER -->
+        <div class="circle-divider">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 40" preserveAspectRatio="none">
+                <path fill="#1178de" d="M0,0 L1440,0 L1440,10 C1200,40 240,40 0,10 L0,0 Z"></path>
+            </svg>
+        </div>
+
+        <!-- PORTFOLIO SECTION -->
+        <section id="portfolio">
+            <div class="portfolioIntro">
+                <div class="line"></div>
+                <span>About Us</span>
+                <h2 class="animated fadeInRight">Marcos Martinez</h2>
+                <p class="animated fadeInLeft">
+                    Hey there! I'm a 21-year-old web developer passionate 
+                    about coding and creating sleek, functional websites. 
+                    Originally from Chicago, 
+                    I'm currently studying in Spain, diving deeper into the 
+                    world of technology. When I'm not coding, you'll probably 
+                    find me watching or playing fútbol—it's my second love after 
+                    programming. I'm always eager to learn, build, and collaborate 
+                    on exciting web projects. Let's create something awesome together! 
+                </p>
+            </div>
+            <div class="portfolioAbout">
+                <img src="/images/someMexican.png" alt="Marcos Martinez profile photo">
+                <p>
+                    I specialize in crafting responsive and user-friendly websites, 
+                    blending clean code with modern design principles. Whether it's 
+                    front-end development, back-end logic, or full-stack solutions, 
+                    I enjoy tackling challenges and bringing ideas to life. I'm always 
+                    exploring new technologies and frameworks to stay ahead in the ever-evolving 
+                    world of web development. If you're looking for a passionate developer to collaborate 
+                    with, let's connect!
+                    <br>
+                    <br>
+                    <br>
+                    Beyond coding and fútbol, I'm a firm believer in continuous learning and problem-solving. 
+                    I love diving into new challenges, whether it's debugging complex code, optimizing performance, 
+                    or experimenting with the latest web technologies. My goal is to create seamless digital experiences 
+                    that are both visually appealing and highly functional. Every project I work on is an opportunity to 
+                    grow and push the boundaries of what's possible on the web.
+                </p>
+                <button class="landing-button" role="button">
+                    <a href="https://mmartinez1468.github.io/portfolio/index.html">My Portfolio</a>
+                </button>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact">
+            <div class="getInTouch">
+                <span>Contact Us</span>
+                <h2>Get In Touch</h2>
+                <label>
+                    We'd love to hear from you! Whether you have a question, feedback, 
+                    or just want to say hello, feel free to reach out. Simply fill out 
+                    the form below, and we'll get back to you as soon as possible. Your 
+                    thoughts and inquiries are important to us, and we're always happy 
+                    to help. Let's start a conversation!
+                </label>
+            </div>
+
+            <div class="formWrapper">
+                <form action="https://api.web3forms.com/submit" method="post" class="form-main">
+                    <input type="hidden" name="access_key" value="5859c3e1-f867-4635-9559-d832ee856a88">
+                    
+                    <div class="inputGroup" id="inputName">
+                        <label for="contact-name">Name:</label>
+                        <input type="text" id="contact-name" name="name" required>
+                    </div>
+                    
+                    <div class="inputGroup">
+                        <label for="contact-email">Email:</label>
+                        <input type="email" id="contact-email" name="email" required>
+                    </div>
+                    
+                    <div class="inputGroup">
+                        <label for="contact-phone">Phone: (Optional)</label>
+                        <input type="text" id="contact-phone" name="phone">
+                    </div>
+                    
+                    <div class="inputGroup">
+                        <label for="contact-message">Message:</label>
+                        <textarea id="contact-message" name="message" rows="5" required></textarea>
+                        <button type="submit" class="landing-button">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footerLinks">
+                <h4>Development</h4>
+                <hr class="solid">
+                <a href="/webDev/webDev.html">
+                    <p>Website Development</p>
+                </a>
+                <a href="/Hosting/hosting.html">
+                    <p>Hosting</p>
+                </a>
+                <a href="/Social Media/media.html">
+                    <p>Social Media Management</p>
+                </a>
+                <a href="/ecommerce/ecommerce.html">
+                    <p>E-commerce</p>
+                </a>
+                <a href="/SEO/seo.html">
+                    <p>SEO</p>
+                </a>
+            </div>
+            
+            <div class="footerLinks">
+                <h4>Resources</h4>
+                <hr class="solid">
+                <a href="/Contact Us/contact.html">
+                    <p>Support</p>
+                </a>
+                <a href="/Contact Us/contact.html">
+                    <p>Free Consultation</p>
+                </a>
+                <a href="/index.html">
+                    <p>FAQ</p>
+                </a>
+                <a href="/Contact Us/contact.html">
+                    <p>Call Us</p>
+                </a>
+            </div>
+            
+            <div class="footerLinks">
+                <h4>About</h4>
+                <hr class="solid">
+                <a href="https://mmartinez1468.github.io/portfolio/">
+                    <p>Portfolio</p>
+                </a>
+                <a href="/Contact Us/contact.html">
+                    <p>Terms Of Service</p>
+                </a>
+                <a href="/Contact Us/contact.html">
+                    <p>Services</p>
+                </a>
+                <a href="/Contact Us/contact.html">
+                    <p>Refund Policy</p>
+                </a>
+            </div>
+            
+            <div class="footerLinks footerPrivacy">
+                <h4>Privacy</h4>
+                <hr class="solid">
+                <p>
+                    Questions or concerns? Reading this Privacy 
+                    Notice will help you understand your privacy 
+                    rights and choices. We are responsible for 
+                    making decisions about how your personal 
+                    information is processed. If you do not 
+                    agree with our policies and practices, 
+                    please do not use our Services. 
+                    If you still have any questions or 
+                    concerns, please contact us at 
+                    marcosmartinez16@icloud.com.
+                </p>
+            </div>
+        </footer>
+    </main>
+    
+    <!-- Scripts -->
+    <script src="/script.js"></script>
+</body>
+</html>
