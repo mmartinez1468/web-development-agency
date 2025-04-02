@@ -818,6 +818,12 @@ a {
       height: 500px;
    }
 }
+@media screen and (max-width: 768px) {
+  .landing-content .landing-box:nth-child(1)::before {
+      background-attachment: scroll; /* Change to scroll on mobile */
+      background-position: center; /* Ensure image is centered */
+  }
+}
 
 
 
