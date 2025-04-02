@@ -664,6 +664,13 @@ span {
   color: rgb(255, 255, 255);
 }
 
+.landing-content-box > h2 {
+  font-size: 1.5rem;
+}
+.landing-content-box > p {
+  font-size: .75rem;
+}
+
 .landing-button {
   width: 9em;
   height: 3em;
