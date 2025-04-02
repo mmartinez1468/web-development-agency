@@ -785,6 +785,15 @@ span {
     height: 500px;
   }
 }
+/* Fixes background images for mobile */
+@media screen and (max-width: 768px) {
+  .landing-content .landing-box:nth-child(1)::before,
+  .landing-content .landing-box:nth-child(2)::before,
+  .landing-content .landing-box:nth-child(3)::before {
+    background-attachment: scroll; /* Changes to scroll instead of fixed on mobile */
+    background-position: center; /* Centers the background image */
+  }
+}
 
 /*==================================
   8. PAGE SECTION
