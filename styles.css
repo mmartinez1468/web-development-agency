@@ -650,6 +650,12 @@ span {
   left: -200vw;
 }
 
+.landing-content .landing-box:nth-child(1)::before,
+.landing-content .landing-box:nth-child(2)::before,
+.landing-content .landing-box:nth-child(3)::before {
+  background-position: center;
+}
+
 /* Content Styling */
 .landing-content-box {
   display: flex;
