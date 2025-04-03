@@ -1901,6 +1901,7 @@ hr.solid {
   transition: all 1s;
 }
 
+
 /* One Time Animation For The Landing Page */
 .fadeInLeftStay {
   opacity: 1;
@@ -1922,6 +1923,26 @@ hr.solid {
 } 
 
 /* One Time Animation For The Landing Page */
+.fadeInBottomStay {
+  opacity: 1;
+  animation-name: fadeInBottomOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: forwards;
+  animation-duration: 2s;
+}
+
+@keyframes fadeInBottomOpacity {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* One Time Animation For The Landing Page */
 .fadeInRightStay {
   opacity: 1;
   animation-name: fadeInRightOpacity;
@@ -1940,6 +1961,26 @@ hr.solid {
     transform: translateY(0);
   }
 } 
+
+/* One Time Animation For The Landing Page */
+.fadeInTopStay {
+  opacity: 1;
+  animation-name: fadeInTopOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: forwards;
+  animation-duration: 2s;
+}
+
+@keyframes fadeInTopOpacity {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /* FadeInLeft Animation */
 .fadeInLeft {
