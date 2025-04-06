@@ -2067,7 +2067,7 @@ hr.solid {
 }
 
 .consultation-toggle-btn {
-  background-color: #ffa601;
+  background-color: #0D47A1;
   color: white;
   border: 1px solid black;
   border-left: none;
@@ -2084,7 +2084,7 @@ hr.solid {
 }
 
 .consultation-toggle-btn:hover {
-  background-color: #dd930b;
+  background-color: #0d3878;
 }
 
 .consultation-form-container {
