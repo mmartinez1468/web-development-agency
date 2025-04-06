@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Emblema+One&family=Lora:ital,wght@0,400..700;1,400..700&family=Paytone+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- Remix Icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preload" href="images/logo.webp" as="image">
+    <link rel="preload" href="path/to/critical-font.woff2" as="font" crossorigin>
 </head>
 <body>
   <main>
@@ -163,7 +165,7 @@
                         </a>
                     </div>
                     <div class="landing-image">
-                      <img src="images/logo.webp" alt="Company Logo" loading="lazy" importance="high">
+                      <img src="images/logo.webp" alt="Company Logo">
                     </div>
                 </div>
             </div>
@@ -235,7 +237,6 @@
       </div>
     </section>
     
-
     <!-- HTML -->
     <section id="landing-video">
       <video class="my-video" controls>
@@ -651,7 +652,7 @@
    </footer>
 
     <!-- JavaScript -->
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </main>
 </body>
 </html>
