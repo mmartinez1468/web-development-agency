@@ -1208,6 +1208,10 @@ svg {
   overflow-x: hidden;
 }
 
+.priceExplain li .priceExplainHeader:nth-child(2) {
+  background-color: red;
+}
+
 .priceExplain li {
   width: 320px;
   height: auto;

@@ -106,11 +106,11 @@ navContainer.className = 'package-nav-container';
 
 const prevBtn = document.createElement('button');
 prevBtn.className = 'package-nav-btn prev';
-prevBtn.innerHTML = '&laquo; Previous';
+prevBtn.innerHTML = '&laquo;';
 
 const nextBtn = document.createElement('button');
 nextBtn.className = 'package-nav-btn next';
-nextBtn.innerHTML = 'Next &raquo;';
+nextBtn.innerHTML = '&raquo;';
 
 const dotsContainer = document.createElement('div');
 dotsContainer.className = 'package-dots-container';
