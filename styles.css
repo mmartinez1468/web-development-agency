@@ -602,9 +602,12 @@ span {
     animation-timing-function: forwards;
     animation-duration: 2s;
 }
-.landing-image > img {
-    height: 200px;
-}
+.landing-image img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+  }
 #landingImage {
     animation: 6s linear infinite rotation-right;
 }
