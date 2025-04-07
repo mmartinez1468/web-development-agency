@@ -979,7 +979,7 @@ svg {
 }
 .getInTouch > span,
 .pricingHeader > span {
-    color: #1178de;
+    color: #0d3878;
 }
 .pricingHeader > h2 {
     line-height: 2rem;
@@ -1014,7 +1014,7 @@ svg {
 .priceExplainHeader {
     width: 100%;
     height: auto;
-    background-color: #1178de;
+    background-color: #0d3878;
     box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
 }
 .priceExplainHeader > span {
@@ -1037,7 +1037,7 @@ svg {
 }
 .priceExplainInfo > span {
     font-size: 1rem;
-    color: #1178de;
+    color: #0d3878;
     padding: 1rem 0;
 }
 .priceExplainPoints {
@@ -1301,7 +1301,7 @@ svg {
 }
 .package-dot.active,
 footer {
-    background-color: #1178de;
+    background-color: #0d3878;
 }
 .package-dots-container {
     display: flex;
@@ -1712,7 +1712,7 @@ hr.solid {
     border-bottom: 3px solid #ffa601;
 }
 .consultation-submit-btn {
-    background-color: #1178de;
+    background-color: #0d3878;
     border: none;
     padding: 10px;
     border-radius: 4px;
