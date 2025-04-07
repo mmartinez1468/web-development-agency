@@ -18,6 +18,67 @@
     <!-- Page Loader -->
     <div class="loader"></div>
 
+    <!-- Cookie Consent Banner -->
+    <div class="gdpr-cookie-banner" id="cookieConsent">
+      <div class="gdpr-cookie-message">
+          <h3>Cookie Notice</h3>
+          <p>We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+      </div>
+      <div class="gdpr-cookie-actions">
+          <button class="gdpr-cookie-btn gdpr-accept-all" id="acceptAllBtn">Accept All</button>
+          <button class="gdpr-cookie-btn gdpr-decline-all" id="declineBtn">Decline All</button>
+          <button class="gdpr-cookie-btn gdpr-customize" id="customizeBtn">Customize</button>
+      </div>
+  </div>
+  
+    <!-- Cookie Settings Modal -->
+    <div class="gdpr-preferences-modal" id="cookieModal">
+        <div class="gdpr-modal-container">
+            <div class="gdpr-modal-header">
+                <h2>Cookie Preferences</h2>
+                <button class="gdpr-modal-close" id="closeModal">&times;</button>
+            </div>
+            
+            <div class="gdpr-cookie-category">
+                <div class="gdpr-toggle-container">
+                    <label for="essentialCookies">Essential Cookies</label>
+                    <label class="gdpr-toggle-switch">
+                        <input type="checkbox" id="essentialCookies" checked disabled>
+                        <span class="gdpr-toggle-slider"></span>
+                    </label>
+                </div>
+                <span class="gdpr-essential-label">Always active</span>
+                <p class="gdpr-category-description">These cookies are necessary for the website to function and cannot be switched off in our systems.</p>
+            </div>
+            
+            <div class="gdpr-cookie-category">
+                <div class="gdpr-toggle-container">
+                    <label for="analyticalCookies">Analytical Cookies</label>
+                    <label class="gdpr-toggle-switch">
+                        <input type="checkbox" id="analyticalCookies">
+                        <span class="gdpr-toggle-slider"></span>
+                    </label>
+                </div>
+                <p class="gdpr-category-description">These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site.</p>
+            </div>
+            
+            <div class="gdpr-cookie-category">
+                <div class="gdpr-toggle-container">
+                    <label for="marketingCookies">Marketing Cookies</label>
+                    <label class="gdpr-toggle-switch">
+                        <input type="checkbox" id="marketingCookies">
+                        <span class="gdpr-toggle-slider"></span>
+                    </label>
+                </div>
+                <p class="gdpr-category-description">These cookies may be set through our site by our advertising partners to build a profile of your interests.</p>
+            </div>
+            
+            <div class="gdpr-modal-footer">
+                <button class="gdpr-cookie-btn gdpr-decline-all" id="savePreferencesBtn">Save Preferences</button>
+            </div>
+        </div>
+    </div>
+
     <!-- CONSULTATION SLIDE PANEL -->
     <div class="consultation-slide-panel" id="consultationPanel">
       <button class="consultation-toggle-btn" id="consultationToggleBtn">Contact Us</button>
@@ -422,7 +483,7 @@
           <input type="hidden" name="access_key" value="5859c3e1-f867-4635-9559-d832ee856a88">
           <!-- Honeypot Spam Protection -->
           <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-          <div id="inputName">
+          <div class="inputGroup">
             <label for="form-input-name">Name</label>
             <input type="text" id="form-input-name" name="consultation-name" required="">
           </div>

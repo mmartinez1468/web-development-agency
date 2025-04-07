@@ -10,6 +10,163 @@ window.addEventListener('load', () => {
 })
 
 
+///////////////// COOKIE CONSENT FORM /////////////////
+document.addEventListener('DOMContentLoaded', function() {
+  const cookieBanner = document.getElementById('cookieConsent');
+  const preferencesModal = document.getElementById('cookieModal');
+  const acceptAllBtn = document.getElementById('acceptAllBtn');
+  const declineBtn = document.getElementById('declineBtn');
+  const customizeBtn = document.getElementById('customizeBtn');
+  const closeModalBtn = document.getElementById('closeModal');
+  const savePreferencesBtn = document.getElementById('savePreferencesBtn');
+  const analyticalCookies = document.getElementById('analyticalCookies');
+  const marketingCookies = document.getElementById('marketingCookies');
+  
+  // Check if consent was already given
+  const storedConsentSettings = getConsentSettings();
+  
+  if (!storedConsentSettings.hasConsented) {
+      // Show the cookie banner with a slight delay for better UX
+      setTimeout(() => {
+          cookieBanner.classList.add('active');
+      }, 1000);
+  }
+  
+  // Accept all cookies
+  acceptAllBtn.addEventListener('click', function() {
+      saveConsentSettings({
+          hasConsented: true,
+          analytical: true,
+          marketing: true,
+          timestamp: new Date().getTime()
+      });
+      
+      cookieBanner.classList.remove('active');
+  });
+  
+  // Decline all cookies
+  declineBtn.addEventListener('click', function() {
+      saveConsentSettings({
+          hasConsented: true,
+          analytical: false,
+          marketing: false,
+          timestamp: new Date().getTime()
+      });
+      
+      cookieBanner.classList.remove('active');
+  });
+  
+  // Open customize modal
+  customizeBtn.addEventListener('click', function() {
+      const currentSettings = getConsentSettings();
+      
+      analyticalCookies.checked = currentSettings.analytical;
+      marketingCookies.checked = currentSettings.marketing;
+      
+      preferencesModal.classList.add('active');
+  });
+  
+  // Close modal
+  closeModalBtn.addEventListener('click', function() {
+      preferencesModal.classList.remove('active');
+  });
+  
+  // Save preferences
+  savePreferencesBtn.addEventListener('click', function() {
+      saveConsentSettings({
+          hasConsented: true,
+          analytical: analyticalCookies.checked,
+          marketing: marketingCookies.checked,
+          timestamp: new Date().getTime()
+      });
+      
+      preferencesModal.classList.remove('active');
+      cookieBanner.classList.remove('active');
+  });
+  
+  // Close modal when clicking outside
+  window.addEventListener('click', function(event) {
+      if (event.target === preferencesModal) {
+          preferencesModal.classList.remove('active');
+      }
+  });
+  
+  // Get cookie consent settings
+  function getConsentSettings() {
+      const defaultSettings = {
+          hasConsented: false,
+          analytical: false,
+          marketing: false,
+          timestamp: null
+      };
+      
+      const storedSettings = localStorage.getItem('gdprConsentSettings');
+      
+      if (!storedSettings) {
+          return defaultSettings;
+      }
+      
+      try {
+          return JSON.parse(storedSettings);
+      } catch (e) {
+          return defaultSettings;
+      }
+  }
+  
+  // Save cookie consent settings
+  function saveConsentSettings(settings) {
+      localStorage.setItem('gdprConsentSettings', JSON.stringify(settings));
+      
+      // This is where you would add code to actually set or remove cookies
+      // based on the user's preferences.
+      applyConsentSettings(settings);
+  }
+  
+  // Apply the user's consent preferences
+  function applyConsentSettings(settings) {
+      console.log('Applying cookie settings:', settings);
+      
+      // Example: If analytical cookies are allowed
+      if (settings.analytical) {
+          // Enable analytics (e.g., Google Analytics)
+          enableAnalyticsTracking();
+      } else {
+          // Disable analytics
+          disableAnalyticsTracking();
+      }
+      
+      // Example: If marketing cookies are allowed
+      if (settings.marketing) {
+          // Enable marketing cookies (e.g., Facebook Pixel)
+          enableMarketingTrackers();
+      } else {
+          // Disable marketing cookies
+          disableMarketingTrackers();
+      }
+  }
+  
+  // These are placeholder functions you would implement based on your analytics and marketing tools
+  function enableAnalyticsTracking() {
+      // Example: Initialize Google Analytics
+      console.log('Analytics cookies enabled');
+  }
+  
+  function disableAnalyticsTracking() {
+      // Example: Remove Google Analytics cookies
+      console.log('Analytics cookies disabled');
+  }
+  
+  function enableMarketingTrackers() {
+      // Example: Initialize Facebook Pixel
+      console.log('Marketing cookies enabled');
+  }
+  
+  function disableMarketingTrackers() {
+      // Example: Remove marketing cookies
+      console.log('Marketing cookies disabled');
+  }
+});
+
 ///////////////// REPLAYS ANIMATION WHEN BACK IN VIEWPORT /////////////////
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
