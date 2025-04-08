@@ -452,7 +452,7 @@ input:checked + .gdpr-toggle-slider:before {
 .nav__burger,
 .nav__close,
 .nav__logo {
-    color: #000;
+    color: #1178de;
 }
 .nav__data {
     height: 100%;
@@ -529,25 +529,25 @@ input:checked + .gdpr-toggle-slider:before {
     height: 30px;
   }
 .dropdown__link .web-dev-icon {
-    width: 30px; /* Smaller SVG icon */
-    height: 30px;
+    width: 20px; /* Smaller SVG icon */
+    height: 20px;
 }
 .dropdown__link .hosting-icon {
-    width: 30px; /* Smaller SVG icon */
-    height: 30px;
+    width: 20px; /* Smaller SVG icon */
+    height: 20px;
 }
 .dropdown__link .social-media-icon {
-    width: 30px; /* Smaller SVG icon */
-    height: 30px;
+    width: 20px; /* Smaller SVG icon */
+    height: 20px;
 }
 .dropdown__link .seo-icon {
-    width: 30px; /* Smaller SVG icon */
-    height: 30px;
+    width: 20px; /* Smaller SVG icon */
+    height: 20px;
 }
 .dropdown__link .ecom-icon {
-    width: 30px; /* Smaller SVG icon */
-    height: 30px;
-    margin-right: 1rem;
+    width: 20px; /* Smaller SVG icon */
+    height: 20px;
+    margin-right: .5rem;
 }
 .dropdown__link .ecom-drop-icon {
     width: 30px; /* Smaller SVG icon */
@@ -772,13 +772,6 @@ input:checked + .gdpr-toggle-slider:before {
     cursor: pointer;
     transition: 0.5s;
 }
-.landing-tabs input:first-child:checked ~ .landing-buttons label:nth-child(1),
-.landing-tabs input:nth-child(2):checked ~ .landing-buttons label:nth-child(2),
-.landing-tabs input:nth-child(3):checked ~ .landing-buttons label:nth-child(3) {
-    opacity: 1;
-    width: 50px;
-    background-color: #1178de;
-}
 .landing-content {
     position: relative;
     width: 300vw;
@@ -834,19 +827,18 @@ input:checked + .gdpr-toggle-slider:before {
 .landing-button {
     width: 9em;
     height: 3em;
-    border-radius: 30em;
     font-size: 15px;
     border: none;
     overflow: hidden;
     cursor: pointer;
     font-family: "Bricolage Grotesque", serif;
     font-weight: 900;
+    background-color: #0d47a1;
 }
 .landing-button::before {
     content: "";
     width: 0;
     height: 3em;
-    border-radius: 30em;
     position: absolute;
     top: 0;
     left: 0;
@@ -946,7 +938,7 @@ input:checked + .gdpr-toggle-slider:before {
         font-size: 1.1rem;
     }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 824px) {
     .landing-image {
         animation: none;
     }
