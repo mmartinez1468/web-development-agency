@@ -53,58 +53,62 @@
    <header class="header"> 
     <nav class="nav header-container">
       <div class="nav__data">
-          <a href="/index.html" class="nav__logo">
-            <img src="/images/Remove background project (8).png" alt="">
+          <a href="index.html" class="nav__logo" aria-label="Go back to landing page">
+            <img src="/images/Remove background project (8).webp" alt="">
           </a>
           
           <div class="nav__toggle" id="nav-toggle">
-            <i class="ri-menu-line nav__burger"></i>
-            <i class="ri-close-line nav__close"></i>
+           
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="nav__burger" fill="currentColor"><path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path></svg>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="nav__close" fill="currentColor"><path d="M10.5859 12L2.79297 4.20706L4.20718 2.79285L12.0001 10.5857L19.793 2.79285L21.2072 4.20706L13.4143 12L21.2072 19.7928L19.793 21.2071L12.0001 13.4142L4.20718 21.2071L2.79297 19.7928L10.5859 12Z"></path></svg>
+          
           </div>
       </div>
+      
 
       <!--=============== NAV MENU ===============-->
       <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
-            <li><a href="/index.html" class="nav__link">Home</a></li>
+            <li><a href="index.html" class="nav__link">Home</a></li>
 
             <!--=============== DROPDOWN 1 ===============-->
             
             
-            <li><a href="/About/about.html" class="nav__link">About</a></li>
+            <li><a href="./About/about.html" class="nav__link">About</a></li>
             <li class="dropdown__item">
               <div class="nav__link">
-                Services <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                Services <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="dropdown__arrow" fill="currentColor"><path d="M12 15.0006L7.75732 10.758L9.17154 9.34375L12 12.1722L14.8284 9.34375L16.2426 10.758L12 15.0006Z"></path></svg>
               </div>
 
               <ul class="dropdown__menu">
                 <li>
-                  <a href="/webDev/webDev.html" class="dropdown__link">
-                    <i class="ri-computer-fill"></i> Website Development
+                  <a href="./webDev/webDev.html" class="dropdown__link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="web-dev-icon" fill="currentColor"><path d="M13 18V20H17V22H7V20H11V18H2.9918C2.44405 18 2 17.5511 2 16.9925V4.00748C2 3.45107 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44892 22 4.00748V16.9925C22 17.5489 21.5447 18 21.0082 18H13Z"></path></svg> Website Development
                   </a>                          
                 </li> 
                 <li>
-                    <a href="/Hosting/hosting.html" class="dropdown__link">
-                      <i class="ri-cloud-fill"></i> Hosting
+                    <a href="Hosting/hosting.html" class="dropdown__link">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="hosting-icon" fill="currentColor"><path d="M17 7C13.5705 7 10.6449 9.15804 9.50734 12.1903L11.3805 12.8927C12.2337 10.6185 14.4278 9 17 9C17.6983 9 18.3687 9.11928 18.992 9.33857C21.3265 10.16 23 12.3846 23 15C23 18.3137 20.3137 21 17 21H7C3.68629 21 1 18.3137 1 15C1 12.3846 2.67346 10.16 5.00804 9.33857C5.0027 9.22639 5 9.11351 5 9C5 5.13401 8.13401 2 12 2C15.242 2 17.9693 4.20399 18.7652 7.19539C18.1973 7.0675 17.6065 7 17 7Z"></path></svg> Hosting
                     </a>                          
                 </li>
 
                 <li>
                     <a href="/Social Media/media.html" class="dropdown__link">
-                      <i class="ri-smartphone-fill"></i> Social Media
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="social-media-icon" fill="currentColor"><path d="M6 2H18C18.5523 2 19 2.44772 19 3V21C19 21.5523 18.5523 22 18 22H6C5.44772 22 5 21.5523 5 21V3C5 2.44772 5.44772 2 6 2ZM12 17C11.4477 17 11 17.4477 11 18C11 18.5523 11.4477 19 12 19C12.5523 19 13 18.5523 13 18C13 17.4477 12.5523 17 12 17Z"></path></svg> Social Media
                     </a>
                 </li>
 
                 <li>
                   <a href="/SEO/seo.html" class="dropdown__link">
-                    <i class="ri-search-2-fill"></i> SEO
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="seo-icon" fill="currentColor"><path d="M11 2C15.968 2 20 6.032 20 11C20 15.968 15.968 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2ZM19.4853 18.0711L22.3137 20.8995L20.8995 22.3137L18.0711 19.4853L19.4853 18.0711Z"></path></svg> SEO
                   </a>
               </li>
             <!--=============== DROPDOWN SUBMENU ===============-->
             <li class="dropdown__subitem">
               <div class="dropdown__link">
-                <a href="/ecommerce/ecommerce.html" style="color: black;">
-                  <i class="ri-shopping-cart-2-fill"></i> E-commerce <i class="ri-add-line dropdown__add"></i>
+                <a href="/ecommerce/ecommerce.html" style="color: black;" class="ecommerce-flex">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="ecom-icon" fill="currentColor"><path d="M4.00436 6.41686L0.761719 3.17422L2.17593 1.76001L5.41857 5.00265H20.6603C21.2126 5.00265 21.6603 5.45037 21.6603 6.00265C21.6603 6.09997 21.6461 6.19678 21.6182 6.29L19.2182 14.29C19.0913 14.713 18.7019 15.0027 18.2603 15.0027H6.00436V17.0027H17.0044V19.0027H5.00436C4.45207 19.0027 4.00436 18.5549 4.00436 18.0027V6.41686ZM5.50436 23.0027C4.67593 23.0027 4.00436 22.3311 4.00436 21.5027C4.00436 20.6742 4.67593 20.0027 5.50436 20.0027C6.33279 20.0027 7.00436 20.6742 7.00436 21.5027C7.00436 22.3311 6.33279 23.0027 5.50436 23.0027ZM17.5044 23.0027C16.6759 23.0027 16.0044 22.3311 16.0044 21.5027C16.0044 20.6742 16.6759 20.0027 17.5044 20.0027C18.3328 20.0027 19.0044 20.6742 19.0044 21.5027C19.0044 22.3311 18.3328 23.0027 17.5044 23.0027Z"></path></svg> E-commerce <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="ecom-drop-icon" fill="currentColor"><path d="M12 15.0006L7.75732 10.758L9.17154 9.34375L12 12.1722L14.8284 9.34375L16.2426 10.758L12 15.0006Z"></path></svg>
                 </a>
               </div>
 
@@ -131,12 +135,12 @@
               </ul>
           </li>
             <!--=============== DROPDOWN 2 ===============-->
-            <li><a href="mailto:marcosmartinez16@hickoryhillswebdevelopment.com" class="nav__link">Contact Us</a></li>
+            <li><a href="/Contact Us/contact.html" class="nav__link" aria-label="Get in touch with our team">Contact Us</a></li>
             
           </ul>
       </div>
     </nav>
-  </header>
+   </header>
 
 
     <!------------------ LANDING SECTION ------------------>
@@ -671,6 +675,6 @@
       </div>
    </footer>
 
-    <script src="/script.js"></script>
+    <script src="/script.js" defer></script>
 </body>
 </html>

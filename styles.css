@@ -618,6 +618,7 @@ input:checked + .gdpr-toggle-slider:before {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease-out;
+    padding-left: 0;
 }
 .dropdown__item:hover .dropdown__menu,
 .dropdown__subitem:hover > .dropdown__submenu {
@@ -945,6 +946,11 @@ input:checked + .gdpr-toggle-slider:before {
         font-size: 1.1rem;
     }
 }
+@media screen and (max-width: 1023px) {
+    .landing-image {
+        animation: none;
+    }
+}
 @media screen and (min-width: 1224px) {
     .landing-image > img {
         height: 500px;
@@ -1250,7 +1256,7 @@ svg {
 }
 .pricingHeader > h2 {
     line-height: 2rem;
-    padding: 2rem 0;
+    padding: 1rem 0;
     font-size: 1.5rem;
 }
 @media screen and (min-width: 430px) {
@@ -1568,7 +1574,7 @@ svg {
 }
 .package-dot.active,
 footer {
-    background-color: #1178de;
+    background-color: #0d47a1;
 }
 .package-dots-container {
     display: flex;
