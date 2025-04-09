@@ -976,7 +976,7 @@ svg {
 }
 
 
-/********************** CALL TO ACTION SECTION **********************/
+/* Call to Action section */
 #callToAction {
   display: flex;
   justify-content: center;
@@ -990,52 +990,57 @@ svg {
   background-size: cover;
   z-index: -1;
 }
-.cta-text {
-  
 
+.cta-text {
   flex-direction: column;
   color: #ffffff;
 }
+
 .cta-text:before {
-  content: ""; /* So that it will show */
-  display: block; /* So it can have width */
-  width: 50%; /* Make sure position on these elements is relative (or something besides default) */
+  content: "";
+  display: block;
+  width: 50%;
   border-top: 3px solid #ffa601;
 }
+
 .cta-text > h3 {
   color: #ffffff;
+  font-size: 1.75rem;
 }
+
 .cta-text > h4 {
   line-height: 1.4rem;
   letter-spacing: 1px;
   margin-bottom: 1rem;
+  font-size: 1rem;
 }
+
 .cta-list {
   list-style: none;
   margin-top: 1rem;
   color: white;
   font-size: 1rem;
+  padding-left: 0;
 }
+
 .cta-list li:before {
   content: '✓';
   padding-right: 1rem;
   font-weight: 900;
   color: #ffa601;
 }
+
 .cta-image {
   display: flex;
   animation: rotation-left 6s infinite linear;
   overflow: hidden;
+}
 
-}
 @keyframes rotation-left {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
 }
+
 @media screen and (min-width: 1023px) {
   #callToAction {
     flex-direction: row;
@@ -1046,7 +1051,6 @@ svg {
     width: 50%;
   }
   .cta-image {
-    display: flex;
     justify-content: end;
     align-items: end;
     margin-left: auto;
@@ -1164,7 +1168,7 @@ form {
 footer {
     display: flex;
     flex-direction: column;
-    background-color: #1178de;
+    background-color: #0d47a1;
     height: fit-content;
     color: white;
     padding: 2rem;
@@ -1240,7 +1244,7 @@ hr.solid {
 }
 
 .consultation-toggle-btn {
-  background-color: #1178de;
+  background-color: #0d47a1;
   color: white;
   border: 1px solid black;
   border-left: none;
