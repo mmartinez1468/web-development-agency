@@ -938,11 +938,6 @@ input:checked + .gdpr-toggle-slider:before {
         font-size: 1.1rem;
     }
 }
-@media screen and (max-width: 824px) {
-    .landing-image {
-        animation: none;
-    }
-}
 @media screen and (min-width: 1224px) {
     .landing-image > img {
         height: 500px;
