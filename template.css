@@ -997,10 +997,10 @@ span {
   flex-direction: column;
   width: 100%;
   padding: 2rem;
-  background-image: url(/images/background-blue.jpg);
-  background-attachment: fixed;
+  background-image: url(/images/background-blue.webp);
   background-repeat: no-repeat;
   background-size: cover;
+  position: absolute;
   z-index: -1;
 }
 

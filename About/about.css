@@ -898,10 +898,8 @@ span {
     width: 40%;
   }
   .mission-image > img {
-    transform: rotate(-20deg) scale(1.1);
     height: 100%;
     padding-top: 4rem;
-    margin-left: -20rem;
   }
 }
 
@@ -995,7 +993,7 @@ svg {
 .wave-separator-2 svg {
   width: 100%;
   height: 100%;
-  background-image: url(/images/background-blue.jpg);
+  background-image: url(/images/background-blue.webp);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1283,10 +1281,10 @@ svg {
   flex-direction: column;
   width: 100%;
   padding: 2rem;
-  background-image: url(/images/background-blue.jpg);
-  background-attachment: fixed;
+  background-image: url(/images/background-blue.webp);
   background-repeat: no-repeat;
   background-size: cover;
+  position: absolute;
   z-index: -1;
 }
 
@@ -1624,6 +1622,7 @@ hr.solid {
   display: flex;
   transition: right 0.5s ease;
   z-index: 1000;
+  overflow: hidden;
 }
 
 .consultation-slide-panel.open {
