@@ -726,7 +726,7 @@ span {
   z-index: 1;
   cursor: pointer;
   font-family: "Bricolage Grotesque", serif;
-  background-color: #1178de;
+  background-color: #005a87;
   color: white;
   font-weight: 900;
 }
@@ -1099,7 +1099,7 @@ svg {
 
 .team-about-intro > span {
   border-bottom: 3px solid #ffa601;
-  color: #1178de;
+  color: #005a87;
   padding-top: 1rem;
 }
 

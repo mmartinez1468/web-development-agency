@@ -443,7 +443,7 @@ input:checked+.gdpr-toggle-slider:before {
 .nav__link,
 .nav__logo,
 .pricingHeader>span {
-    color: black;
+    color: #005a87;
 }
 
 .gdpr-modal-footer {
