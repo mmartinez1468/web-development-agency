@@ -289,12 +289,12 @@ span {
 }
 
 .gdpr-accept-all {
-    background-color: #4caf50;
+    background-color: #0d47a1;
     color: #fff
 }
 
 .gdpr-accept-all:hover {
-    background-color: #3e8e41
+    background-color: #0a3474;
 }
 
 .gdpr-decline-all {
@@ -305,7 +305,7 @@ span {
 
 .gdpr-customize,
 input:checked+.gdpr-toggle-slider {
-    background-color: #2196f3
+    background-color: #272626;
 }
 
 .gdpr-decline-all:hover {
@@ -317,7 +317,7 @@ input:checked+.gdpr-toggle-slider {
 }
 
 .gdpr-customize:hover {
-    background-color: #0b7dda
+    background-color: #000000;
 }
 
 .gdpr-preferences-modal {

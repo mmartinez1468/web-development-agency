@@ -244,7 +244,7 @@ a {
   }
 }
 .nav__link {
-  color: #1178de;
+  color: black;
   background-color: white;
   font-weight: var(--font-semi-bold);
   padding: 1.25rem 1.5rem;

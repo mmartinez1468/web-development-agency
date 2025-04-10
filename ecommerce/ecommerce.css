@@ -509,7 +509,7 @@ span {
 .nav__link {
   font-weight: var(--font-semi-bold);
   background-color: #fff;
-  color: #1178de;
+  color: black;
   padding: 1.25rem 1.5rem;
   display: flex;
   justify-content: space-between;
