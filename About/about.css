@@ -1,146 +1,325 @@
-/* Base styles and variables */
-:root {
-  --header-height: 3.5rem;
-  --black-color: hsl(220, 24%, 12%);
-  --black-color-light: hsl(220, 24%, 15%);
-  --black-color-lighten: hsl(220, 20%, 18%);
-  --white-color: #fff;
-  --body-color: hsl(220, 100%, 97%);
-  --primary-color: #1178de;
-  --secondary-color: #ffa601;
-  --dark-gray: #1a1a1a;
-  --light-gray: #f4efef;
-  --body-font: "Montserrat", sans-serif;
-  --heading-font: "Bricolage Grotesque", serif;
-  --normal-font-size: 0.938rem;
-  --font-regular: 400;
-  --font-semi-bold: 600;
-  --z-tooltip: 10;
-  --z-fixed: 100;
+@import url('https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Emblema+One&family=Lora:ital,wght@0,400..700;1,400..700&family=Paytone+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+h1,
+span {
+    letter-spacing: 3px;
 }
-
-/* Reset and base elements */
+.header,
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+}
+.nav__link,
+.nav__logo {
+    font-weight: var(--font-semi-bold);
+}
+.header,
+.loader,
+.nav__link {
+    background-color: #fff;
+}
+.landing-content .landing-box:first-child::before,
+.landing-content .landing-box:nth-child(2)::before,
+.landing-content .landing-box:nth-child(3)::before,
+.page-links-container {
+    background-position: center;
+}
+.landing-content .landing-box:first-child::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    opacity: .4;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    background-image: url(images/pexels-fauxels-3183183.jpg);
+    z-index: -1;
+  }
+.btn-flip,
+p {
+    letter-spacing: 1px;
+}
+.btn-flip,
+a {
+    text-decoration: none;
+}
+#contact,
+#faq {
+    padding: 3rem 0;
+}
+.faqContainer,
+.package-info,
+.priceExplain,
+ul {
+    list-style: none;
+}
+.fadeInDown,
+.fadeInLeft,
+.fadeInRight,
+.fadeInUp {
+    filter: blur(5px);
+}
 *,
 ::after,
 ::before {
-  box-sizing: border-box;
-  margin: 0;
+    box-sizing: border-box;
 }
-
+* {
+    margin: 0;
+}
 body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  background-color: var(--body-color);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
 }
-
-h1, h2, h3, h4, h5, h6, p, span {
-  text-wrap: balance;
-  font-family: var(--heading-font);
-  font-optical-sizing: auto;
-  font-style: normal;
-  overflow-wrap: break-word;
+canvas,
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
 }
-
-canvas, img, picture, svg, video {
-  display: block;
-  max-width: 100%;
+button,
+input,
+select,
+textarea {
+    font: inherit;
 }
-
-button, input, select, textarea {
-  font: inherit;
-}
-
-a {
-  text-decoration: none;
-  color: #fff;
-}
-
-/* Typography */
-h1 {
-  font-size: 3rem;
-  font-weight: 900;
-  letter-spacing: 3px;
-}
-
-h2 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-}
-
-h3 {
-  font-size: 2.25rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-
-h4 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-}
-
-p {
-  text-wrap: pretty;
-  font-weight: 400;
-  letter-spacing: 1px;
-}
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
 span {
-  font-weight: 900;
-  letter-spacing: 3px;
+    text-wrap: balance;
+    font-family: var(--heading-font);
+    font-optical-sizing: auto;
+    font-style: normal;
 }
-
-ul {
-  list-style: none;
+a {
+    color: #fff;
 }
-
+#__next,
+#root {
+    isolation: isolate;
+}
+:root {
+    --header-height: 3.5rem;
+    --black-color: hsl(220, 24%, 12%);
+    --black-color-light: hsl(220, 24%, 15%);
+    --black-color-lighten: hsl(220, 20%, 18%);
+    --white-color: #fff;
+    --body-color: hsl(220, 100%, 97%);
+    --primary-color: #1178de;
+    --secondary-color: #ffa601;
+    --dark-gray: #1a1a1a;
+    --light-gray: #f4efef;
+    --body-font: "Montserrat", sans-serif;
+    --heading-font: "Bricolage Grotesque", serif;
+    --normal-font-size: 0.938rem;
+    --font-regular: 400;
+    --font-semi-bold: 600;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+    overflow-wrap: break-word;
+}
+p {
+    text-wrap: pretty;
+    font-weight: 400;
+}
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+.pricingHeader > h2,
+h2,
+h3,
+h4 {
+    letter-spacing: 2px;
+}
+h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+h3 {
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+span {
+    font-weight: 900;
+}
+.header-container {
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+}
 .primary-color {
-  color: var(--primary-color);
+    color: var(--primary-color);
 }
-
 .secondary-color {
-  color: var(--secondary-color);
+    color: var(--secondary-color);
 }
 
-/* Loader */
+
+/*==================================
+16. ANIMATIONS
+==================================*/
+  /* Replays Animation When Back In ViewPort */
+  .animated {
+    opacity: 0;
+    transition: all 1s;
+  }
+  /* One Time Animation For The Landing Page  */
+  .fadeInLeftStay {
+    opacity: 1;
+    animation-name: fadeInLeftOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: forwards;
+    animation-duration: 2s;
+  }
+  @keyframes fadeInLeftOpacity {
+    0% {
+       opacity: 0;
+       transform: translateX(-100px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+  } 
+  /* One Time Animation For The Landing Page  */
+  .fadeInRightStay {
+    opacity: 1;
+    animation-name: fadeInRightOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: forwards;
+    animation-duration: 2s;
+  }
+  @keyframes fadeInRightOpacity {
+    0% {
+       opacity: 0;
+       transform: translateX(100px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+  } 
+  /* FadeInLeft Animation */
+  .fadeInLeft {
+    filter: blur(5px);
+    transform: translateX(-20px);
+    
+  }
+  .fadeInLeft.visible {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
+  /* FadeInLeft Animation */
+  .fadeInRight {
+    filter: blur(5px);
+    transform: translateX(20px);
+    
+  }
+  .fadeInRight.visible {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
+  .fadeInDown {
+    filter: blur(5px);
+    transform: translateY(-100px);
+  }
+  .fadeInDown.visible {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+  .fadeInUp {
+    filter: blur(5px);
+    transform: translateY(100px);
+  }
+  .fadeInUp.visible {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+  /* ANIMATION SPEEDS */
+  .fast {
+    animation-delay: 200ms;
+    transition-delay: 200ms;
+  }
+  .regular {
+    animation-delay: 400ms;
+    transition-delay: 400ms;
+  }
+  .slow {
+    animation-delay: 600ms;
+    transition-delay: 600ms;
+  }
+
+  
+/********************** PRE LOADER **********************/
 .loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  opacity: 1;
-  z-index: 100000000;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #FFFFFF;
+      opacity: 1;
+      z-index: 100000000;
 }
-
 .loaderHidden {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 2s, visibility 1s;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 2s, visibility 1s; /* Apply transition here only */
 }
-
 .loader::after {
-  content: "";
-  width: 75px;
-  height: 75px;
-  border: 15px solid #ddd;
-  border-top-color: var(--primary-color);
-  border-radius: 50%;
-  animation: 0.75s infinite loading;
+      content: "";
+      width: 75px;
+      height: 75px;
+      border: 15px solid #dddddd;
+      border-top-color: #1178de;
+      border-radius: 50%;
+      animation: loading 0.75s ease infinite;
+  
 }
-
 @keyframes loading {
-  from { transform: rotate(0turn); }
-  to { transform: rotate(1turn); }
+      from {
+        transform: rotate(0turn);
+      }
+      to {
+        transform: rotate(1turn);
+      }
 }
+  
 
 /* Header and Navigation */
 .header {
@@ -198,7 +377,7 @@ ul {
   font-size: 1.25rem;
   cursor: pointer;
   transition: opacity 0.1s, transform 0.4s;
-  color: #000;
+  color: #1178de;
 }
 
 .nav__close {
@@ -436,6 +615,46 @@ ul {
     top: 0;
     pointer-events: initial;
     transition: top 0.3s;
+  }
+}
+
+/* Additional styles for mobile dropdown functionality */
+@media screen and (max-width: 1118px) {
+  /* Override the hover behavior on mobile */
+  .dropdown__item:hover .dropdown__menu,
+  .dropdown__subitem:hover > .dropdown__submenu {
+    max-height: 0;
+    transition: max-height 0.4s ease-out;
+  }
+  
+  /* Create new class for active dropdowns on mobile */
+  .dropdown-active {
+    max-height: 1000px !important;
+    transition: max-height 0.4s ease-in !important;
+  }
+  
+  /* Keep the arrow rotation */
+  .dropdown-active + .nav__link .dropdown__arrow,
+  .dropdown__item .nav__link.clicked .dropdown__arrow {
+    transform: rotate(180deg);
+  }
+  
+  /* Make sure the dropdown links are clickable on mobile */
+  .dropdown__link, .dropdown__sublink {
+    cursor: pointer;
+  }
+  
+  /* Add a visual indicator for clickable dropdowns */
+  .dropdown__item > .nav__link,
+  .dropdown__subitem > .dropdown__link {
+    position: relative;
+  }
+  
+  /* Improve touch target size for mobile */
+  .dropdown__arrow, 
+  .ecom-drop-icon {
+    padding: 10px;
+    margin: -10px;
   }
 }
 
