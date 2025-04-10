@@ -1370,7 +1370,7 @@ svg {
 .priceExplainHeader {
     width: 100%;
     height: auto;
-    background-color: #0d47a1;
+    background-color: #005a87;
     box-shadow: rgba(0, 0, 0, .24) 0 3px 8px
 }
 
@@ -1394,7 +1394,7 @@ svg {
 
 .priceExplainInfo>span {
     font-size: 1rem;
-    color: #0d47a1;
+    color: #005a87;
     padding: 1rem 0
 }
 
@@ -1457,7 +1457,7 @@ svg {
     padding: 0 30px;
     line-height: 40px;
     position: relative;
-    background: #0d47a1;
+    background: #005a87;
     content: attr(data-front);
     transform: translateY(0) rotateX(0)
 }
@@ -2173,7 +2173,7 @@ hr.solid {
 }
 
 .consultation-submit-btn {
-    background-color: #1178de;
+    background-color: #0056b3;
     border: none;
     padding: 10px;
     border-radius: 4px;
@@ -2182,7 +2182,7 @@ hr.solid {
 }
 
 .consultation-submit-btn:hover {
-    background-color: #0d62b8
+    background-color: #0056b3
 }
 
 #form-input {
