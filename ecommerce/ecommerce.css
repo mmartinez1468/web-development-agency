@@ -1,109 +1,185 @@
-/* Base styles and variables */
-:root {
-  --header-height: 3.5rem;
-  --black-color: hsl(220, 24%, 12%);
-  --black-color-light: hsl(220, 24%, 15%);
-  --black-color-lighten: hsl(220, 20%, 18%);
-  --white-color: #fff;
-  --body-color: hsl(220, 100%, 97%);
-  --primary-color: #1178de;
-  --secondary-color: #ffa601;
-  --dark-gray: #1a1a1a;
-  --light-gray: #f4efef;
-  --body-font: "Montserrat", sans-serif;
-  --heading-font: "Bricolage Grotesque", serif;
-  --normal-font-size: 0.938rem;
-  --font-regular: 400;
-  --font-semi-bold: 600;
-  --z-tooltip: 10;
-  --z-fixed: 100;
+@import url('https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Emblema+One&family=Lora:ital,wght@0,400..700;1,400..700&family=Paytone+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+h1,
+span {
+    letter-spacing: 3px;
 }
-
-/* Reset and base elements */
+.header,
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+}
+.nav__link,
+.nav__logo {
+    font-weight: var(--font-semi-bold);
+}
+.header,
+.loader,
+.nav__link {
+    background-color: #fff;
+}
+.landing-content .landing-box:first-child::before,
+.landing-content .landing-box:nth-child(2)::before,
+.landing-content .landing-box:nth-child(3)::before,
+.page-links-container {
+    background-position: center;
+}
+.landing-content .landing-box:first-child::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    opacity: .4;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    background-image: url(images/pexels-fauxels-3183183.jpg);
+    z-index: -1;
+  }
+.btn-flip,
+p {
+    letter-spacing: 1px;
+}
+.btn-flip,
+a {
+    text-decoration: none;
+}
+#contact,
+#faq {
+    padding: 3rem 0;
+}
+.faqContainer,
+.package-info,
+.priceExplain,
+ul {
+    list-style: none;
+}
+.fadeInDown,
+.fadeInLeft,
+.fadeInRight,
+.fadeInUp {
+    filter: blur(5px);
+}
 *,
 ::after,
 ::before {
-  box-sizing: border-box;
-  margin: 0;
+    box-sizing: border-box;
 }
-
+* {
+    margin: 0;
+}
 body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  background-color: var(--body-color);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
 }
-
-h1, h2, h3, h4, h5, h6, p, span {
-  text-wrap: balance;
-  font-family: var(--heading-font);
-  font-optical-sizing: auto;
-  font-style: normal;
-  overflow-wrap: break-word;
+canvas,
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
 }
-
-canvas, img, picture, svg, video {
-  display: block;
-  max-width: 100%;
+button,
+input,
+select,
+textarea {
+    font: inherit;
 }
-
-button, input, select, textarea {
-  font: inherit;
-}
-
-a {
-  text-decoration: none;
-  color: #fff;
-}
-
-/* Typography */
-h1 {
-  font-size: 3rem;
-  font-weight: 900;
-  letter-spacing: 3px;
-}
-
-h2 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-}
-
-h3 {
-  font-size: 2.25rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-
-h4 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-}
-
-p {
-  text-wrap: pretty;
-  font-weight: 400;
-  letter-spacing: 1px;
-}
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
 span {
-  font-weight: 900;
-  letter-spacing: 3px;
+    text-wrap: balance;
+    font-family: var(--heading-font);
+    font-optical-sizing: auto;
+    font-style: normal;
 }
-
-ul {
-  list-style: none;
+a {
+    color: #fff;
 }
-
+#__next,
+#root {
+    isolation: isolate;
+}
+:root {
+    --header-height: 3.5rem;
+    --black-color: hsl(220, 24%, 12%);
+    --black-color-light: hsl(220, 24%, 15%);
+    --black-color-lighten: hsl(220, 20%, 18%);
+    --white-color: #fff;
+    --body-color: hsl(220, 100%, 97%);
+    --primary-color: #1178de;
+    --secondary-color: #ffa601;
+    --dark-gray: #1a1a1a;
+    --light-gray: #f4efef;
+    --body-font: "Montserrat", sans-serif;
+    --heading-font: "Bricolage Grotesque", serif;
+    --normal-font-size: 0.938rem;
+    --font-regular: 400;
+    --font-semi-bold: 600;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+    overflow-wrap: break-word;
+}
+p {
+    text-wrap: pretty;
+    font-weight: 400;
+}
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+.pricingHeader > h2,
+h2,
+h3,
+h4 {
+    letter-spacing: 2px;
+}
+h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+h3 {
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+span {
+    font-weight: 900;
+}
+.header-container {
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+}
 .primary-color {
-  color: var(--primary-color);
+    color: var(--primary-color);
 }
-
 .secondary-color {
-  color: var(--secondary-color);
+    color: var(--secondary-color);
 }
 
 
