@@ -1202,9 +1202,9 @@ svg {
   width: 100%;
   padding: 2rem;
   background-image: url(/images/background-blue.webp);
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  position: absolute;
   z-index: -1;
 }
 
