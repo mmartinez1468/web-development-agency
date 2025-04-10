@@ -760,7 +760,7 @@ span {
   z-index: 1;
   cursor: pointer;
   font-family: "Bricolage Grotesque", serif;
-  background-color: #ffa601;
+  background-color: #a97006;
   color: white;
   font-weight: 900;
 }
@@ -1698,3 +1698,4 @@ hr.solid {
 #form-label {
   font-size: 14px;
 }
+
